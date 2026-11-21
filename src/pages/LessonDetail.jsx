@@ -405,6 +405,7 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
               id="lesson-audio"
               controls
               preload="metadata"
+              referrerPolicy="no-referrer"
               src={resolvedAudioSrc}
               onError={(e) => {
                 if (lesson.originalAudioUrl && e.currentTarget.src !== lesson.originalAudioUrl) {
