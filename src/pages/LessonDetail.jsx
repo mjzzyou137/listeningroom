@@ -422,6 +422,7 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
               src={embedVideoUrl}
               title={lesson.title}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             />
           </section>
