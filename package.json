@@ -1,0 +1,27 @@
+{
+  "name": "elllo-a1-natural-conversations",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite",
+    "server:python": "python3 -m http.server 4173 --directory public",
+    "scrape:a1": "ruby scripts/scrape_a1.rb",
+    "scrape:levels": "ruby scripts/scrape_levels.rb",
+    "scrape:natural": "ruby scripts/scrape_natural.rb",
+    "scrape:videos": "ruby scripts/scrape_videos.rb",
+    "grammar:fill": "ruby scripts/fill_missing_grammar.rb",
+    "timings:generate": "ruby scripts/generate_script_timings.rb"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.3.0",
+    "vite": "^8.3.8"
+  }
+}

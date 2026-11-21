@@ -1,0 +1,10 @@
+node_modules
+dist
+.whisper_cache
+models
+.DS_Store
+*.log
+work/
+public/audio/
+.vercel
+
