@@ -1,0 +1,8 @@
+public/audio
+models
+.whisper_cache
+work
+scripts
+node_modules
+dist
+*.log
