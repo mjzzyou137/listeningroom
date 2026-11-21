@@ -80,13 +80,19 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
   const currentIndex = siblings.findIndex((item) => item.id === lesson.id);
   const nextLesson = siblings[(currentIndex + 1) % siblings.length];
 
+  const CLOUDFLARE_R2_BASE = 'https://pub-5c009e46a0b34c0f831960b4fa794044.r2.dev';
+  const getAudioUrl = (audioPath) => {
+    if (!audioPath) return '';
+    if (audioPath.startsWith('http')) return audioPath;
+    return `${CLOUDFLARE_R2_BASE}${audioPath.startsWith('/') ? audioPath : '/' + audioPath}`;
+  };
+
   const resolvedAudioSrc =
     typeof window !== 'undefined' &&
     window.location.hostname !== 'localhost' &&
-    window.location.hostname !== '127.0.0.1' &&
-    lesson.originalAudioUrl
-      ? lesson.originalAudioUrl
-      : (lesson.audioUrl || lesson.originalAudioUrl);
+    window.location.hostname !== '127.0.0.1'
+      ? getAudioUrl(lesson.audioUrl)
+      : (lesson.audioUrl || getAudioUrl(lesson.audioUrl));
 
   const allowedTabs =
     collectionType === 'natural' ? ['script', 'vocabulary', 'grammar'] : ['script', 'grammar'];
@@ -405,11 +411,11 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
               id="lesson-audio"
               controls
               preload="metadata"
-              referrerPolicy="no-referrer"
               src={resolvedAudioSrc}
               onError={(e) => {
-                if (lesson.originalAudioUrl && e.currentTarget.src !== lesson.originalAudioUrl) {
-                  e.currentTarget.src = lesson.originalAudioUrl;
+                const fallback = getAudioUrl(lesson.audioUrl);
+                if (fallback && e.currentTarget.src !== fallback) {
+                  e.currentTarget.src = fallback;
                   e.currentTarget.load();
                 }
               }}
