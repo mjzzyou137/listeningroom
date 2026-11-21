@@ -106,6 +106,29 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
     );
   }, [lesson?.transcriptHtml]);
 
+  const embedVideoUrl = useMemo(() => {
+    const rawUrl = lesson?.videoUrl || lesson?.youtubeUrl;
+    if (!rawUrl) return null;
+
+    if (rawUrl.includes('player.vimeo.com') || rawUrl.includes('youtube.com/embed')) {
+      return rawUrl;
+    }
+
+    const vimeoMatch = rawUrl.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+    if (vimeoMatch && vimeoMatch[1]) {
+      return `https://player.vimeo.com/video/${vimeoMatch[1]}?title=0&byline=0&portrait=0&badge=0&autopause=0`;
+    }
+
+    const ytMatch = rawUrl.match(
+      /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/
+    );
+    if (ytMatch && ytMatch[1]) {
+      return `https://www.youtube.com/embed/${ytMatch[1]}`;
+    }
+
+    return rawUrl;
+  }, [lesson?.videoUrl, lesson?.youtubeUrl]);
+
   // Audio & Transcript synchronization effect
   useEffect(() => {
     if (currentTab !== 'script' || !transcriptRef.current || !audioRef.current) {
@@ -393,12 +416,12 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
           </div>
         </section>
 
-        {lesson.videoUrl && (
+        {embedVideoUrl && (
           <section className="video-player">
             <iframe
-              src={lesson.videoUrl}
+              src={embedVideoUrl}
               title={lesson.title}
-              allow="autoplay; fullscreen; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />
           </section>
