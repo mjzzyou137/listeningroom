@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Icon from '../components/Icon';
@@ -97,6 +97,14 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
   const allowedTabs =
     collectionType === 'natural' ? ['script', 'vocabulary', 'grammar'] : ['script', 'grammar'];
   const currentTab = allowedTabs.includes(activeTab) ? activeTab : 'script';
+
+  const formattedTranscriptHtml = useMemo(() => {
+    if (!lesson?.transcriptHtml) return '';
+    return lesson.transcriptHtml.replace(
+      /<strong>\s*([^<]+?)\s*<\/strong>\s*:\s*/gi,
+      '<strong>$1:</strong> '
+    );
+  }, [lesson?.transcriptHtml]);
 
   // Audio & Transcript synchronization effect
   useEffect(() => {
@@ -293,7 +301,7 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
               <span>Tự động cuộn</span>
             </label>
           </div>
-          <div dangerouslySetInnerHTML={{ __html: lesson.transcriptHtml || '' }} />
+          <div dangerouslySetInnerHTML={{ __html: formattedTranscriptHtml }} />
         </article>
       );
     }
