@@ -401,7 +401,6 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
             />
-            <span>Nguồn video: ELLLO</span>
           </section>
         )}
 
