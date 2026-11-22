@@ -637,103 +637,119 @@
   background: #ef4444;
 }
 
-/* Word tokens flex display (Image 2 style) */
-.diff-tokens-container {
+/* ============================================================
+   CLEAN INLINE DIFF RESULTS (Matching Image 1)
+   ============================================================ */
+
+.diff-block {
+  margin-top: 18px;
+  background: #fbfdfc;
+  border: 1.5px solid #dce8e3;
+  border-radius: 14px;
+  padding: 18px 22px;
+}
+
+.diff-block-user {
+  background: #ffffff;
+  border-color: #d7e4de;
+}
+
+.diff-block-model {
+  background: #f8faf9;
+  border-color: #dce8e3;
+}
+
+.diff-block-header {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 16px;
-  margin-bottom: 24px;
-  line-height: 1;
-}
-
-/* Individual Token Badge */
-.diff-token {
-  display: inline-flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  padding: 10px 14px;
-  min-width: 44px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-  transition: transform 0.15s ease;
+  margin-bottom: 12px;
 }
 
-.diff-token:hover {
-  transform: translateY(-2px);
+.diff-block-label {
+  font-size: 13.5px;
+  font-weight: 750;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
 }
 
-/* Token: Correct (In đậm màu xanh lá) */
-.diff-token.correct {
-  background: #eff6ff;
-  border: 1.5px solid #bfdbfe;
-  color: #1e40af;
+.diff-block-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
-/* If green variant preferred by user description */
-.diff-token.correct {
-  background: #f0fdf4;
-  border: 1.5px solid #bbf7d0;
+.btn-inline-action {
+  background: transparent;
+  color: #16765e;
+  border: 1px solid #c9ded6;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.15s ease;
+}
+
+.btn-inline-action:hover {
+  background: #eef6f3;
+  border-color: #16765e;
+}
+
+/* Prose text flowing naturally like Image 1 */
+.diff-prose {
+  font-size: 18px;
+  line-height: 1.85;
+  color: #1e293b;
+  word-wrap: break-word;
+}
+
+/* User's Words: In Image 1, correct words are dark green bold, wrong words are dark red bold */
+.diff-word {
+  display: inline;
+  transition: background-color 0.15s;
+}
+
+.diff-word.word-correct {
   color: #15803d;
+  font-weight: 700;
 }
 
-.diff-token.correct .token-word {
-  font-weight: 800;
-  font-size: 18px;
-  color: #166534;
-}
-
-.diff-token.correct .token-sub {
-  font-size: 10.5px;
-  font-weight: 600;
-  color: #16a34a;
-  margin-top: 4px;
-}
-
-/* Token: Incorrect / Wrong word (Màu đỏ) */
-.diff-token.incorrect,
-.diff-token.wrong_word {
-  background: #fff1f2;
-  border: 1.5px solid #fecdd3;
-  color: #9f1239;
-}
-
-.diff-token.incorrect .token-word,
-.diff-token.wrong_word .token-word {
-  font-weight: 800;
-  font-size: 18px;
-  color: #9f1239;
-}
-
-.diff-token.incorrect .token-sub,
-.diff-token.wrong_word .token-sub {
-  font-size: 11px;
-  font-weight: 600;
-  color: #e11d48;
-  margin-top: 4px;
-}
-
-/* Token: Missing (Màu đỏ nét đứt) */
-.diff-token.missing {
-  background: #fff5f5;
-  border: 1.5px dashed #fca5a5;
-  color: #b91c1c;
-}
-
-.diff-token.missing .token-word {
-  font-weight: 800;
-  font-size: 18px;
+.diff-word.word-wrong {
   color: #dc2626;
-  opacity: 0.9;
+  font-weight: 700;
+  text-decoration: underline wavy #f87171;
+  text-underline-offset: 4px;
+  cursor: help;
 }
 
-.diff-token.missing .token-sub {
-  font-size: 10.5px;
-  font-weight: 600;
-  color: #ef4444;
-  margin-top: 4px;
+.diff-word.word-wrong:hover {
+  background-color: #fee2e2;
+  border-radius: 3px;
+}
+
+/* Model Answer Words: matched vs missing */
+.diff-model-word {
+  display: inline;
+}
+
+.diff-model-word.model-matched {
+  color: #334155;
+  font-weight: 500;
+}
+
+.diff-model-word.model-missing {
+  color: #15803d;
+  font-weight: 700;
+  background: #dcfce7;
+  padding: 1px 4px;
+  border-radius: 4px;
+  border-bottom: 2px solid #86efac;
+  cursor: help;
 }
 
 /* Side-by-side or comparison details */

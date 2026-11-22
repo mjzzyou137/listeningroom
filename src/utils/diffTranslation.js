@@ -68,6 +68,8 @@ export function diffTranslation(userText, modelText) {
       totalModelWords: n,
       correctCount: 0,
       userWordCount: 0,
+      userTokens: [],
+      modelTokens: modelWords.map((w) => ({ word: w, matched: false })),
       tokens: modelWords.map((w) => ({
         type: 'missing',
         expected: w
@@ -90,9 +92,11 @@ export function diffTranslation(userText, modelText) {
   let i = m;
   let j = n;
   const rawTokens = [];
+  const modelMatched = new Array(n).fill(false);
 
   while (i > 0 && j > 0) {
     if (canonicalWord(userWords[i - 1]) === canonicalWord(modelWords[j - 1])) {
+      modelMatched[j - 1] = true;
       rawTokens.push({
         type: 'correct',
         word: userWords[i - 1],
@@ -150,6 +154,20 @@ export function diffTranslation(userText, modelText) {
     }
   }
 
+  const userTokens = tokens
+    .filter((t) => t.word !== undefined)
+    .map((t) => ({
+      word: t.word,
+      type: t.type,
+      isCorrect: t.type === 'correct',
+      expected: t.expected || null
+    }));
+
+  const modelTokens = modelWords.map((w, idx) => ({
+    word: w,
+    matched: modelMatched[idx]
+  }));
+
   const correctCount = dp[m][n];
   const score = Math.min(100, Math.round((correctCount / Math.max(n, 1)) * 100));
 
@@ -158,6 +176,8 @@ export function diffTranslation(userText, modelText) {
     totalModelWords: n,
     correctCount,
     userWordCount: m,
+    userTokens,
+    modelTokens,
     tokens
   };
 }

@@ -100,6 +100,16 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
     saveProgress(currentLesson.id, userInput, result);
   };
 
+  // Keyboard shortcut: Enter to check translation
+  const handleTextareaKeyDown = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      if (userInput.trim()) {
+        handleCheck();
+      }
+    }
+  };
+
   // Reset lesson
   const handleReset = () => {
     setUserInput('');
@@ -321,12 +331,13 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
                   className="ruled-textarea"
                   value={userInput}
                   onChange={(e) => setUserInput(e.target.value)}
+                  onKeyDown={handleTextareaKeyDown}
                   placeholder="Nhập bản dịch tiếng Anh của bạn tại đây... (Ví dụ: Hello! My name is Minh...)"
                   rows={6}
                 />
                 <div className="textarea-footer-info">
                   <span>{wordCount} từ đã nhập</span>
-                  <span>Định dạng dòng kẻ hỗ trợ luyện viết chuẩn ngữ pháp</span>
+                  <span>Nhấn <strong>Enter</strong> để kiểm tra bài dịch · <strong>Shift + Enter</strong> để xuống dòng</span>
                 </div>
               </div>
 
@@ -371,108 +382,135 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
               </div>
 
               {/* ================================================= */}
-              {/* WORD-BY-WORD DIFF RESULTS (Matching Image 2)      */}
+              {/* CLEAN INLINE DIFF RESULTS (Matching Image 1)      */}
               {/* ================================================= */}
-              {diffResult && (
-                <section className="diff-results-card">
-                  <div className="diff-score-banner">
-                    <div className="diff-score-badge">
-                      <div
-                        className={`score-circle ${
-                          diffResult.score >= 80
-                            ? 'high'
-                            : diffResult.score >= 50
-                            ? 'medium'
-                            : 'low'
-                        }`}
-                      >
-                        {diffResult.score}%
+              {diffResult && (() => {
+                const userTokens =
+                  diffResult.userTokens ||
+                  (diffResult.tokens
+                    ? diffResult.tokens
+                        .filter((t) => t.word !== undefined)
+                        .map((t) => ({
+                          word: t.word,
+                          isCorrect: t.type === 'correct',
+                          expected: t.expected || null
+                        }))
+                    : []);
+
+                const modelTokens =
+                  diffResult.modelTokens ||
+                  (currentLesson.answer
+                    ? currentLesson.answer.trim().split(/\s+/).map((w) => ({ word: w, matched: true }))
+                    : []);
+
+                return (
+                  <section className="diff-results-card">
+                    <div className="diff-score-banner">
+                      <div className="diff-score-badge">
+                        <div
+                          className={`score-circle ${
+                            diffResult.score >= 80
+                              ? 'high'
+                              : diffResult.score >= 50
+                              ? 'medium'
+                              : 'low'
+                          }`}
+                        >
+                          {diffResult.score}%
+                        </div>
+                        <div className="score-text">
+                          <strong>
+                            {diffResult.score >= 90
+                              ? 'Xuất sắc! Bản dịch rất chuẩn xác 🎉'
+                              : diffResult.score >= 75
+                              ? 'Rất tốt! Cố gắng phát huy nhé 👏'
+                              : diffResult.score >= 50
+                              ? 'Khá tốt! Hãy xem lại các từ màu đỏ nhé 💪'
+                              : 'Cố gắng lên! Hãy đối chiếu đáp án mẫu để học thêm 📖'}
+                          </strong>
+                          <span>
+                            Đúng {diffResult.correctCount} / {diffResult.totalModelWords} từ mẫu ({diffResult.userWordCount} từ đã viết)
+                          </span>
+                        </div>
                       </div>
-                      <div className="score-text">
-                        <strong>
-                          {diffResult.score >= 90
-                            ? 'Xuất sắc! Bản dịch rất chuẩn xác 🎉'
-                            : diffResult.score >= 75
-                            ? 'Rất tốt! Cố gắng phát huy nhé 👏'
-                            : diffResult.score >= 50
-                            ? 'Khá tốt! Hãy xem lại các từ màu đỏ nhé 💪'
-                            : 'Cố gắng lên! Hãy đối chiếu đáp án mẫu để học thêm 📖'}
-                        </strong>
-                        <span>
-                          Đúng {diffResult.correctCount} / {diffResult.totalModelWords} từ mẫu ({diffResult.userWordCount} từ đã viết)
-                        </span>
+
+                      <div className="diff-legend">
+                        <div className="diff-legend-item">
+                          <span className="legend-dot green" />
+                          <span>Từ đúng (xanh lá)</span>
+                        </div>
+                        <div className="diff-legend-item">
+                          <span className="legend-dot red" />
+                          <span>Chưa đúng / Thừa (đỏ)</span>
+                        </div>
                       </div>
                     </div>
 
-                    <div className="diff-legend">
-                      <div className="diff-legend-item">
-                        <span className="legend-dot green" />
-                        <span>Từ đúng (xanh lá)</span>
+                    {/* Section 1: Bạn viết (Matching Image 1) */}
+                    <div className="diff-block diff-block-user">
+                      <div className="diff-block-header">
+                        <span className="diff-block-label">Bạn viết</span>
                       </div>
-                      <div className="diff-legend-item">
-                        <span className="legend-dot red" />
-                        <span>Sai / Thiếu (đỏ)</span>
+                      <div className="diff-prose diff-user-prose">
+                        {userTokens.map((tok, idx) => (
+                          <span
+                            key={idx}
+                            className={`diff-word ${tok.isCorrect ? 'word-correct' : 'word-wrong'}`}
+                            title={
+                              tok.isCorrect
+                                ? 'Chính xác'
+                                : tok.expected
+                                ? `Chưa chuẩn. Đáp án mẫu: "${tok.expected}"`
+                                : 'Từ này không có trong đáp án mẫu hoặc thừa'
+                            }
+                          >
+                            {tok.word}{' '}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                  </div>
 
-                  {/* Word-by-word token badges (Image 2 style) */}
-                  <div className="diff-tokens-container">
-                    {diffResult.tokens.map((tok, idx) => {
-                      if (tok.type === 'correct') {
-                        return (
-                          <div key={idx} className="diff-token correct" title="Từ chính xác">
-                            <span className="token-word">{tok.word}</span>
-                            <span className="token-sub">✓ đúng</span>
-                          </div>
-                        );
-                      }
-                      if (tok.type === 'wrong_word') {
-                        return (
-                          <div
-                            key={idx}
-                            className="diff-token wrong_word"
-                            title={`Bạn viết: "${tok.word}" · Đáp án: "${tok.expected}"`}
+                    {/* Section 2: Đáp án chuẩn (Matching Image 1 clean style) */}
+                    <div className="diff-block diff-block-model">
+                      <div className="diff-block-header">
+                        <span className="diff-block-label">Đáp án chuẩn</span>
+                        <div className="diff-block-actions">
+                          <button
+                            type="button"
+                            className="btn-inline-action"
+                            onClick={() => handleSpeak(currentLesson.answer)}
+                            title="Nghe phát âm đáp án chuẩn"
                           >
-                            <span className="token-word">{tok.word}</span>
-                            <span className="token-sub">cần: {tok.expected}</span>
-                          </div>
-                        );
-                      }
-                      if (tok.type === 'incorrect') {
-                        return (
-                          <div
-                            key={idx}
-                            className="diff-token incorrect"
-                            title={`Từ này không có trong mẫu: "${tok.word}"`}
+                            <Icon name="volume" /> Nghe đọc
+                          </button>
+                          <button
+                            type="button"
+                            className="btn-inline-action"
+                            onClick={() => {
+                              navigator.clipboard.writeText(currentLesson.answer);
+                              alert('Đã sao chép đáp án chuẩn!');
+                            }}
+                            title="Sao chép đáp án chuẩn"
                           >
-                            <span className="token-word">{tok.word}</span>
-                            <span className="token-sub">✗ sai / thừa</span>
-                          </div>
-                        );
-                      }
-                      if (tok.type === 'missing') {
-                        return (
-                          <div
+                            <Icon name="copy" /> Sao chép
+                          </button>
+                        </div>
+                      </div>
+                      <div className="diff-prose diff-model-prose">
+                        {modelTokens.map((tok, idx) => (
+                          <span
                             key={idx}
-                            className="diff-token missing"
-                            title={`Thiếu từ mẫu: "${tok.expected}"`}
+                            className={`diff-model-word ${tok.matched ? 'model-matched' : 'model-missing'}`}
+                            title={tok.matched ? 'Bạn đã viết đúng từ này' : 'Từ bạn còn thiếu'}
                           >
-                            <span className="token-word">{tok.expected}</span>
-                            <span className="token-sub">✗ thiếu</span>
-                          </div>
-                        );
-                      }
-                      return null;
-                    })}
-                  </div>
-
-                  <div className="diff-comparison-box">
-                    <h4>Đáp án đối chiếu đầy đủ:</h4>
-                    <p>{currentLesson.answer}</p>
-                  </div>
-                </section>
-              )}
+                            {tok.word}{' '}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </section>
+                );
+              })()}
 
               {/* Model Answer Reveal Box */}
               {showAnswer && (
