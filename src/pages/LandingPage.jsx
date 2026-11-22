@@ -143,12 +143,13 @@ export default function LandingPage({ data }) {
           'Grammar Lessons & Books',
           'Grammar practice by level',
           'grammar',
-          ['A1', 'A2', 'B1', 'B2'],
+          ['A1', 'A2', 'B1', 'B2', 'C1'],
           {
             A1: '25 Grammar Lessons',
             A2: '25 Grammar Lessons',
             B1: '25 Grammar Lessons',
-            B2: '25 Grammar Lessons'
+            B2: '25 Grammar Lessons',
+            C1: 'Advanced Grammar Lessons'
           }
         )}
       </main>

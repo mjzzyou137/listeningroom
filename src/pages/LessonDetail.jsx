@@ -71,7 +71,7 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
       : collectionType === 'videos'
       ? data.videoLevels
       : collectionType === 'grammar'
-      ? data.levels.filter((lvl) => lvl.level !== 'C1')
+      ? data.levels
       : data.levels;
 
   const currentLevelGroup =
@@ -95,7 +95,9 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
       : (lesson.audioUrl || getAudioUrl(lesson.audioUrl));
 
   const allowedTabs =
-    collectionType === 'natural' ? ['script', 'vocabulary', 'grammar'] : ['script', 'grammar'];
+    collectionType === 'natural' || collectionType === 'videos'
+      ? ['script', 'vocabulary', 'grammar']
+      : ['script', 'grammar'];
   const currentTab = allowedTabs.includes(activeTab) ? activeTab : 'script';
 
   const formattedTranscriptHtml = useMemo(() => {
@@ -370,6 +372,8 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
             <Icon name="back" />{' '}
             {collectionType === 'natural'
               ? 'Natural Conversations'
+              : collectionType === 'videos'
+              ? 'One Minute English Videos'
               : collectionType === 'grammar'
               ? 'Grammar Lessons & Books'
               : 'Thư viện'}{' '}
@@ -379,6 +383,8 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
             {lesson.code} ·{' '}
             {collectionType === 'natural'
               ? 'Natural'
+              : collectionType === 'videos'
+              ? 'Video'
               : collectionType === 'grammar'
               ? 'Grammar'
               : 'Level'}{' '}
@@ -475,7 +481,7 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
             >
               Script
             </button>
-            {collectionType === 'natural' && (
+            {(collectionType === 'natural' || collectionType === 'videos') && (
               <button
                 type="button"
                 className={currentTab === 'vocabulary' ? 'active' : ''}

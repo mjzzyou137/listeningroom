@@ -14,7 +14,9 @@
     "scrape:natural": "ruby scripts/scrape_natural.rb",
     "scrape:videos": "ruby scripts/scrape_videos.rb",
     "grammar:fill": "ruby scripts/fill_missing_grammar.rb",
-    "timings:generate": "ruby scripts/generate_script_timings.rb"
+    "timings:generate": "ruby scripts/generate_script_timings.rb",
+    "vocabulary:fill-videos": "ruby scripts/fill_missing_video_vocabulary.rb",
+    "natural:add-a1": "ruby scripts/add_a1_natural.rb"
   },
   "dependencies": {
     "react": "^19.3.1",

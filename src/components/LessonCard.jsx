@@ -11,6 +11,8 @@ export default function LessonCard({ lesson, collection, isSaved, onToggleSave }
         <span className="card-type">
           {lesson.collection === 'natural'
             ? 'Natural conversation'
+            : lesson.collection === 'videos'
+            ? 'One Minute English'
             : 'Grammar conversation'}
         </span>
         <button

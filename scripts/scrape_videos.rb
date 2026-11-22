@@ -7,6 +7,8 @@ require "nokogiri"
 require "thread"
 require "time"
 require "uri"
+require "cgi"
+require_relative "grammar_generator"
 
 ROOT = File.expand_path("..", __dir__)
 DATA_DIR = File.join(ROOT, "public", "data", "videos")
@@ -15,7 +17,7 @@ FileUtils.mkdir_p(DATA_DIR)
 FileUtils.mkdir_p(AUDIO_ROOT)
 
 LEVELS = {
-  "A2" => ["High-Beginner", "A2BEG"], "B1" => ["Intermediate", "B1INT"],
+  "A1" => ["Beginner", "A1BEG"], "A2" => ["High-Beginner", "A2BEG"], "B1" => ["Intermediate", "B1INT"],
   "B2" => ["High-Intermediate", "B2INT"], "C1" => ["Advanced", "C1ADV"]
 }.freeze
 
@@ -39,31 +41,23 @@ def clean_html(node)
   clone.inner_html.strip
 end
 
-def sentences(node)
-  node.text.gsub(/\s+/, " ").strip.split(/(?<=[.!?])\s+/).select { |line| line.length.between?(18, 240) }
-end
-
-def generated_grammar(node)
-  lines = sentences(node)
-  rules = [
-    ["Present simple", /\b(?:do|does|am|is|are|have|has|like|want|need|work|live|think)\b/i, "Dùng hiện tại đơn cho thói quen, sự thật và ý kiến."],
-    ["Present continuous", /\b(?:am|is|are|'m|'s|'re)\s+\w+ing\b/i, "Dùng be + V-ing cho hành động đang diễn ra hoặc tình huống tạm thời."],
-    ["Past simple", /\b(?:did|was|were|went|had|made|got|saw|took|\w+ed)\b/i, "Dùng quá khứ đơn cho hành động đã hoàn tất trong quá khứ."],
-    ["Present perfect", /\b(?:have|has|'ve|'s)\s+(?:been|done|gone|seen|had|\w+ed)\b/i, "Dùng have/has + past participle cho trải nghiệm hoặc kết quả liên quan hiện tại."],
-    ["Future forms", /\b(?:will|going to)\b/i, "Dùng will cho quyết định/dự đoán; be going to cho kế hoạch hoặc dự định."],
-    ["Modal verbs", /\b(?:can|could|should|would|might|must)\b/i, "Modal + động từ nguyên mẫu diễn tả khả năng, lời khuyên, nghĩa vụ hoặc giả định."],
-    ["Conditionals", /\bif\b/i, "Mệnh đề if nêu điều kiện; mệnh đề còn lại cho biết kết quả."],
-    ["Comparisons", /\b(?:than|more|less|most|best|better|worse)\b/i, "Dùng comparative với than để so sánh và superlative để nói mức cao nhất."],
-    ["Relative clauses", /\b(?:who|which|that|where)\b/i, "Mệnh đề quan hệ bổ sung thông tin cho người, vật hoặc nơi chốn."],
-    ["Reason and contrast", /\b(?:because|although|though|but|so)\b/i, "Các từ nối giúp thể hiện nguyên nhân, kết quả hoặc sự tương phản."],
-  ]
-  chosen = rules.map do |title, pattern, note|
-    example = lines.find { |line| line.match?(pattern) }
-    [title, note, example] if example
-  end.compact.first(5)
-  chosen = [["Sentence building", "Quan sát trật tự chủ ngữ + động từ + bổ ngữ trong lời nói tự nhiên.", lines.first]] if chosen.empty?
-  intro = '<p class="generated-note">Grammar này được Listeningroom tự tạo từ transcript của bài, không sao chép tab Grammar của ELLLO.</p>'
-  intro + chosen.map { |title, note, example| "<section><h3>#{title}</h3><p>#{note}</p><blockquote>#{example}</blockquote></section>" }.join
+def vocabulary_html(doc, lesson_url)
+  frame = doc.at_css("#view3 iframe[src]")
+  return clean_html(doc.at_css("#view3")) unless frame
+  frame_url = URI.join(lesson_url, frame["src"].gsub(" ", "%20")).to_s
+  vocab_doc = Nokogiri::HTML(fetch(frame_url))
+  cards = vocab_doc.css(".picvocabwrap").map do |card|
+    term = card.at_css(".vocab")&.text&.gsub(/\s+/, " ")&.strip
+    image = card.at_css("img[src]")
+    next if term.to_s.empty?
+    image_url = image ? URI.join(frame_url, image["src"].gsub(" ", "%20")).to_s : nil
+    image_html = image_url ? "<img src=\"#{CGI.escapeHTML(image_url)}\" alt=\"#{CGI.escapeHTML(term)}\" loading=\"lazy\">" : ""
+    "<section class=\"vocab-item\">#{image_html}<h3>#{CGI.escapeHTML(term)}</h3></section>"
+  end.compact
+  return cards.join unless cards.empty?
+  clean_html(doc.at_css("#view3"))
+rescue StandardError
+  clean_html(doc.at_css("#view3"))
 end
 
 def index_entries(level, dir)
@@ -72,7 +66,7 @@ def index_entries(level, dir)
   entries = {}
   doc.css("a[href]").each do |link|
     href = link["href"]
-    next unless href&.match?(/\A#{level}-\d{3}-.+\.htm\z/i)
+    next unless href&.match?(/\A#{level}-\d{3}-.+\.html?\z/i)
     url = URI.join(index_url, href.gsub(" ", "%20")).to_s
     title = link.text.gsub(/\s+/, " ").strip
     entries[url] = title unless title.empty?
@@ -102,7 +96,8 @@ def scrape_lesson(level, level_name, url, index_title)
     collection: "videos", title: title, description: "One Minute English video lesson for #{level_name} learners.",
     topic: "One Minute English", speakers: speakers, videoUrl: video_url,
     audioUrl: File.exist?(audio_path) ? "/audio/videos/#{level.downcase}/#{File.basename(audio_path)}" : nil,
-    transcriptHtml: clean_html(transcript), grammarHtml: generated_grammar(transcript), sourceUrl: url
+    transcriptHtml: clean_html(transcript), vocabularyHtml: vocabulary_html(doc, url),
+    grammarHtml: GrammarGenerator.generate(clean_html(transcript)), grammarSource: "ai-generated-from-script", sourceUrl: url
   }
 end
 

@@ -63,7 +63,8 @@ def timings_for(lesson, audio_path)
   end
 end
 
-FILES.each do |filename|
+files = ARGV.empty? ? FILES : ARGV.map { |name| name.end_with?(".json") ? name : "#{name}.json" }
+files.each do |filename|
   path = File.join(ROOT, "public", "data", filename)
   payload = JSON.parse(File.read(path))
   lessons = payload["levels"].flat_map { |level| level["lessons"] }
@@ -75,7 +76,8 @@ FILES.each do |filename|
     Thread.new do
       loop do
         lesson = queue.pop(true) rescue break
-        audio_path = File.join(ROOT, "public", lesson["audioUrl"].sub(%r{\A/}, ""))
+        audio_rel = lesson["audioUrl"].to_s.sub(%r{\Ahttps?://[^/]+/}, "").sub(%r{\A/}, "")
+        audio_path = File.join(ROOT, "public", audio_rel)
         begin
           timing = timings_for(lesson, audio_path)
           lesson["scriptTimings"] = timing if timing

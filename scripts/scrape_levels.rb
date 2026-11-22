@@ -14,8 +14,9 @@ AUDIO_ROOT = File.join(ROOT, "public", "audio")
 FileUtils.mkdir_p(DATA_DIR)
 
 LEVELS = {
-  "A2" => { name: "High-Beginner", index: "https://elllo.org/english/grammar/A2-00-Grammar-Lessons.htm" },
-  "B1" => { name: "Intermediate", index: "https://elllo.org/english/grammar/B1-00-Grammar-Lessons.htm" },
+  "A1" => { name: "Beginner", index: "https://elllo.org/book/A1/index.html" },
+  "A2" => { name: "High-Beginner", index: "https://elllo.org/book/A2/index.html" },
+  "B1" => { name: "Intermediate", index: "https://elllo.org/book/B1/index.html" },
   "B2" => { name: "High-Intermediate", index: "https://elllo.org/book/B2/index.html" },
   "C1" => { name: "Advanced", index: "https://elllo.org/book/C1/index.html" }
 }.freeze
@@ -105,9 +106,9 @@ def scrape_level(level, config)
 
     youtube_src = document.at_css("iframe[src*='youtube.com']")&.[]("src")
     youtube_id = youtube_src&.match(%r{embed/([^?&/]+)})&.[](1)
-    all_sources = document.css("audio source[src]").map { |source| URI.join(url, source["src"]).to_s }
+    all_sources = document.css("audio source[src]").map { |source| URI.join(url, source["src"].gsub(" ", "%20")).to_s }
     combined_source = document.css("audio source[src]").find { |source| !source.ancestors("#view1").any? }
-    preferred_sources = combined_source ? [URI.join(url, combined_source["src"]).to_s] : document.css("#view1 audio source[src]").map { |source| URI.join(url, source["src"]).to_s }
+    preferred_sources = combined_source ? [URI.join(url, combined_source["src"].gsub(" ", "%20")).to_s] : document.css("#view1 audio source[src]").map { |source| URI.join(url, source["src"].gsub(" ", "%20")).to_s }
     preferred_sources = all_sources.first(1) if preferred_sources.empty?
     audio_filename = "#{id}.mp3"
     audio_path = File.join(audio_dir, audio_filename)
@@ -117,7 +118,7 @@ def scrape_level(level, config)
         download_file(preferred_sources.first, audio_path)
       rescue StandardError => error
         warn "  Combined audio unavailable (#{error.message}); using conversation parts"
-        preferred_sources = document.css("#view1 audio source[src]").map { |source| URI.join(url, source["src"]).to_s }
+        preferred_sources = document.css("#view1 audio source[src]").map { |source| URI.join(url, source["src"].gsub(" ", "%20")).to_s }
       end
     end
 
@@ -173,9 +174,6 @@ payloads = LEVELS.map do |level, config|
     scrape_level(level, config)
   end
 end
-a1 = JSON.parse(File.read(File.join(ROOT, "public", "data", "a1-lessons.json")))
-a1["lessons"].each { |lesson| lesson["level"] = "A1"; lesson["levelName"] = "Beginner" }
-File.write(File.join(DATA_DIR, "a1.json"), JSON.pretty_generate(a1))
-all = [a1] + payloads
+all = payloads
 File.write(File.join(ROOT, "public", "data", "all-lessons.json"), JSON.pretty_generate({ generatedAt: Time.now.utc.iso8601, levels: all }))
 warn "Saved combined dataset with #{all.sum { |payload| payload['lessons']&.length || payload[:lessons].length }} lessons"

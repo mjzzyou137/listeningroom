@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import LandingPage from './pages/LandingPage';
 import CollectionPage from './pages/CollectionPage';
 import LessonDetail from './pages/LessonDetail';
+import LevelOverview from './pages/LevelOverview';
 
 function parseHash(hash) {
   if (!hash || hash === '#/' || hash === '#') {
@@ -106,9 +107,9 @@ export default function App() {
 
   useEffect(() => {
     Promise.all([
-      fetch('/data/all-lessons.json?v=2'),
-      fetch('/data/natural-conversations.json?v=5'),
-      fetch('/data/one-minute-videos.json?v=3')
+      fetch('/data/all-lessons.json?v=3'),
+      fetch('/data/natural-conversations.json?v=6'),
+      fetch('/data/one-minute-videos.json?v=4')
     ])
       .then(async ([levelsRes, naturalRes, videoRes]) => {
         if (!levelsRes.ok || !naturalRes.ok || !videoRes.ok) {
@@ -177,6 +178,13 @@ export default function App() {
   }
 
   if (route.type === 'collection') {
+    if (route.collection === 'levels') {
+      return (
+        <div id="app">
+          <LevelOverview level={route.level} data={data} savedCount={saved.size} />
+        </div>
+      );
+    }
     return (
       <div id="app">
         <CollectionPage

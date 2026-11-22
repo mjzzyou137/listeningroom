@@ -26,7 +26,7 @@ export default function CollectionPage({
       : collection === 'videos'
       ? data.videoLevels
       : collection === 'grammar'
-      ? data.levels.filter((lvl) => lvl.level !== 'C1')
+      ? data.levels
       : data.levels;
 
   const currentLevel = activeLevels.find((lvl) => lvl.level === level) || activeLevels[0];
@@ -54,7 +54,11 @@ export default function CollectionPage({
       : heroLinesMap[safeLevel] || ['Small lessons.', 'A confident beginning.'];
 
   const contentLabel =
-    collection === 'natural' ? 'Script + Vocabulary' : 'Script + Grammar';
+    collection === 'natural'
+      ? 'Script + Vocabulary + Grammar'
+      : collection === 'videos'
+      ? 'Video + Audio + Script + Vocabulary + AI Grammar'
+      : 'Script + Original Grammar';
 
   const allLessons = currentLevel?.lessons || [];
 
@@ -88,6 +92,8 @@ export default function CollectionPage({
   const headingPrefix =
     collection === 'natural'
       ? 'Natural Conversations'
+      : collection === 'videos'
+      ? 'One Minute English Videos'
       : collection === 'grammar'
       ? 'Grammar Lessons & Books'
       : 'Thư viện';
@@ -109,7 +115,7 @@ export default function CollectionPage({
           </div>
 
           <section
-            className={`library-hero ${collection === 'natural' ? 'natural-hero' : ''}`}
+            className={`library-hero ${collection === 'natural' ? 'natural-hero' : collection === 'videos' ? 'video-hero' : ''}`}
           >
             <div className="library-copy">
               <span className="eyebrow">
