@@ -437,16 +437,22 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
                       <div className="diff-legend">
                         <div className="diff-legend-item">
                           <span className="legend-dot green" />
-                          <span>Từ đúng (xanh lá)</span>
+                          <span>Từ đúng</span>
+                        </div>
+                        <div className="diff-legend-item">
+                          <span className="legend-fix-badge">
+                            <del>sai</del> ➔ đúng
+                          </span>
+                          <span>Từ cần sửa</span>
                         </div>
                         <div className="diff-legend-item">
                           <span className="legend-dot red" />
-                          <span>Chưa đúng / Thừa (đỏ)</span>
+                          <span>Từ còn thiếu</span>
                         </div>
                       </div>
                     </div>
 
-                    {/* Section 1: Bạn viết (Matching Image 1) */}
+                    {/* Section 1: Bạn viết (Matching Image 1 with inline corrections) */}
                     <div className="diff-block diff-block-user">
                       <div className="diff-block-header">
                         <span className="diff-block-label">Bạn viết</span>
@@ -471,10 +477,13 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
                             return (
                               <span
                                 key={idx}
-                                className="diff-word word-wrong"
-                                title={`Bạn viết: "${tok.word}" · Đáp án: "${tok.expected}"`}
+                                className="diff-correction-pair"
+                                title={`Bạn viết: "${tok.word}" ➔ Đáp án chuẩn: "${tok.expected}"`}
                               >
-                                {tok.word}{' '}
+                                <del className="diff-wrong-val">{tok.word}</del>
+                                <span className="diff-arrow">➔</span>
+                                <span className="diff-correct-val">{tok.expected}</span>
+                                {' '}
                               </span>
                             );
                           }
@@ -482,10 +491,10 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
                             return (
                               <span
                                 key={idx}
-                                className="diff-word word-wrong"
-                                title={`Từ thừa hoặc không có trong bài: "${tok.word}"`}
+                                className="diff-word word-extra"
+                                title={`Từ thừa không cần thiết: "${tok.word}"`}
                               >
-                                {tok.word}{' '}
+                                <del>{tok.word}</del>{' '}
                               </span>
                             );
                           }
