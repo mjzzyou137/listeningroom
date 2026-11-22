@@ -107,9 +107,9 @@ export default function App() {
 
   useEffect(() => {
     Promise.all([
-      fetch('/data/all-lessons.json?v=3'),
-      fetch('/data/natural-conversations.json?v=6'),
-      fetch('/data/one-minute-videos.json?v=4')
+      fetch('/data/all-lessons.json?v=20261122_01'),
+      fetch('/data/natural-conversations.json?v=20261122_01'),
+      fetch('/data/one-minute-videos.json?v=20261122_01')
     ])
       .then(async ([levelsRes, naturalRes, videoRes]) => {
         if (!levelsRes.ok || !naturalRes.ok || !videoRes.ok) {

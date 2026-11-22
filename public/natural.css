@@ -34,7 +34,17 @@
 .home-category-card .sample-link svg { width: 17px; }
 .video-hero { background: #f7f0df; border-color: #eadfca; }
 .video-player { max-width: 1120px; margin: 28px auto; padding: 0 24px; }
-.video-player iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 22px; background: #122b27; box-shadow: 0 18px 45px rgba(20,45,40,.14); }
+.video-player-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding: 0 4px; }
+.video-player-title { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 750; color: #17332c; }
+.video-player-title svg { width: 18px; height: 18px; color: #16765e; }
+.video-sub-btn { display: inline-flex; align-items: center; gap: 7px; padding: 6px 14px; border-radius: 999px; border: 1px solid #d4deda; background: #fff; color: #556963; font-size: 13px; font-weight: 700; cursor: pointer; transition: all .2s ease; }
+.video-sub-btn svg { width: 18px; height: 18px; }
+.video-sub-btn:hover { background: #f0f6f3; border-color: #16765e; color: #16765e; }
+.video-sub-btn.active { background: #e6f4ee; border-color: #16765e; color: #11624d; }
+.video-wrapper { position: relative; border-radius: 22px; overflow: hidden; box-shadow: 0 18px 45px rgba(20,45,40,.14); background: #000; }
+.video-player iframe, .video-player video { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 22px; background: #122b27; box-shadow: 0 18px 45px rgba(20,45,40,.14); display: block; }
+.video-player video::cue { background-color: rgba(16, 28, 25, 0.85); color: #fff; font-family: inherit; font-size: 16px; font-weight: 600; padding: 4px 10px; border-radius: 6px; line-height: 1.4; }
+@media (max-width: 680px) { .video-player video::cue { font-size: 13px; padding: 2px 6px; } .video-player-header { font-size: 14px; } }
 .video-player a { display: inline-flex; gap: 5px; align-items: center; margin-top: 12px; color: #17765f; font-weight: 700; text-decoration: none; }
 .video-player a svg { width: 18px; }
 .generated-note { padding: 15px 18px; border-radius: 12px; background: #eef6f2; color: #42675b; }

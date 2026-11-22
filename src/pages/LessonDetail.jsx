@@ -11,8 +11,10 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
   const [autoScroll, setAutoScroll] = useState(true);
 
   const audioRef = useRef(null);
+  const videoRef = useRef(null);
   const transcriptRef = useRef(null);
   const autoScrollRef = useRef(true);
+  const [subtitlesEnabled, setSubtitlesEnabled] = useState(true);
 
   // Find lesson across all collections
   const allCollections = [
@@ -81,18 +83,32 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
   const nextLesson = siblings[(currentIndex + 1) % siblings.length];
 
   const CLOUDFLARE_R2_BASE = 'https://pub-5c009e46a0b34c0f831960b4fa794044.r2.dev';
-  const getAudioUrl = (audioPath) => {
-    if (!audioPath) return '';
-    if (audioPath.startsWith('http')) return audioPath;
-    return `${CLOUDFLARE_R2_BASE}${audioPath.startsWith('/') ? audioPath : '/' + audioPath}`;
+  const getMediaUrl = (mediaPath) => {
+    if (!mediaPath) return '';
+    if (mediaPath.startsWith('http')) return mediaPath;
+    return `${CLOUDFLARE_R2_BASE}${mediaPath.startsWith('/') ? mediaPath : '/' + mediaPath}`;
   };
 
   const resolvedAudioSrc =
     typeof window !== 'undefined' &&
     window.location.hostname !== 'localhost' &&
     window.location.hostname !== '127.0.0.1'
-      ? getAudioUrl(lesson.audioUrl)
-      : (lesson.audioUrl || getAudioUrl(lesson.audioUrl));
+      ? getMediaUrl(lesson.audioUrl)
+      : (lesson.audioUrl || getMediaUrl(lesson.audioUrl));
+
+  const resolvedVideoSrc =
+    typeof window !== 'undefined' &&
+    window.location.hostname !== 'localhost' &&
+    window.location.hostname !== '127.0.0.1'
+      ? getMediaUrl(lesson.videoUrl)
+      : (lesson.videoUrl || getMediaUrl(lesson.videoUrl));
+
+  const resolvedSubtitleSrc =
+    typeof window !== 'undefined' &&
+    window.location.hostname !== 'localhost' &&
+    window.location.hostname !== '127.0.0.1'
+      ? getMediaUrl(lesson.subtitleUrl)
+      : (lesson.subtitleUrl || getMediaUrl(lesson.subtitleUrl));
 
   const allowedTabs =
     collectionType === 'natural' || collectionType === 'videos'
@@ -108,7 +124,38 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
     );
   }, [lesson?.transcriptHtml]);
 
+  const isDirectVideo = useMemo(() => {
+    if (!lesson?.videoUrl) return false;
+    const url = lesson.videoUrl.toLowerCase();
+    return url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.ogg') || url.startsWith('/videos/');
+  }, [lesson?.videoUrl]);
+
+  const toggleSubtitles = () => {
+    const nextState = !subtitlesEnabled;
+    if (videoRef.current && videoRef.current.textTracks) {
+      for (let i = 0; i < videoRef.current.textTracks.length; i++) {
+        videoRef.current.textTracks[i].mode = nextState ? 'showing' : 'hidden';
+      }
+    }
+    setSubtitlesEnabled(nextState);
+  };
+
+  const handleVideoLoadedMetadata = () => {
+    if (videoRef.current && videoRef.current.textTracks) {
+      for (let i = 0; i < videoRef.current.textTracks.length; i++) {
+        videoRef.current.textTracks[i].mode = subtitlesEnabled ? 'showing' : 'hidden';
+      }
+    }
+  };
+
+  const handleVideoPlay = () => {
+    if (audioRef.current && !audioRef.current.paused) {
+      audioRef.current.pause();
+    }
+  };
+
   const embedVideoUrl = useMemo(() => {
+    if (isDirectVideo) return null;
     const rawUrl = lesson?.videoUrl || lesson?.youtubeUrl;
     if (!rawUrl) return null;
 
@@ -129,15 +176,16 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
     }
 
     return rawUrl;
-  }, [lesson?.videoUrl, lesson?.youtubeUrl]);
+  }, [isDirectVideo, lesson?.videoUrl, lesson?.youtubeUrl]);
 
-  // Audio & Transcript synchronization effect
+  // Audio/Video & Transcript synchronization effect
   useEffect(() => {
     if (currentTab !== 'script' || !transcriptRef.current || !audioRef.current) {
       return;
     }
 
     const audio = audioRef.current;
+    const video = videoRef.current;
     const container = transcriptRef.current;
     const lines = [...container.querySelectorAll('p')].filter((line) =>
       line.textContent.trim()
@@ -163,15 +211,18 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
       lines.forEach((line) => line.classList.remove('script-active'));
     };
 
-    const sync = () => {
+    const sync = (customMedia) => {
+      const media = customMedia || (video && !video.paused ? video : audio);
+      if (!media) return;
+
       let nextIdx;
       if (preciseTimings) {
-        nextIdx = preciseTimings.findLastIndex((time) => time <= audio.currentTime + 0.05);
+        nextIdx = preciseTimings.findLastIndex((time) => time <= media.currentTime + 0.05);
         if (nextIdx < 0) nextIdx = 0;
         if (nextIdx >= lines.length) nextIdx = lines.length - 1;
       } else {
-        if (!audio.duration || !Number.isFinite(audio.duration)) return;
-        const target = (audio.currentTime / audio.duration) * totalWeight;
+        if (!media.duration || !Number.isFinite(media.duration)) return;
+        const target = (media.currentTime / media.duration) * totalWeight;
         let running = 0;
         const index = weights.findIndex((weight) => {
           running += weight;
@@ -189,15 +240,18 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
       const activeLine = lines[nextIdx];
       if (activeLine) {
         activeLine.classList.add('script-active');
-        if (autoScrollRef.current && !audio.paused) {
+        if (autoScrollRef.current && !media.paused) {
           activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       }
     };
 
     const seekToLine = (index) => {
+      const isVideoActive = video && (isDirectVideo || !video.paused);
+      const targetMedia = isVideoActive ? video : audio;
+
       const seek = () => {
-        if (!audio.duration || !Number.isFinite(audio.duration)) return;
+        if (!targetMedia.duration || !Number.isFinite(targetMedia.duration)) return;
         let targetTime;
         if (preciseTimings) {
           if (index < preciseTimings.length) {
@@ -209,58 +263,78 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
           const weightBefore = weights
             .slice(0, index)
             .reduce((sum, weight) => sum + weight, 0);
-          targetTime = (weightBefore / totalWeight) * audio.duration;
+          targetTime = (weightBefore / totalWeight) * targetMedia.duration;
         }
 
-        audio.currentTime = Math.min(audio.duration - 0.05, targetTime);
+        targetMedia.currentTime = Math.min(targetMedia.duration - 0.05, targetTime);
         localActiveIndex = -1;
         autoScrollRef.current = true;
-        sync();
-        audio.play().catch(() => {});
+        sync(targetMedia);
+        targetMedia.play().catch(() => {});
       };
 
-      if (audio.readyState >= 1) {
+      if (targetMedia.readyState >= 1) {
         seek();
       } else {
-        audio.addEventListener('loadedmetadata', seek, { once: true });
+        targetMedia.addEventListener('loadedmetadata', seek, { once: true });
       }
     };
 
-    const handlePlay = () => {
+    const handleAudioPlay = () => {
+      if (video && !video.paused) {
+        video.pause();
+      }
       autoScrollRef.current = autoScroll;
       setIsPlaying(true);
       setHasStarted(true);
-      sync();
+      sync(audio);
     };
 
-    const handlePause = () => {
+    const handleVideoPlaySync = () => {
+      if (audio && !audio.paused) {
+        audio.pause();
+      }
+      autoScrollRef.current = autoScroll;
+      sync(video);
+    };
+
+    const handleAudioPause = () => {
       setIsPlaying(false);
     };
 
-    const handleEnded = () => {
+    const handleMediaEnded = () => {
       setIsPlaying(false);
       clearHighlight();
       setActiveIndex(-1);
     };
 
-    const handleTimeUpdate = () => {
-      sync();
-    };
-
-    const handleSeeked = () => {
+    const handleAudioTimeUpdate = () => sync(audio);
+    const handleVideoTimeUpdate = () => sync(video);
+    const handleAudioSeeked = () => {
       localActiveIndex = -1;
-      sync();
+      sync(audio);
+    };
+    const handleVideoSeeked = () => {
+      localActiveIndex = -1;
+      sync(video);
     };
 
-    audio.addEventListener('play', handlePlay);
-    audio.addEventListener('pause', handlePause);
-    audio.addEventListener('ended', handleEnded);
-    audio.addEventListener('timeupdate', handleTimeUpdate);
-    audio.addEventListener('seeked', handleSeeked);
+    audio.addEventListener('play', handleAudioPlay);
+    audio.addEventListener('pause', handleAudioPause);
+    audio.addEventListener('ended', handleMediaEnded);
+    audio.addEventListener('timeupdate', handleAudioTimeUpdate);
+    audio.addEventListener('seeked', handleAudioSeeked);
+
+    if (video) {
+      video.addEventListener('play', handleVideoPlaySync);
+      video.addEventListener('ended', handleMediaEnded);
+      video.addEventListener('timeupdate', handleVideoTimeUpdate);
+      video.addEventListener('seeked', handleVideoSeeked);
+    }
 
     lines.forEach((line, index) => {
       line.classList.add('script-seekable');
-      line.setAttribute('title', 'Phát audio từ đoạn này');
+      line.setAttribute('title', isDirectVideo ? 'Phát từ đoạn này' : 'Phát audio từ đoạn này');
       line.setAttribute('tabindex', '0');
       const clickHandler = () => seekToLine(index);
       const keyHandler = (event) => {
@@ -279,17 +353,23 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
     });
 
     return () => {
-      audio.removeEventListener('play', handlePlay);
-      audio.removeEventListener('pause', handlePause);
-      audio.removeEventListener('ended', handleEnded);
-      audio.removeEventListener('timeupdate', handleTimeUpdate);
-      audio.removeEventListener('seeked', handleSeeked);
+      audio.removeEventListener('play', handleAudioPlay);
+      audio.removeEventListener('pause', handleAudioPause);
+      audio.removeEventListener('ended', handleMediaEnded);
+      audio.removeEventListener('timeupdate', handleAudioTimeUpdate);
+      audio.removeEventListener('seeked', handleAudioSeeked);
+      if (video) {
+        video.removeEventListener('play', handleVideoPlaySync);
+        video.removeEventListener('ended', handleMediaEnded);
+        video.removeEventListener('timeupdate', handleVideoTimeUpdate);
+        video.removeEventListener('seeked', handleVideoSeeked);
+      }
       lines.forEach((line) => {
         line.classList.remove('script-active', 'script-seekable');
         if (line._cleanup) line._cleanup();
       });
     };
-  }, [lesson, currentTab]);
+  }, [lesson, currentTab, isDirectVideo]);
 
   const togglePlayAudio = () => {
     if (!audioRef.current) return;
@@ -422,7 +502,48 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
           </div>
         </section>
 
-        {embedVideoUrl && (
+        {isDirectVideo ? (
+          <section className="video-player">
+            <div className="video-player-header">
+              <div className="video-player-title">
+                <Icon name="play" /> Video bài học
+              </div>
+              {lesson.subtitleUrl && (
+                <button
+                  type="button"
+                  className={`video-sub-btn ${subtitlesEnabled ? 'active' : ''}`}
+                  onClick={toggleSubtitles}
+                  title={subtitlesEnabled ? 'Tắt phụ đề (CC)' : 'Bật phụ đề (CC)'}
+                >
+                  <Icon name="cc" />
+                  <span>Phụ đề {subtitlesEnabled ? 'BẬT' : 'TẮT'}</span>
+                </button>
+              )}
+            </div>
+            <div className="video-wrapper">
+              <video
+                ref={videoRef}
+                controls
+                playsInline
+                preload="metadata"
+                src={resolvedVideoSrc}
+                onPlay={handleVideoPlay}
+                onLoadedMetadata={handleVideoLoadedMetadata}
+              >
+                {resolvedSubtitleSrc && (
+                  <track
+                    kind="subtitles"
+                    src={resolvedSubtitleSrc}
+                    srcLang="en"
+                    label="English"
+                    default
+                  />
+                )}
+                Trình duyệt của bạn không hỗ trợ phát video HTML5.
+              </video>
+            </div>
+          </section>
+        ) : embedVideoUrl ? (
           <section className="video-player">
             <iframe
               src={embedVideoUrl}
@@ -432,7 +553,7 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
               allowFullScreen
             />
           </section>
-        )}
+        ) : null}
 
         <section className="player-card">
           <div className="player-label">

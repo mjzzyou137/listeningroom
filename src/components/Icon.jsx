@@ -11,7 +11,8 @@ const paths = {
   stop: '<rect x="6" y="6" width="12" height="12" rx="1"/>',
   pause: '<path d="M8 5v14M16 5v14"/>',
   grid: '<rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/>',
-  wave: '<path d="M4 12h2m2-4v8m3-11v14m3-9v4m3-7v10m3-5h1"/>'
+  wave: '<path d="M4 12h2m2-4v8m3-11v14m3-9v4m3-7v10m3-5h1"/>',
+  cc: '<rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9.5a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2M16 9.5a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'
 };
 
 export default function Icon({ name, className = '', ...props }) {

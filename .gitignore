@@ -3,8 +3,11 @@ dist
 .whisper_cache
 models
 .DS_Store
-*.log
+__pycache__/
+*.pyc
 work/
 public/audio/
+public/videos/
+.venv/
 .vercel
 
