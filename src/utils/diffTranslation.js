@@ -68,34 +68,80 @@ export function diffTranslation(userText, modelText) {
       totalModelWords: n,
       correctCount: 0,
       userWordCount: 0,
-      userTokens: [],
-      modelTokens: modelWords.map((w) => ({ word: w, matched: false })),
+      hasMore: n > 0,
       tokens: modelWords.map((w) => ({
         type: 'missing',
         expected: w
-      }))
+      })),
+      modelTokens: modelWords.map((w) => ({ word: w, matched: false }))
     };
   }
 
-  // LCS Matrix
+  // Semi-global localized dynamic programming alignment:
+  // Match: 0 cost
+  // Substitution / typo: 2.5 cost
+  // Delete extra user word: 2.0 cost
+  // Insert missing model word: 1.5 cost
   const dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
-  for (let i = 0; i < m; i++) {
-    for (let j = 0; j < n; j++) {
-      if (canonicalWord(userWords[i]) === canonicalWord(modelWords[j])) {
-        dp[i + 1][j + 1] = dp[i][j] + 1;
-      } else {
-        dp[i + 1][j + 1] = Math.max(dp[i + 1][j], dp[i][j + 1]);
+  const op = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(''));
+
+  for (let j = 0; j <= n; j++) {
+    dp[0][j] = j * 1.5;
+    op[0][j] = 'insert';
+  }
+  for (let i = 0; i <= m; i++) {
+    dp[i][0] = i * 2.5;
+    op[i][0] = 'delete';
+  }
+  dp[0][0] = 0;
+
+  for (let i = 1; i <= m; i++) {
+    const uWord = canonicalWord(userWords[i - 1]);
+    for (let j = 1; j <= n; j++) {
+      const mWord = canonicalWord(modelWords[j - 1]);
+      const isMatch = uWord === mWord;
+
+      const matchCost = isMatch ? 0 : 2.5;
+      const costMatch = dp[i - 1][j - 1] + matchCost;
+      const costDelete = dp[i - 1][j] + 2.0;
+      const costInsert = dp[i][j - 1] + 1.5;
+
+      let minCost = costMatch;
+      let bestOp = isMatch ? 'match' : 'sub';
+
+      if (costInsert < minCost) {
+        minCost = costInsert;
+        bestOp = 'insert';
+      }
+      if (costDelete < minCost) {
+        minCost = costDelete;
+        bestOp = 'delete';
+      }
+
+      dp[i][j] = minCost;
+      op[i][j] = bestOp;
+    }
+  }
+
+  // Semi-global prefix alignment: user may only have written the first sentence/clause
+  let bestJ = n;
+  if (m < n * 0.8) {
+    let minCost = Infinity;
+    for (let j = 1; j <= n; j++) {
+      if (dp[m][j] < minCost) {
+        minCost = dp[m][j];
+        bestJ = j;
       }
     }
   }
 
   let i = m;
-  let j = n;
+  let j = bestJ;
   const rawTokens = [];
   const modelMatched = new Array(n).fill(false);
 
-  while (i > 0 && j > 0) {
-    if (canonicalWord(userWords[i - 1]) === canonicalWord(modelWords[j - 1])) {
+  while (i > 0 || j > 0) {
+    if (i > 0 && j > 0 && op[i][j] === 'match') {
       modelMatched[j - 1] = true;
       rawTokens.push({
         type: 'correct',
@@ -104,7 +150,15 @@ export function diffTranslation(userText, modelText) {
       });
       i--;
       j--;
-    } else if (dp[i - 1][j] >= dp[i][j - 1]) {
+    } else if (i > 0 && j > 0 && op[i][j] === 'sub') {
+      rawTokens.push({
+        type: 'wrong_word',
+        word: userWords[i - 1],
+        expected: modelWords[j - 1]
+      });
+      i--;
+      j--;
+    } else if (i > 0 && (j === 0 || op[i][j] === 'delete')) {
       rawTokens.push({
         type: 'incorrect',
         word: userWords[i - 1]
@@ -119,65 +173,24 @@ export function diffTranslation(userText, modelText) {
     }
   }
 
-  while (i > 0) {
-    rawTokens.push({ type: 'incorrect', word: userWords[i - 1] });
-    i--;
-  }
-  while (j > 0) {
-    rawTokens.push({ type: 'missing', expected: modelWords[j - 1] });
-    j--;
-  }
-
   rawTokens.reverse();
 
-  // Merge adjacent incorrect and missing into a paired wrong_word
-  const tokens = [];
-  for (let k = 0; k < rawTokens.length; k++) {
-    const cur = rawTokens[k];
-    const nxt = rawTokens[k + 1];
-    if (cur.type === 'incorrect' && nxt && nxt.type === 'missing') {
-      tokens.push({
-        type: 'wrong_word',
-        word: cur.word,
-        expected: nxt.expected
-      });
-      k++;
-    } else if (cur.type === 'missing' && nxt && nxt.type === 'incorrect') {
-      tokens.push({
-        type: 'wrong_word',
-        word: nxt.word,
-        expected: cur.expected
-      });
-      k++;
-    } else {
-      tokens.push(cur);
-    }
-  }
-
-  const userTokens = tokens
-    .filter((t) => t.word !== undefined)
-    .map((t) => ({
-      word: t.word,
-      type: t.type,
-      isCorrect: t.type === 'correct',
-      expected: t.expected || null
-    }));
+  const correctCount = rawTokens.filter((t) => t.type === 'correct').length;
+  const score = Math.min(100, Math.round((correctCount / Math.max(n, 1)) * 100));
 
   const modelTokens = modelWords.map((w, idx) => ({
     word: w,
     matched: modelMatched[idx]
   }));
 
-  const correctCount = dp[m][n];
-  const score = Math.min(100, Math.round((correctCount / Math.max(n, 1)) * 100));
-
   return {
     score,
     totalModelWords: n,
     correctCount,
     userWordCount: m,
-    userTokens,
-    modelTokens,
-    tokens
+    hasMore: bestJ < n,
+    bestJ,
+    tokens: rawTokens,
+    modelTokens
   };
 }

@@ -450,23 +450,61 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
                     <div className="diff-block diff-block-user">
                       <div className="diff-block-header">
                         <span className="diff-block-label">Bạn viết</span>
+                        {diffResult.hasMore && (
+                          <span className="diff-incomplete-pill">Chưa dịch hết đoạn văn</span>
+                        )}
                       </div>
                       <div className="diff-prose diff-user-prose">
-                        {userTokens.map((tok, idx) => (
-                          <span
-                            key={idx}
-                            className={`diff-word ${tok.isCorrect ? 'word-correct' : 'word-wrong'}`}
-                            title={
-                              tok.isCorrect
-                                ? 'Chính xác'
-                                : tok.expected
-                                ? `Chưa chuẩn. Đáp án mẫu: "${tok.expected}"`
-                                : 'Từ này không có trong đáp án mẫu hoặc thừa'
-                            }
-                          >
-                            {tok.word}{' '}
-                          </span>
-                        ))}
+                        {(diffResult.tokens || []).map((tok, idx) => {
+                          if (tok.type === 'correct') {
+                            return (
+                              <span
+                                key={idx}
+                                className="diff-word word-correct"
+                                title="Chính xác"
+                              >
+                                {tok.word}{' '}
+                              </span>
+                            );
+                          }
+                          if (tok.type === 'wrong_word') {
+                            return (
+                              <span
+                                key={idx}
+                                className="diff-word word-wrong"
+                                title={`Bạn viết: "${tok.word}" · Đáp án: "${tok.expected}"`}
+                              >
+                                {tok.word}{' '}
+                              </span>
+                            );
+                          }
+                          if (tok.type === 'incorrect') {
+                            return (
+                              <span
+                                key={idx}
+                                className="diff-word word-wrong"
+                                title={`Từ thừa hoặc không có trong bài: "${tok.word}"`}
+                              >
+                                {tok.word}{' '}
+                              </span>
+                            );
+                          }
+                          if (tok.type === 'missing') {
+                            return (
+                              <span
+                                key={idx}
+                                className="diff-word word-missing"
+                                title={`Bạn bị thiếu từ: "${tok.expected}"`}
+                              >
+                                {tok.expected}{' '}
+                              </span>
+                            );
+                          }
+                          return null;
+                        })}
+                        {diffResult.hasMore && (
+                          <span className="diff-remaining-ellipsis" title="Còn các câu tiếp theo chưa dịch">…</span>
+                        )}
                       </div>
                     </div>
 

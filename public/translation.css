@@ -732,6 +732,40 @@
   border-radius: 3px;
 }
 
+/* Missing Word: Báo đỏ nổi bật tại chỗ bị thiếu từ */
+.diff-word.word-missing {
+  color: #dc2626;
+  font-weight: 700;
+  background-color: #fee2e2;
+  border: 1px dashed #fca5a5;
+  padding: 1px 6px;
+  border-radius: 5px;
+  text-decoration: underline wavy #ef4444;
+  text-underline-offset: 4px;
+  cursor: help;
+}
+
+.diff-word.word-missing:hover {
+  background-color: #fecdd3;
+}
+
+.diff-incomplete-pill {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #b45309;
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.diff-remaining-ellipsis {
+  color: #94a3b8;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-left: 4px;
+}
+
 /* Model Answer Words: matched vs missing */
 .diff-model-word {
   display: inline;
