@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function Header({ collection, level, compact = false }) {
-  const naturalOrVideoLevel = level === 'A1' ? 'A2' : level;
   const badgeType =
     collection === 'natural'
       ? 'NATURAL'
@@ -9,7 +8,20 @@ export default function Header({ collection, level, compact = false }) {
       ? 'VIDEO'
       : collection === 'grammar'
       ? 'GRAMMAR'
+      : collection === 'translation'
+      ? 'LUYỆN DỊCH'
+      : collection === 'sentence-building'
+      ? 'GHÉP CÂU'
       : 'LEVEL';
+
+  const currentLevel = level || 'A1';
+  const naturalOrVideoLevel = currentLevel === 'A1' ? 'A2' : currentLevel;
+  const pillHref =
+    collection === 'translation'
+      ? '#/translation'
+      : collection === 'sentence-building'
+      ? '#/sentence-building'
+      : `#/collection/${collection}/${currentLevel}`;
 
   return (
     <header className={`site-header ${compact ? 'compact' : ''}`}>
@@ -40,13 +52,25 @@ export default function Header({ collection, level, compact = false }) {
         </a>
         <a
           className={collection === 'grammar' ? 'active' : ''}
-          href={`#/collection/grammar/${level}`}
+          href={`#/collection/grammar/${currentLevel}`}
         >
           Grammar Lessons & Books
         </a>
+        <a
+          className={collection === 'translation' ? 'active' : ''}
+          href="#/translation"
+        >
+          Luyện dịch
+        </a>
+        <a
+          className={collection === 'sentence-building' ? 'active' : ''}
+          href="#/sentence-building"
+        >
+          Ghép câu
+        </a>
       </nav>
-      <a className="level-pill" href={`#/collection/${collection}/${level}`}>
-        {badgeType} {level}
+      <a className="level-pill" href={pillHref}>
+        {badgeType} {collection === 'translation' ? '90 BÀI' : collection === 'sentence-building' ? '2500 CÂU' : currentLevel}
       </a>
     </header>
   );

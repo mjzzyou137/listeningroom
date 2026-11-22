@@ -152,6 +152,151 @@ export default function LandingPage({ data }) {
             C1: 'Advanced Grammar Lessons'
           }
         )}
+
+        <section className="home-category-section">
+          <div className="home-category-head">
+            <div>
+              <span className="eyebrow">Dịch Việt → Anh</span>
+              <h2>Luyện Dịch 90 Chủ Đề</h2>
+            </div>
+            <p>Tự viết bản dịch vào dòng kẻ, kiểm tra đối chiếu từng từ đúng/sai từ A1 đến B1 theo chủ đề.</p>
+          </div>
+          <div className="home-category-grid">
+            <article className="home-category-card">
+              <span>Cấp A1 (Bài 1–30)</span>
+              <h3>Hiện tại đơn & Tiếp diễn</h3>
+              <p>Giới thiệu bản thân, Gia đình tôi, Bữa sáng, Sở thích...</p>
+              <div>
+                <a href="#/translation/A1">Luyện 30 bài A1</a>
+                <a className="sample-link" href="#/translation/lesson/translation-a1-01">
+                  Bài 1 mẫu <Icon name="arrow" />
+                </a>
+              </div>
+            </article>
+            <article className="home-category-card">
+              <span>Cấp A2 (Bài 31–60)</span>
+              <h3>Quá khứ, Tương lai, So sánh</h3>
+              <p>Đi siêu thị, Một ngày mưa, Nhà hàng, Kế hoạch...</p>
+              <div>
+                <a href="#/translation/A2">Luyện 30 bài A2</a>
+                <a className="sample-link" href="#/translation/lesson/translation-a2-31">
+                  Bài 31 mẫu <Icon name="arrow" />
+                </a>
+              </div>
+            </article>
+            <article className="home-category-card">
+              <span>Cấp B1 (Bài 61–90)</span>
+              <h3>Hiện tại hoàn thành & Quan điểm</h3>
+              <p>Lợi ích đọc sách, Mạng xã hội, Làm việc ở nhà, AI...</p>
+              <div>
+                <a href="#/translation/B1">Luyện 30 bài B1</a>
+                <a className="sample-link" href="#/translation/lesson/translation-b1-61">
+                  Bài 61 mẫu <Icon name="arrow" />
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section className="home-category-section">
+          <div className="home-category-head">
+            <div>
+              <span className="eyebrow">Ráp Câu & Luyện Nghe</span>
+              <h2>Ghép Câu Tiếng Anh (2,500 Câu)</h2>
+            </div>
+            <p>Ráp các từ xáo trộn thành câu hoàn chỉnh theo 90 chủ đề từ cơ bản đến nâng cao, kèm audio nghe toàn bài với phát âm chuẩn.</p>
+          </div>
+          <div className="home-category-grid">
+            <article className="home-category-card">
+              <span>Phần 1 (Chủ đề 1–10)</span>
+              <h3>Giao tiếp cơ bản</h3>
+              <p>Chào hỏi, Giới thiệu, Cảm ơn & Xin lỗi, Hỏi đường, Gia đình...</p>
+              <div>
+                <a href="#/sentence-building/part-1">10 chủ đề (300 câu)</a>
+                <a className="sample-link" href="#/sentence-building/topic/topic-01">
+                  Chủ đề 1 <Icon name="arrow" />
+                </a>
+              </div>
+            </article>
+            <article className="home-category-card">
+              <span>Phần 2 (Chủ đề 11–20)</span>
+              <h3>Đời sống & Sinh hoạt</h3>
+              <p>Thói quen hàng ngày, Ăn uống, Mua sắm, Nhà cửa, Thời tiết...</p>
+              <div>
+                <a href="#/sentence-building/part-2">10 chủ đề (300 câu)</a>
+                <a className="sample-link" href="#/sentence-building/topic/topic-11">
+                  Chủ đề 11 <Icon name="arrow" />
+                </a>
+              </div>
+            </article>
+            <article className="home-category-card">
+              <span>Phần 3 (Chủ đề 21–30)</span>
+              <h3>Công việc & Sự nghiệp</h3>
+              <p>Phỏng vấn, Đồng nghiệp, Cuộc họp, Báo cáo tiến độ, Đàm phán...</p>
+              <div>
+                <a href="#/sentence-building/part-3">10 chủ đề (300 câu)</a>
+                <a className="sample-link" href="#/sentence-building/topic/topic-21">
+                  Chủ đề 21 <Icon name="arrow" />
+                </a>
+              </div>
+            </article>
+            <article className="home-category-card">
+              <span>Phần 4 & 5 (Chủ đề 31–50)</span>
+              <h3>Giải trí & Nâng cao</h3>
+              <p>Du lịch, Sở thích, Sức khỏe, Tranh luận, Tình huống khẩn cấp...</p>
+              <div>
+                <a href="#/sentence-building/part-4">20 chủ đề (600 câu)</a>
+                <a className="sample-link" href="#/sentence-building/topic/topic-31">
+                  Chủ đề 31 <Icon name="arrow" />
+                </a>
+              </div>
+            </article>
+            <article className="home-category-card">
+              <span>Phần 6 (Chủ đề 51–60)</span>
+              <h3>Gặp Người Nước Ngoài</h3>
+              <p>Bắt chuyện, Small talk, Phục vụ khách, Đi chợ, Thuê nhà...</p>
+              <div>
+                <a href="#/sentence-building/part-6">10 chủ đề (250 câu)</a>
+                <a className="sample-link" href="#/sentence-building/topic/topic-51">
+                  Chủ đề 51 <Icon name="arrow" />
+                </a>
+              </div>
+            </article>
+            <article className="home-category-card">
+              <span>Phần 7 (Chủ đề 61–70)</span>
+              <h3>Đời Sống Người Trẻ</h3>
+              <p>Mạng xã hội, Từ lóng, Hẹn hò, Thời trang, Gym & Fitness...</p>
+              <div>
+                <a href="#/sentence-building/part-7">10 chủ đề (250 câu)</a>
+                <a className="sample-link" href="#/sentence-building/topic/topic-61">
+                  Chủ đề 61 <Icon name="arrow" />
+                </a>
+              </div>
+            </article>
+            <article className="home-category-card">
+              <span>Phần 8 (Chủ đề 71–80)</span>
+              <h3>Giao Tiếp Nâng Cao</h3>
+              <p>Kể chuyện quá khứ, Ước mơ, Đưa lời khuyên, Thuyết phục...</p>
+              <div>
+                <a href="#/sentence-building/part-8">10 chủ đề (250 câu)</a>
+                <a className="sample-link" href="#/sentence-building/topic/topic-71">
+                  Chủ đề 71 <Icon name="arrow" />
+                </a>
+              </div>
+            </article>
+            <article className="home-category-card">
+              <span>Phần 9 (Chủ đề 81–90)</span>
+              <h3>Học Tập & Thi Cử</h3>
+              <p>IELTS Speaking Part 1 & 2, Tự học, Viết CV, Quản lý deadline...</p>
+              <div>
+                <a href="#/sentence-building/part-9">10 chủ đề (250 câu)</a>
+                <a className="sample-link" href="#/sentence-building/topic/topic-81">
+                  Chủ đề 81 <Icon name="arrow" />
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
       </main>
       <Footer />
     </>

@@ -1,0 +1,844 @@
+/* ============================================================
+   TRANSLATION PRACTICE (LUYỆN DỊCH 90 CHỦ ĐỀ) STYLES
+   ============================================================ */
+
+.translation-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+/* Header & Banner */
+.translation-hero {
+  background: linear-gradient(135deg, #f7fbf9 0%, #eef7f3 100%);
+  border: 1px solid #d4deda;
+  border-radius: 20px;
+  padding: 32px 36px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 20px rgba(22, 118, 94, 0.06);
+}
+
+.translation-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #16765e;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.translation-hero h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #122b27;
+  margin: 0 0 10px;
+  line-height: 1.25;
+}
+
+.translation-hero p {
+  color: #4b635c;
+  font-size: 15px;
+  margin: 0 0 18px;
+  max-width: 720px;
+  line-height: 1.5;
+}
+
+.translation-stats-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.translation-stat-pill {
+  background: #fff;
+  border: 1px solid #d8e4df;
+  border-radius: 12px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #314b43;
+  font-weight: 600;
+}
+
+.translation-stat-pill strong {
+  color: #16765e;
+  font-size: 16px;
+}
+
+/* Filters & Navigation */
+.translation-nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.translation-level-tabs {
+  display: flex;
+  gap: 8px;
+  background: #eef4f1;
+  padding: 4px;
+  border-radius: 14px;
+  border: 1px solid #d9e5e0;
+}
+
+.translation-level-tab {
+  border: none;
+  background: transparent;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #47625a;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.translation-level-tab:hover {
+  color: #16765e;
+}
+
+.translation-level-tab.active {
+  background: #fff;
+  color: #16765e;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.translation-search-box {
+  position: relative;
+  min-width: 260px;
+  flex: 1;
+  max-width: 360px;
+}
+
+.translation-search-box input {
+  width: 100%;
+  padding: 10px 16px 10px 38px;
+  border-radius: 12px;
+  border: 1px solid #d1ded8;
+  background: #fff;
+  font-size: 14px;
+  color: #122b27;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.translation-search-box input:focus {
+  border-color: #16765e;
+  box-shadow: 0 0 0 3px rgba(22, 118, 94, 0.12);
+}
+
+.translation-search-box svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: #7a948c;
+}
+
+/* Lesson Grid */
+.translation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+.translation-card {
+  background: #fff;
+  border: 1px solid #dbe6e1;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.translation-card:hover {
+  transform: translateY(-3px);
+  border-color: #16765e;
+  box-shadow: 0 10px 25px rgba(22, 118, 94, 0.09);
+}
+
+.translation-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.translation-badge {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.translation-badge.a1 {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.translation-badge.a2 {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.translation-badge.b1 {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.translation-card-num {
+  font-size: 12px;
+  font-weight: 700;
+  color: #7b948c;
+}
+
+.translation-card h3 {
+  font-size: 17px;
+  font-weight: 750;
+  color: #14352d;
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
+
+.translation-card-preview {
+  font-size: 13.5px;
+  color: #4b635c;
+  line-height: 1.5;
+  margin-bottom: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.translation-card-focus {
+  margin-top: auto;
+  font-size: 11.5px;
+  color: #718981;
+  background: #f7f9f8;
+  padding: 6px 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ============================================================
+   WORKSHEET DETAIL VIEW (Chi tiết bài tập luyện dịch)
+   ============================================================ */
+
+.worksheet-top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.worksheet-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #16765e;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  background: #eef6f2;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+.worksheet-back-btn:hover {
+  background: #e2f0ea;
+  color: #0f5c49;
+}
+
+.worksheet-nav-arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.worksheet-arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #3b554d;
+  background: #fff;
+  border: 1px solid #d4deda;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.worksheet-arrow-btn:hover:not(.disabled) {
+  border-color: #16765e;
+  color: #16765e;
+  background: #f4faf7;
+}
+
+.worksheet-arrow-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Sheet Card Layout (Matching Image 1) */
+.worksheet-sheet {
+  background: #fff;
+  border: 1px solid #d5e0dc;
+  border-radius: 20px;
+  box-shadow: 0 12px 36px rgba(18, 43, 39, 0.08);
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.worksheet-sheet-header {
+  padding: 24px 32px 18px;
+  border-bottom: 1px solid #e9efec;
+  background: #fbfdfc;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.worksheet-sheet-title h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #122b27;
+  margin: 0 0 6px;
+}
+
+.worksheet-sheet-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #556f67;
+}
+
+/* Prompt Section (Tiếng Việt & Từ gợi ý) */
+.worksheet-prompt-section {
+  padding: 26px 32px 20px;
+}
+
+.worksheet-section-label {
+  font-size: 16px;
+  font-weight: 800;
+  color: #16765e;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.worksheet-vn-box {
+  background: #f8faf9;
+  border: 1px solid #e2ebe7;
+  border-left: 4px solid #16765e;
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #17332c;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.worksheet-hints-box {
+  margin-bottom: 12px;
+}
+
+.worksheet-hints-box .hints-title {
+  font-size: 14px;
+  font-weight: 750;
+  color: #425e56;
+  margin-bottom: 8px;
+}
+
+.worksheet-hint-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hint-chip {
+  background: #f0f7f4;
+  border: 1px solid #cfe0d9;
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-size: 13px;
+  color: #1a4f42;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.hint-chip:hover {
+  background: #e2f2eb;
+  border-color: #16765e;
+  transform: translateY(-1px);
+}
+
+.hint-chip strong {
+  font-weight: 700;
+  color: #12634f;
+}
+
+.hint-chip span {
+  color: #556f67;
+  margin-left: 4px;
+}
+
+/* Ruled Writing Area (Matching Image 1 notebook lines) */
+.worksheet-write-section {
+  padding: 10px 32px 28px;
+}
+
+.ruled-textarea-container {
+  position: relative;
+  background: #fff;
+  border: 1.5px solid #c8d9d2;
+  border-radius: 14px;
+  padding: 6px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ruled-textarea-container:focus-within {
+  border-color: #16765e;
+  box-shadow: 0 0 0 3px rgba(22, 118, 94, 0.15);
+}
+
+.ruled-textarea {
+  width: 100%;
+  min-height: 190px;
+  padding: 8px 16px 8px;
+  border: none;
+  outline: none;
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 36px; /* Exact height matching line pattern */
+  color: #14352d;
+  background-image: linear-gradient(to bottom, transparent 35px, #dce7e3 35px, #dce7e3 36px);
+  background-size: 100% 36px;
+  background-position-y: 0px;
+  background-attachment: local;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.ruled-textarea::placeholder {
+  color: #92aba2;
+  line-height: 36px;
+}
+
+.textarea-footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px 2px;
+  font-size: 12.5px;
+  color: #7b948c;
+}
+
+/* Action Controls */
+.worksheet-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn-check-translation {
+  background: #16765e;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 750;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(22, 118, 94, 0.25);
+  transition: all 0.2s;
+}
+
+.btn-check-translation:hover {
+  background: #11624d;
+  transform: translateY(-1px);
+}
+
+.btn-toggle-answer {
+  background: #fff;
+  color: #1f473e;
+  border: 1.5px solid #cad9d3;
+  border-radius: 12px;
+  padding: 11px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: all 0.2s;
+}
+
+.btn-toggle-answer:hover {
+  background: #f3f8f5;
+  border-color: #16765e;
+  color: #16765e;
+}
+
+.btn-secondary-action {
+  background: transparent;
+  color: #637f77;
+  border: none;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s;
+}
+
+.btn-secondary-action:hover {
+  background: #eef5f2;
+  color: #1f473e;
+}
+
+/* ============================================================
+   WORD-BY-WORD DIFF RESULT (Matching Image 2)
+   ============================================================ */
+
+.diff-results-card {
+  margin-top: 28px;
+  background: #fff;
+  border: 1.5px solid #d4e2dc;
+  border-radius: 18px;
+  padding: 24px 28px;
+  box-shadow: 0 6px 20px rgba(18, 43, 39, 0.05);
+}
+
+.diff-score-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eef3f0;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.diff-score-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.score-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.score-circle.high {
+  background: #dcfce7;
+  color: #15803d;
+  border: 2px solid #86efac;
+}
+
+.score-circle.medium {
+  background: #fef3c7;
+  color: #b45309;
+  border: 2px solid #fde68a;
+}
+
+.score-circle.low {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 2px solid #fca5a5;
+}
+
+.score-text strong {
+  display: block;
+  font-size: 17px;
+  color: #122b27;
+}
+
+.score-text span {
+  font-size: 13px;
+  color: #556f67;
+}
+
+.diff-legend {
+  display: flex;
+  gap: 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.diff-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+
+.legend-dot.green {
+  background: #22c55e;
+}
+
+.legend-dot.red {
+  background: #ef4444;
+}
+
+/* Word tokens flex display (Image 2 style) */
+.diff-tokens-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  line-height: 1;
+}
+
+/* Individual Token Badge */
+.diff-token {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 10px 14px;
+  min-width: 44px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s ease;
+}
+
+.diff-token:hover {
+  transform: translateY(-2px);
+}
+
+/* Token: Correct (In đậm màu xanh lá) */
+.diff-token.correct {
+  background: #eff6ff;
+  border: 1.5px solid #bfdbfe;
+  color: #1e40af;
+}
+
+/* If green variant preferred by user description */
+.diff-token.correct {
+  background: #f0fdf4;
+  border: 1.5px solid #bbf7d0;
+  color: #15803d;
+}
+
+.diff-token.correct .token-word {
+  font-weight: 800;
+  font-size: 18px;
+  color: #166534;
+}
+
+.diff-token.correct .token-sub {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #16a34a;
+  margin-top: 4px;
+}
+
+/* Token: Incorrect / Wrong word (Màu đỏ) */
+.diff-token.incorrect,
+.diff-token.wrong_word {
+  background: #fff1f2;
+  border: 1.5px solid #fecdd3;
+  color: #9f1239;
+}
+
+.diff-token.incorrect .token-word,
+.diff-token.wrong_word .token-word {
+  font-weight: 800;
+  font-size: 18px;
+  color: #9f1239;
+}
+
+.diff-token.incorrect .token-sub,
+.diff-token.wrong_word .token-sub {
+  font-size: 11px;
+  font-weight: 600;
+  color: #e11d48;
+  margin-top: 4px;
+}
+
+/* Token: Missing (Màu đỏ nét đứt) */
+.diff-token.missing {
+  background: #fff5f5;
+  border: 1.5px dashed #fca5a5;
+  color: #b91c1c;
+}
+
+.diff-token.missing .token-word {
+  font-weight: 800;
+  font-size: 18px;
+  color: #dc2626;
+  opacity: 0.9;
+}
+
+.diff-token.missing .token-sub {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #ef4444;
+  margin-top: 4px;
+}
+
+/* Side-by-side or comparison details */
+.diff-comparison-box {
+  background: #f9fbfb;
+  border: 1px solid #e2ebe8;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-top: 14px;
+}
+
+.diff-comparison-box h4 {
+  font-size: 13.5px;
+  font-weight: 750;
+  color: #3d5850;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.diff-comparison-box p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #1c3d35;
+  margin: 0;
+}
+
+/* Model Answer Reveal Box */
+.model-answer-reveal {
+  background: #f4faf7;
+  border: 1.5px solid #b8ddd0;
+  border-radius: 16px;
+  padding: 22px 26px;
+  margin-top: 24px;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.model-answer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.model-answer-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #125e4c;
+}
+
+.model-answer-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.model-answer-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #14352d;
+  background: #fff;
+  border: 1px solid #cfe0d9;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+
+.model-answer-note {
+  font-size: 13px;
+  color: #55726a;
+  line-height: 1.5;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .translation-hero {
+    padding: 24px 20px;
+  }
+  .translation-hero h1 {
+    font-size: 26px;
+  }
+  .worksheet-sheet-header {
+    padding: 20px;
+  }
+  .worksheet-prompt-section,
+  .worksheet-write-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .diff-token {
+    padding: 8px 10px;
+  }
+  .diff-token .token-word {
+    font-size: 16px;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

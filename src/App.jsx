@@ -3,6 +3,8 @@ import LandingPage from './pages/LandingPage';
 import CollectionPage from './pages/CollectionPage';
 import LessonDetail from './pages/LessonDetail';
 import LevelOverview from './pages/LevelOverview';
+import TranslationPage from './pages/TranslationPage';
+import SentenceBuildingPage from './pages/SentenceBuildingPage';
 
 function parseHash(hash) {
   if (!hash || hash === '#/' || hash === '#') {
@@ -12,6 +14,58 @@ function parseHash(hash) {
   const [hashPath, queryString] = hash.split('?');
   const params = new URLSearchParams(queryString || '');
   const collectionQuery = params.get('collection') || params.get('from');
+
+  const transLessonMatch = hashPath.match(/^#\/translation\/lesson\/(.+)$/i);
+  if (transLessonMatch) {
+    return {
+      type: 'translation',
+      lessonId: transLessonMatch[1],
+      collection: 'translation'
+    };
+  }
+
+  const transLevelMatch = hashPath.match(/^#\/translation\/(A1|A2|B1)$/i);
+  if (transLevelMatch) {
+    return {
+      type: 'translation',
+      level: transLevelMatch[1].toUpperCase(),
+      collection: 'translation'
+    };
+  }
+
+  if (hashPath === '#/translation' || hashPath === '#translation') {
+    return {
+      type: 'translation',
+      level: 'ALL',
+      collection: 'translation'
+    };
+  }
+
+  const sbTopicMatch = hashPath.match(/^#\/sentence-building\/topic\/(.+)$/i);
+  if (sbTopicMatch) {
+    return {
+      type: 'sentence-building',
+      topicId: sbTopicMatch[1],
+      collection: 'sentence-building'
+    };
+  }
+
+  const sbPartMatch = hashPath.match(/^#\/sentence-building\/(part-\d+)$/i);
+  if (sbPartMatch) {
+    return {
+      type: 'sentence-building',
+      part: sbPartMatch[1].toLowerCase(),
+      collection: 'sentence-building'
+    };
+  }
+
+  if (hashPath === '#/sentence-building' || hashPath === '#sentence-building') {
+    return {
+      type: 'sentence-building',
+      part: 'ALL',
+      collection: 'sentence-building'
+    };
+  }
 
   const lessonColMatch = hashPath.match(
     /^#\/collection\/(levels|natural|videos|grammar)\/(A1|A2|B1|B2|C1)\/lesson\/(.+)$/i
@@ -162,6 +216,24 @@ export default function App() {
       <div id="app">
         <div className="error">{error}</div>
       </div>
+    );
+  }
+
+  if (route.type === 'translation') {
+    return (
+      <TranslationPage
+        lessonId={route.lessonId}
+        levelFilter={route.level}
+      />
+    );
+  }
+
+  if (route.type === 'sentence-building') {
+    return (
+      <SentenceBuildingPage
+        topicId={route.topicId}
+        partFilter={route.part}
+      />
     );
   }
 

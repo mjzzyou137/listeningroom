@@ -1,0 +1,2535 @@
+{
+  "total": 90,
+  "levels": [
+    "A1",
+    "A2",
+    "B1"
+  ],
+  "levelFocus": {
+    "A1": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+    "A2": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+    "B1": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm"
+  },
+  "lessons": [
+    {
+      "id": "translation-a1-01",
+      "number": 1,
+      "title": "Giới Thiệu Bản Thân",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Xin chào! Tôi tên là Minh. Tôi hai mươi lăm tuổi và sống ở Thành phố Hồ Chí Minh. Tôi là nhân viên văn phòng. Tôi làm việc từ thứ Hai đến thứ Sáu. Lúc rảnh, tôi thích đọc sách và nghe nhạc. Tôi biết nấu ăn nhưng không biết lái xe hơi. Tôi muốn học tiếng Anh vì tôi muốn đi du lịch khắp thế giới.",
+      "hintsText": "office worker (nhân viên văn phòng)  ·  free time (thời gian rảnh)  ·  can't drive (không biết lái xe)  ·  travel around the world (đi khắp thế giới)",
+      "hints": [
+        {
+          "en": "office worker",
+          "vi": "nhân viên văn phòng"
+        },
+        {
+          "en": "free time",
+          "vi": "thời gian rảnh"
+        },
+        {
+          "en": "can't drive",
+          "vi": "không biết lái xe"
+        },
+        {
+          "en": "travel around the world",
+          "vi": "đi khắp thế giới"
+        }
+      ],
+      "answer": "Hello! My name is Minh. I am twenty-five years old, and I live in Ho Chi Minh City. I am an office worker. I work from Monday to Friday. In my free time, I like reading books and listening to music. I can cook, but I can't drive a car. I want to learn English because I want to travel around the world."
+    },
+    {
+      "id": "translation-a1-02",
+      "number": 2,
+      "title": "Gia Đình Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Gia đình tôi có năm người: bố, mẹ, chị gái, em trai và tôi. Bố tôi là tài xế, còn mẹ tôi là giáo viên. Chị tôi làm việc ở ngân hàng. Em trai tôi là học sinh, năm nay mười tuổi. Buổi tối, cả nhà thường ăn cơm cùng nhau. Tôi rất yêu gia đình mình.",
+      "hintsText": "there are (có)  ·  younger brother (em trai)  ·  driver (tài xế)  ·  have dinner together (ăn tối cùng nhau)",
+      "hints": [
+        {
+          "en": "there are",
+          "vi": "có"
+        },
+        {
+          "en": "younger brother",
+          "vi": "em trai"
+        },
+        {
+          "en": "driver",
+          "vi": "tài xế"
+        },
+        {
+          "en": "have dinner together",
+          "vi": "ăn tối cùng nhau"
+        }
+      ],
+      "answer": "There are five people in my family: my father, my mother, my older sister, my younger brother and me. My father is a driver, and my mother is a teacher. My sister works in a bank. My brother is a student. He is ten years old. We often have dinner together in the evening. I love my family very much."
+    },
+    {
+      "id": "translation-a1-03",
+      "number": 3,
+      "title": "Bữa Sáng Của Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Mỗi sáng tôi ăn sáng lúc bảy giờ. Tôi thường ăn bánh mì với trứng và uống một ly sữa. Mẹ tôi thích uống cà phê, còn bố tôi thích uống trà. Vào chủ nhật, cả nhà không ăn sáng ở nhà. Chúng tôi cùng nhau ra ngoài ăn bánh bao. Tôi thấy ăn bánh bao là một cách mở đầu buổi sáng rất tuyệt.",
+      "hintsText": "have breakfast (ăn sáng)  ·  a glass of milk (một ly sữa)  ·  steamed buns (bánh bao)  ·  go out (ra ngoài)",
+      "hints": [
+        {
+          "en": "have breakfast",
+          "vi": "ăn sáng"
+        },
+        {
+          "en": "a glass of milk",
+          "vi": "một ly sữa"
+        },
+        {
+          "en": "steamed buns",
+          "vi": "bánh bao"
+        },
+        {
+          "en": "go out",
+          "vi": "ra ngoài"
+        }
+      ],
+      "answer": "I have breakfast at seven o'clock every morning. I often eat bread and eggs and drink a glass of milk. My mom likes to drink coffee, and my dad likes to drink tea. On Sundays, we don't have breakfast at home. We go out together to eat steamed buns. I think steamed buns are a nice way to start the morning."
+    },
+    {
+      "id": "translation-a1-04",
+      "number": 4,
+      "title": "Căn Phòng Của Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Phòng của tôi không lớn, nhưng rất sạch sẽ. Trong phòng có một cái giường, một cái bàn và một cái ghế. Trên bàn có một chiếc máy tính và rất nhiều sách. Tôi có một con mèo nhỏ tên là Mimi, nó thường ngủ trên giường của tôi. Tối nào tôi cũng học tiếng Anh trong phòng. Tôi rất thích căn phòng của mình.",
+      "hintsText": "there is (có)  ·  desk (cái bàn)  ·  named (tên là)  ·  every evening (mỗi tối)",
+      "hints": [
+        {
+          "en": "there is",
+          "vi": "có"
+        },
+        {
+          "en": "desk",
+          "vi": "cái bàn"
+        },
+        {
+          "en": "named",
+          "vi": "tên là"
+        },
+        {
+          "en": "every evening",
+          "vi": "mỗi tối"
+        }
+      ],
+      "answer": "My room is not big, but it is very clean. In my room, there is a bed, a desk and a chair. On the desk, there is a computer and a lot of books. I have a little cat named Mimi, and she often sleeps on my bed. I study English in my room every evening. I really like my room."
+    },
+    {
+      "id": "translation-a1-05",
+      "number": 5,
+      "title": "Cô Giáo Của Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Cô giáo tiếng Anh của tôi tên là Anna. Cô đến từ London, năm nay ba mươi tuổi. Cô Anna rất xinh và hay cười. Cô dạy chúng tôi vào thứ Hai, thứ Tư và thứ Sáu hằng tuần. Cô nói rất chậm nên ai cũng hiểu được. Sau giờ học, cô thường hỏi chúng tôi: “Bài hôm nay có khó không?” Chúng tôi ai cũng rất quý cô Anna.",
+      "hintsText": "be from (đến từ)  ·  smile (cười)  ·  understand (hiểu)  ·  lesson (bài học)",
+      "hints": [
+        {
+          "en": "be from",
+          "vi": "đến từ"
+        },
+        {
+          "en": "smile",
+          "vi": "cười"
+        },
+        {
+          "en": "understand",
+          "vi": "hiểu"
+        },
+        {
+          "en": "lesson",
+          "vi": "bài học"
+        }
+      ],
+      "answer": "My English teacher's name is Ms. Anna. She is from London, and she is thirty years old this year. Ms. Anna is very pretty, and she likes to smile. She teaches us every Monday, Wednesday and Friday. She speaks very slowly, so we can all understand her. After class, she often asks us, “Was today's lesson difficult?” We all like Ms. Anna very much."
+    },
+    {
+      "id": "translation-a1-06",
+      "number": 6,
+      "title": "Sở Thích Của Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Sở thích của tôi là đá bóng và nghe nhạc. Chiều thứ Bảy nào tôi cũng đá bóng với bạn bè ở trường. Tụi tôi đá không giỏi lắm, nhưng rất vui. Buổi tối về đến nhà, tôi thích vừa nghe nhạc vừa nấu ăn. Tôi thích nhạc tiếng Anh nhất, vì nghe nhạc tiếng Anh giúp tôi học tiếng Anh.",
+      "hintsText": "hobby (sở thích)  ·  have fun (vui vẻ)  ·  while (trong khi)  ·  help (giúp)",
+      "hints": [
+        {
+          "en": "hobby",
+          "vi": "sở thích"
+        },
+        {
+          "en": "have fun",
+          "vi": "vui vẻ"
+        },
+        {
+          "en": "while",
+          "vi": "trong khi"
+        },
+        {
+          "en": "help",
+          "vi": "giúp"
+        }
+      ],
+      "answer": "My hobbies are playing football and listening to music. Every Saturday afternoon, I play football with my friends at school. We don't play very well, but we have a lot of fun. In the evening, after I get home, I like to listen to music while I cook. I like English songs the most, because listening to English songs helps me learn English."
+    },
+    {
+      "id": "translation-a1-07",
+      "number": 7,
+      "title": "Thành Phố Của Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Tôi sống ở Hà Nội. Hà Nội là thủ đô của Việt Nam, và cũng là một thành phố rất đẹp. Ở đây rất đông người, ngoài đường có rất nhiều xe máy. Hà Nội có rất nhiều món ngon, món tôi thích nhất là phở. Mùa thu là mùa đẹp nhất ở Hà Nội vì thời tiết không quá lạnh cũng không quá nóng. Chào mừng bạn đến với Hà Nội!",
+      "hintsText": "capital (thủ đô)  ·  motorbike (xe máy)  ·  favorite dish (món yêu thích)  ·  season (mùa)",
+      "hints": [
+        {
+          "en": "capital",
+          "vi": "thủ đô"
+        },
+        {
+          "en": "motorbike",
+          "vi": "xe máy"
+        },
+        {
+          "en": "favorite dish",
+          "vi": "món yêu thích"
+        },
+        {
+          "en": "season",
+          "vi": "mùa"
+        }
+      ],
+      "answer": "I live in Hanoi. Hanoi is the capital of Vietnam, and it is also a very beautiful city. There are a lot of people here, and there are many motorbikes on the streets. Hanoi has lots of delicious food, and my favorite dish is pho. Autumn is the best season in Hanoi because the weather is not too cold or too hot. Welcome to Hanoi!"
+    },
+    {
+      "id": "translation-a1-08",
+      "number": 8,
+      "title": "Đường Đi Làm",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Nhà tôi hơi xa công ty, đi xe mất bốn mươi phút. Tôi không có xe hơi nên ngày nào cũng đi xe buýt đi làm. Bảy giờ rưỡi sáng, xe buýt rất đông và thường không còn chỗ ngồi. Trên xe, tôi thích xem điện thoại hoặc nghe tiếng Anh. Tan làm, thỉnh thoảng tôi bắt taxi về nhà vì quá mệt.",
+      "hintsText": "it takes (mất (thời gian))  ·  take the bus (đi xe buýt)  ·  crowded (đông đúc)  ·  seat (chỗ ngồi)",
+      "hints": [
+        {
+          "en": "it takes (mất (thời gian))",
+          "vi": ""
+        },
+        {
+          "en": "take the bus",
+          "vi": "đi xe buýt"
+        },
+        {
+          "en": "crowded",
+          "vi": "đông đúc"
+        },
+        {
+          "en": "seat",
+          "vi": "chỗ ngồi"
+        }
+      ],
+      "answer": "My house is a little far from my company. It takes forty minutes by car. I don't have a car, so I take the bus to work every day. At half past seven in the morning, the bus is very crowded, and there are often no seats. On the bus, I like to look at my phone or listen to English. After work, I sometimes take a taxi home because I am too tired."
+    },
+    {
+      "id": "translation-a1-09",
+      "number": 9,
+      "title": "Một Ngày Của Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Ngày nào tôi cũng thức dậy lúc sáu giờ. Tôi đánh răng, rửa mặt rồi ăn sáng. Bảy giờ rưỡi, tôi đi làm bằng xe máy. Mười hai giờ, tôi ăn trưa với đồng nghiệp. Năm giờ chiều tôi tan làm. Buổi tối, tôi nấu cơm và xem tivi. Tôi thường đi ngủ lúc mười một giờ.",
+      "hintsText": "get up (thức dậy)  ·  brush my teeth (đánh răng)  ·  coworkers (đồng nghiệp)  ·  go to bed (đi ngủ)",
+      "hints": [
+        {
+          "en": "get up",
+          "vi": "thức dậy"
+        },
+        {
+          "en": "brush my teeth",
+          "vi": "đánh răng"
+        },
+        {
+          "en": "coworkers",
+          "vi": "đồng nghiệp"
+        },
+        {
+          "en": "go to bed",
+          "vi": "đi ngủ"
+        }
+      ],
+      "answer": "I get up at six o'clock every day. I brush my teeth, wash my face and have breakfast. At seven thirty, I go to work by motorbike. I have lunch with my coworkers at twelve. I finish work at five. In the evening, I cook dinner and watch TV. I usually go to bed at eleven."
+    },
+    {
+      "id": "translation-a1-10",
+      "number": 10,
+      "title": "Ngôi Nhà Của Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Nhà tôi nhỏ nhưng rất đẹp. Nhà có hai tầng. Tầng dưới có phòng khách và nhà bếp. Tầng trên có hai phòng ngủ và một phòng tắm. Trước nhà có một khu vườn nhỏ với rất nhiều hoa. Sáng nào mẹ tôi cũng tưới hoa.",
+      "hintsText": "two floors (hai tầng)  ·  living room (phòng khách)  ·  in front of (phía trước)  ·  water the flowers (tưới hoa)",
+      "hints": [
+        {
+          "en": "two floors",
+          "vi": "hai tầng"
+        },
+        {
+          "en": "living room",
+          "vi": "phòng khách"
+        },
+        {
+          "en": "in front of",
+          "vi": "phía trước"
+        },
+        {
+          "en": "water the flowers",
+          "vi": "tưới hoa"
+        }
+      ],
+      "answer": "My house is small, but it is beautiful. It has two floors. Downstairs, there is a living room and a kitchen. Upstairs, there are two bedrooms and a bathroom. In front of my house, there is a small garden with many flowers. My mother waters the flowers every morning."
+    },
+    {
+      "id": "translation-a1-11",
+      "number": 11,
+      "title": "Chú Chó Của Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Tôi có một chú chó tên là Lucky. Nó ba tuổi. Lucky có bộ lông màu nâu trắng và đôi tai to. Nó thích chơi ngoài sân và đuổi theo quả bóng. Tối nào tôi cũng dắt nó đi dạo trong công viên. Mỗi khi tôi về nhà, nó luôn chạy ra cửa. Lucky là người bạn thân nhất của tôi.",
+      "hintsText": "yard (sân)  ·  run after (đuổi theo)  ·  take him for a walk (dắt đi dạo)  ·  always (luôn luôn)",
+      "hints": [
+        {
+          "en": "yard",
+          "vi": "sân"
+        },
+        {
+          "en": "run after",
+          "vi": "đuổi theo"
+        },
+        {
+          "en": "take him for a walk",
+          "vi": "dắt đi dạo"
+        },
+        {
+          "en": "always",
+          "vi": "luôn luôn"
+        }
+      ],
+      "answer": "I have a dog. His name is Lucky. He is three years old. Lucky is brown and white, and he has big ears. He likes playing in the yard and running after balls. Every evening, I take him for a walk in the park. When I come home, he always runs to the door. Lucky is my best friend."
+    },
+    {
+      "id": "translation-a1-12",
+      "number": 12,
+      "title": "Món Ăn Yêu Thích",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Món ăn tôi thích nhất là cơm chiên. Thứ Bảy nào mẹ tôi cũng làm món này. Mẹ dùng cơm, trứng, cà rốt, đậu Hà Lan và một ít thịt. Món này dễ làm mà rất ngon. Tôi cũng thích ăn mì nước, nhưng tôi không thích đồ cay. Những đêm đói bụng, thỉnh thoảng tôi tự nấu cơm chiên cho mình.",
+      "hintsText": "fried rice (cơm chiên)  ·  easy to make (dễ làm)  ·  spicy (cay)  ·  for myself (cho bản thân)",
+      "hints": [
+        {
+          "en": "fried rice",
+          "vi": "cơm chiên"
+        },
+        {
+          "en": "easy to make",
+          "vi": "dễ làm"
+        },
+        {
+          "en": "spicy",
+          "vi": "cay"
+        },
+        {
+          "en": "for myself",
+          "vi": "cho bản thân"
+        }
+      ],
+      "answer": "My favorite food is fried rice. My mother makes it every Saturday. She uses rice, eggs, carrots, peas and a little meat. It is easy to make, and it is very tasty. I also like noodle soup, but I don't like spicy food. When I am hungry at night, I sometimes cook fried rice for myself."
+    },
+    {
+      "id": "translation-a1-13",
+      "number": 13,
+      "title": "Bạn Thân Của Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Bạn thân của tôi là Lan. Chúng tôi học cùng lớp. Lan cao và có mái tóc đen dài. Bạn ấy rất tốt bụng và vui tính. Lan luôn giúp tôi làm bài tập. Sau giờ học, tụi tôi thường đi cà phê cùng nhau. Cuối tuần, tụi tôi thích xem phim ở nhà Lan. Tôi rất vui vì có một người bạn như vậy.",
+      "hintsText": "the same class (cùng lớp)  ·  kind (tốt bụng)  ·  funny (vui tính)  ·  a friend like her (người bạn như vậy)",
+      "hints": [
+        {
+          "en": "the same class",
+          "vi": "cùng lớp"
+        },
+        {
+          "en": "kind",
+          "vi": "tốt bụng"
+        },
+        {
+          "en": "funny",
+          "vi": "vui tính"
+        },
+        {
+          "en": "a friend like her",
+          "vi": "người bạn như vậy"
+        }
+      ],
+      "answer": "My best friend is Lan. We are in the same class. She is tall and has long black hair. Lan is very kind and funny. She always helps me with my homework. We often go to the coffee shop together after school. On weekends, we like watching movies at her house. I am happy to have a friend like her."
+    },
+    {
+      "id": "translation-a1-14",
+      "number": 14,
+      "title": "Công Việc Của Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Tôi là y tá. Tôi làm việc ở một bệnh viện lớn tại trung tâm thành phố. Tôi bắt đầu làm lúc bảy giờ sáng và tan làm lúc bốn giờ chiều. Công việc của tôi là chăm sóc bệnh nhân. Công việc vất vả nhưng tôi thích, vì tôi có thể giúp đỡ mọi người. Đồng nghiệp của tôi rất thân thiện. Thỉnh thoảng tôi phải làm ca đêm.",
+      "hintsText": "nurse (y tá)  ·  take care of (chăm sóc)  ·  patients (bệnh nhân)  ·  have to (phải)",
+      "hints": [
+        {
+          "en": "nurse",
+          "vi": "y tá"
+        },
+        {
+          "en": "take care of",
+          "vi": "chăm sóc"
+        },
+        {
+          "en": "patients",
+          "vi": "bệnh nhân"
+        },
+        {
+          "en": "have to",
+          "vi": "phải"
+        }
+      ],
+      "answer": "I am a nurse. I work in a big hospital in the city center. I start work at seven in the morning and finish at four in the afternoon. My job is to take care of patients. It is a hard job, but I like it because I can help people. My coworkers are very friendly. Sometimes I have to work at night."
+    },
+    {
+      "id": "translation-a1-15",
+      "number": 15,
+      "title": "Cuối Tuần Của Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Cuối tuần tôi không đi làm nên tôi dậy muộn. Sáng thứ Bảy, tôi dọn nhà và giặt đồ. Buổi chiều, tôi đi mua sắm hoặc gặp bạn bè. Chủ nhật, tôi về thăm ông bà. Cả nhà ăn trưa cùng nhau và nói chuyện rất nhiều. Buổi tối, tôi nghỉ ngơi ở nhà và chuẩn bị cho tuần mới.",
+      "hintsText": "get up late (dậy muộn)  ·  do the laundry (giặt đồ)  ·  visit (thăm)  ·  relax (nghỉ ngơi)",
+      "hints": [
+        {
+          "en": "get up late",
+          "vi": "dậy muộn"
+        },
+        {
+          "en": "do the laundry",
+          "vi": "giặt đồ"
+        },
+        {
+          "en": "visit",
+          "vi": "thăm"
+        },
+        {
+          "en": "relax",
+          "vi": "nghỉ ngơi"
+        }
+      ],
+      "answer": "I don't work on weekends, so I get up late. On Saturday morning, I clean my house and do the laundry. In the afternoon, I go shopping or meet my friends. On Sunday, I visit my grandparents. We have lunch together and talk a lot. In the evening, I relax at home and prepare for the new week."
+    },
+    {
+      "id": "translation-a1-16",
+      "number": 16,
+      "title": "Trường Học Của Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Trường tôi ở gần nhà nên ngày nào tôi cũng đi bộ đến trường. Trường đã cũ nhưng rất rộng. Trường có ba mươi phòng học, một thư viện và một sân chơi lớn. Trong sân trường có rất nhiều cây cao. Nơi tôi thích nhất là thư viện vì ở đó rất yên tĩnh. Ở trường tôi có nhiều bạn, và thầy cô đều rất tốt.",
+      "hintsText": "classrooms (phòng học)  ·  playground (sân chơi)  ·  schoolyard (sân trường)  ·  quiet (yên tĩnh)",
+      "hints": [
+        {
+          "en": "classrooms",
+          "vi": "phòng học"
+        },
+        {
+          "en": "playground",
+          "vi": "sân chơi"
+        },
+        {
+          "en": "schoolyard",
+          "vi": "sân trường"
+        },
+        {
+          "en": "quiet",
+          "vi": "yên tĩnh"
+        }
+      ],
+      "answer": "My school is near my house, so I walk there every day. It is old, but it is very big. There are thirty classrooms, a library and a large playground. There are many tall trees in the schoolyard. My favorite place is the library because it is quiet. I have many friends at school, and my teachers are very nice."
+    },
+    {
+      "id": "translation-a1-17",
+      "number": 17,
+      "title": "Thời Tiết Hôm Nay",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Hôm nay là chủ nhật. Thời tiết rất đẹp. Trời nắng, ấm áp và không có một gợn mây. Nhiệt độ khoảng hai mươi tám độ. Công viên có rất nhiều người. Mấy đứa trẻ đang thả diều, còn vài cụ già đang đi dạo. Tôi đang ngồi dưới một gốc cây to và uống nước lạnh. Tôi rất thích những ngày như thế này.",
+      "hintsText": "sunny (nắng)  ·  temperature (nhiệt độ)  ·  fly kites (thả diều)  ·  under (bên dưới)",
+      "hints": [
+        {
+          "en": "sunny",
+          "vi": "nắng"
+        },
+        {
+          "en": "temperature",
+          "vi": "nhiệt độ"
+        },
+        {
+          "en": "fly kites",
+          "vi": "thả diều"
+        },
+        {
+          "en": "under",
+          "vi": "bên dưới"
+        }
+      ],
+      "answer": "Today is Sunday. The weather is beautiful. It is sunny and warm, and there are no clouds in the sky. The temperature is about twenty-eight degrees. Many people are in the park. Some children are flying kites, and some old people are walking. I am sitting under a big tree and drinking cold water. I love days like this."
+    },
+    {
+      "id": "translation-a1-18",
+      "number": 18,
+      "title": "Quần Áo Tôi Thích",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Tôi thích quần áo đơn giản. Tôi thường mặc áo thun và quần jean. Màu tôi thích nhất là màu xanh dương nên tôi có rất nhiều áo thun màu xanh. Khi đi làm, tôi mặc áo sơ mi trắng và quần tây đen. Tôi không thích mặc đồ bó vì rất khó chịu. Tôi hay mua quần áo trên mạng vì vừa rẻ vừa nhanh.",
+      "hintsText": "wear (mặc)  ·  jeans (quần jean)  ·  tight (bó, chật)  ·  uncomfortable (khó chịu)",
+      "hints": [
+        {
+          "en": "wear",
+          "vi": "mặc"
+        },
+        {
+          "en": "jeans",
+          "vi": "quần jean"
+        },
+        {
+          "en": "tight",
+          "vi": "bó, chật"
+        },
+        {
+          "en": "uncomfortable",
+          "vi": "khó chịu"
+        }
+      ],
+      "answer": "I like simple clothes. I usually wear a T-shirt and jeans. My favorite color is blue, so I have many blue T-shirts. At work, I wear a white shirt and black trousers. I don't like wearing tight clothes because they are uncomfortable. I often buy clothes online because it is cheap and fast."
+    },
+    {
+      "id": "translation-a1-19",
+      "number": 19,
+      "title": "Quán Cà Phê Gần Nhà",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Gần nhà tôi có một quán cà phê nhỏ. Quán mở cửa lúc sáu giờ sáng. Cà phê ở đó đậm mà rẻ. Tôi thường gọi một ly cà phê sữa đá. Chủ quán là một ông cụ rất thân thiện. Ông biết tên tôi và lúc nào cũng mỉm cười với tôi. Tôi hay ngồi ở đó ba mươi phút trước khi đi làm.",
+      "hintsText": "opens (mở cửa)  ·  strong (đậm)  ·  iced milk coffee (cà phê sữa đá)  ·  owner (chủ quán)",
+      "hints": [
+        {
+          "en": "opens",
+          "vi": "mở cửa"
+        },
+        {
+          "en": "strong",
+          "vi": "đậm"
+        },
+        {
+          "en": "iced milk coffee",
+          "vi": "cà phê sữa đá"
+        },
+        {
+          "en": "owner",
+          "vi": "chủ quán"
+        }
+      ],
+      "answer": "There is a small coffee shop near my house. It opens at six in the morning. The coffee there is strong and cheap. I usually order an iced milk coffee. The owner is a friendly old man. He knows my name and always smiles at me. I often sit there for thirty minutes before I go to work."
+    },
+    {
+      "id": "translation-a1-20",
+      "number": 20,
+      "title": "Đi Bơi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Tôi đi bơi ba lần một tuần. Gần công ty tôi có một hồ bơi. Tôi thường bơi sau giờ làm, khoảng sáu giờ. Nước mát, và buổi tối hồ bơi không đông. Bơi rất tốt cho sức khỏe. Bơi xong, tôi thấy thư giãn và ngủ ngon. Mục tiêu của tôi là bơi được một cây số.",
+      "hintsText": "three times a week (ba lần một tuần)  ·  swimming pool (hồ bơi)  ·  health (sức khỏe)  ·  goal (mục tiêu)",
+      "hints": [
+        {
+          "en": "three times a week",
+          "vi": "ba lần một tuần"
+        },
+        {
+          "en": "swimming pool",
+          "vi": "hồ bơi"
+        },
+        {
+          "en": "health",
+          "vi": "sức khỏe"
+        },
+        {
+          "en": "goal",
+          "vi": "mục tiêu"
+        }
+      ],
+      "answer": "I go swimming three times a week. There is a swimming pool near my office. I usually swim after work, at about six o'clock. The water is cool, and the pool is not crowded in the evening. Swimming is good for my health. After swimming, I feel relaxed and I sleep well. My goal is to swim one kilometer."
+    },
+    {
+      "id": "translation-a1-21",
+      "number": 21,
+      "title": "Khu Phố Của Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Tôi sống ở một khu phố đông đúc nhưng rất thân thiện. Trên con đường nhà tôi có một cái chợ, một công viên nhỏ và một tiệm thuốc. Ở đây cũng có rất nhiều quầy hàng ăn vặt. Buổi sáng, người ta bán bánh mì và xôi. Hàng xóm của tôi rất dễ thương, họ hay chào tôi. Vấn đề duy nhất là tiếng ồn từ karaoke vào ban đêm.",
+      "hintsText": "neighborhood (khu phố)  ·  pharmacy (tiệm thuốc)  ·  sticky rice (xôi)  ·  noise (tiếng ồn)",
+      "hints": [
+        {
+          "en": "neighborhood",
+          "vi": "khu phố"
+        },
+        {
+          "en": "pharmacy",
+          "vi": "tiệm thuốc"
+        },
+        {
+          "en": "sticky rice",
+          "vi": "xôi"
+        },
+        {
+          "en": "noise",
+          "vi": "tiếng ồn"
+        }
+      ],
+      "answer": "I live in a busy but friendly neighborhood. There is a market, a small park and a pharmacy on my street. There are also many street food stalls. In the morning, people sell bread and sticky rice. My neighbors are nice, and they often say hello to me. The only problem is the noise from karaoke at night."
+    },
+    {
+      "id": "translation-a1-22",
+      "number": 22,
+      "title": "Điện Thoại Của Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Tôi có một chiếc điện thoại thông minh màu đen. Nó đã dùng được hai năm nhưng vẫn chạy tốt. Ngày nào tôi cũng dùng nó. Tôi gọi điện cho bố mẹ, nhắn tin cho bạn bè và đọc tin tức. Tôi còn dùng nó để học tiếng Anh bằng ứng dụng. Tuy nhiên, tôi nghĩ mình dùng điện thoại quá nhiều. Tôi muốn bỏ điện thoại xuống thường xuyên hơn.",
+      "hintsText": "still works well (vẫn chạy tốt)  ·  send messages (nhắn tin)  ·  apps (ứng dụng)  ·  too much (quá nhiều)",
+      "hints": [
+        {
+          "en": "still works well",
+          "vi": "vẫn chạy tốt"
+        },
+        {
+          "en": "send messages",
+          "vi": "nhắn tin"
+        },
+        {
+          "en": "apps",
+          "vi": "ứng dụng"
+        },
+        {
+          "en": "too much",
+          "vi": "quá nhiều"
+        }
+      ],
+      "answer": "I have a black smartphone. It is two years old, but it still works well. I use it every day. I call my parents, send messages to my friends and read the news. I also use it to learn English with apps. However, I think I use my phone too much. I want to put it down more often."
+    },
+    {
+      "id": "translation-a1-23",
+      "number": 23,
+      "title": "Ông Bà Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Ông bà tôi sống ở quê. Ông tôi bảy mươi lăm tuổi, còn bà tôi bảy mươi hai tuổi. Ông bà có một ngôi nhà nhỏ với khu vườn rộng. Ông bà trồng rau và nuôi gà. Bà tôi nấu ăn rất ngon. Mùa hè nào tôi cũng về thăm ông bà một tuần. Tôi rất thích không khí trong lành và cuộc sống yên bình ở đó.",
+      "hintsText": "countryside (quê, nông thôn)  ·  grow vegetables (trồng rau)  ·  keep chickens (nuôi gà)  ·  fresh air (không khí trong lành)",
+      "hints": [
+        {
+          "en": "countryside",
+          "vi": "quê, nông thôn"
+        },
+        {
+          "en": "grow vegetables",
+          "vi": "trồng rau"
+        },
+        {
+          "en": "keep chickens",
+          "vi": "nuôi gà"
+        },
+        {
+          "en": "fresh air",
+          "vi": "không khí trong lành"
+        }
+      ],
+      "answer": "My grandparents live in the countryside. My grandfather is seventy-five, and my grandmother is seventy-two. They have a small house with a big garden. They grow vegetables and keep chickens. My grandmother cooks very well. Every summer, I visit them for a week. I love the fresh air and the quiet life there."
+    },
+    {
+      "id": "translation-a1-24",
+      "number": 24,
+      "title": "Bữa Tối Gia Đình",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Trong gia đình tôi, bữa tối là bữa ăn quan trọng nhất. Tối nào cả nhà cũng ăn lúc bảy giờ. Mẹ tôi nấu cơm, canh và thêm một hai món nữa. Ăn xong, bố tôi luôn là người rửa bát. Trong bữa ăn, cả nhà không dùng điện thoại. Mọi người kể cho nhau nghe về một ngày của mình và cười rất nhiều. Tôi rất thích khoảng thời gian này.",
+      "hintsText": "the most important (quan trọng nhất)  ·  dishes (món ăn, bát đĩa)  ·  wash the dishes (rửa bát)  ·  during (trong lúc)",
+      "hints": [
+        {
+          "en": "the most important",
+          "vi": "quan trọng nhất"
+        },
+        {
+          "en": "dishes",
+          "vi": "món ăn, bát đĩa"
+        },
+        {
+          "en": "wash the dishes",
+          "vi": "rửa bát"
+        },
+        {
+          "en": "during",
+          "vi": "trong lúc"
+        }
+      ],
+      "answer": "In my family, dinner is the most important meal. We eat at seven o'clock every evening. My mother cooks rice, soup and one or two other dishes. My father always washes the dishes after dinner. During the meal, we don't use our phones. We talk about our day and laugh a lot. I enjoy this time very much."
+    },
+    {
+      "id": "translation-a1-25",
+      "number": 25,
+      "title": "Mùa Yêu Thích",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Mùa tôi thích nhất là mùa thu. Vào mùa thu, thời tiết mát mẻ và bầu trời trong xanh. Lá cây chuyển sang màu vàng và đỏ. Tôi thích đi dạo quanh hồ vào buổi chiều. Tôi cũng thích uống trà nóng và đọc sách ở nhà. Mùa hè quá nóng với tôi, còn mùa đông thì quá lạnh. Mùa thu thì vừa đẹp.",
+      "hintsText": "season (mùa)  ·  clear (trong xanh)  ·  turn yellow (chuyển vàng)  ·  just right (vừa đúng)",
+      "hints": [
+        {
+          "en": "season",
+          "vi": "mùa"
+        },
+        {
+          "en": "clear",
+          "vi": "trong xanh"
+        },
+        {
+          "en": "turn yellow",
+          "vi": "chuyển vàng"
+        },
+        {
+          "en": "just right",
+          "vi": "vừa đúng"
+        }
+      ],
+      "answer": "My favorite season is autumn. In autumn, the weather is cool and the sky is clear. The leaves turn yellow and red. I like walking around the lake in the afternoon. I also like drinking hot tea and reading books at home. Summer is too hot for me, and winter is too cold. Autumn is just right."
+    },
+    {
+      "id": "translation-a1-26",
+      "number": 26,
+      "title": "Đi Chợ",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Sáng chủ nhật nào tôi cũng đi chợ với mẹ. Chợ lúc nào cũng đông đúc và ồn ào. Người ta bán trái cây, rau, thịt và cá. Mọi thứ đều tươi và rẻ hơn ở siêu thị. Mẹ tôi rất giỏi chọn trái cây. Mẹ luôn hỏi giá trước khi mua. Tôi thường xách đồ giúp mẹ.",
+      "hintsText": "busy (đông đúc)  ·  fresh (tươi)  ·  be good at (giỏi về)  ·  carry the bags (xách đồ)",
+      "hints": [
+        {
+          "en": "busy",
+          "vi": "đông đúc"
+        },
+        {
+          "en": "fresh",
+          "vi": "tươi"
+        },
+        {
+          "en": "be good at",
+          "vi": "giỏi về"
+        },
+        {
+          "en": "carry the bags",
+          "vi": "xách đồ"
+        }
+      ],
+      "answer": "Every Sunday morning, I go to the market with my mother. The market is busy and noisy. People sell fruit, vegetables, meat and fish. Everything is fresh and cheaper than in the supermarket. My mother is good at choosing fruit. She always asks the price before she buys. I usually carry the bags for her."
+    },
+    {
+      "id": "translation-a1-27",
+      "number": 27,
+      "title": "Anh Trai Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Tôi có một người anh trai tên là Hùng, năm nay ba mươi tuổi. Anh ấy là kỹ sư, làm việc cho một công ty lớn ở Đà Nẵng. Anh Hùng cao và khỏe vì ngày nào cũng đi tập gym. Anh ấy đã lập gia đình và có một cô con gái nhỏ. Mỗi khi gặp chuyện khó khăn, tôi luôn gọi cho anh ấy để xin lời khuyên.",
+      "hintsText": "engineer (kỹ sư)  ·  strong (khỏe)  ·  married (đã kết hôn)  ·  advice (lời khuyên)",
+      "hints": [
+        {
+          "en": "engineer",
+          "vi": "kỹ sư"
+        },
+        {
+          "en": "strong",
+          "vi": "khỏe"
+        },
+        {
+          "en": "married",
+          "vi": "đã kết hôn"
+        },
+        {
+          "en": "advice",
+          "vi": "lời khuyên"
+        }
+      ],
+      "answer": "I have an older brother. His name is Hung, and he is thirty years old. He is an engineer. He works for a big company in Da Nang. Hung is tall and strong because he goes to the gym every day. He is married and has a little daughter. When I have a problem, I always call him for advice."
+    },
+    {
+      "id": "translation-a1-28",
+      "number": 28,
+      "title": "Thói Quen Buổi Tối",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Tôi về đến nhà khoảng sáu giờ. Đầu tiên, tôi tắm và thay quần áo. Sau đó tôi nấu cơm và ăn cùng bạn cùng phòng. Ăn xong, tôi học tiếng Anh một tiếng. Chín giờ rưỡi, tôi tắt điện thoại và đọc sách. Trước khi ngủ, tôi uống một ly sữa ấm. Thói quen này giúp tôi ngủ ngon hơn.",
+      "hintsText": "take a shower (tắm)  ·  roommate (bạn cùng phòng)  ·  turn off (tắt)  ·  routine (thói quen)",
+      "hints": [
+        {
+          "en": "take a shower",
+          "vi": "tắm"
+        },
+        {
+          "en": "roommate",
+          "vi": "bạn cùng phòng"
+        },
+        {
+          "en": "turn off",
+          "vi": "tắt"
+        },
+        {
+          "en": "routine",
+          "vi": "thói quen"
+        }
+      ],
+      "answer": "I get home at about six o'clock. First, I take a shower and change my clothes. Then I cook dinner and eat with my roommate. After dinner, I study English for one hour. At nine thirty, I turn off my phone and read a book. Before bed, I drink a glass of warm milk. This routine helps me sleep better."
+    },
+    {
+      "id": "translation-a1-29",
+      "number": 29,
+      "title": "Sinh Nhật Của Tôi",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Sinh nhật tôi vào ngày mười hai tháng Năm. Năm nào gia đình tôi cũng tổ chức một bữa tiệc nhỏ ở nhà. Mẹ tôi làm bánh sô-cô-la, và bạn bè tôi đến chơi. Mọi người cùng ăn uống, hát hò và chụp thật nhiều ảnh. Tôi thường nhận được những món quà nhỏ như sách hoặc quần áo. Với tôi, món quà tuyệt nhất là thời gian ở bên những người mình yêu thương.",
+      "hintsText": "party (bữa tiệc)  ·  take photos (chụp ảnh)  ·  gifts (quà)  ·  the people I love (những người tôi yêu thương)",
+      "hints": [
+        {
+          "en": "party",
+          "vi": "bữa tiệc"
+        },
+        {
+          "en": "take photos",
+          "vi": "chụp ảnh"
+        },
+        {
+          "en": "gifts",
+          "vi": "quà"
+        },
+        {
+          "en": "the people I love",
+          "vi": "những người tôi yêu thương"
+        }
+      ],
+      "answer": "My birthday is on the twelfth of May. Every year, my family has a small party at home. My mother makes a chocolate cake, and my friends come to visit. We eat, sing and take a lot of photos. I usually get small gifts like books or clothes. For me, the best gift is time with the people I love."
+    },
+    {
+      "id": "translation-a1-30",
+      "number": 30,
+      "title": "Những Việc Tôi Có Thể Làm",
+      "level": "A1",
+      "levelFocus": "Thì hiện tại đơn, hiện tại tiếp diễn, there is / there are, can",
+      "vietnamese": "Tôi có thể làm được nhiều việc. Tôi biết đi xe đạp và chạy xe máy. Tôi biết nấu mấy món đơn giản như trứng và mì. Tôi nói được tiếng Việt và một chút tiếng Anh. Tôi chưa biết chơi đàn guitar, nhưng tôi đang học. Bạn tôi dạy tôi vào mỗi thứ Ba. Tôi mong mình có thể đàn tặng mẹ một bài hát vào ngày sinh nhật của mẹ.",
+      "hintsText": "ride a bicycle (đi xe đạp)  ·  simple dishes (món đơn giản)  ·  not ... yet (chưa)  ·  I hope (tôi mong)",
+      "hints": [
+        {
+          "en": "ride a bicycle",
+          "vi": "đi xe đạp"
+        },
+        {
+          "en": "simple dishes",
+          "vi": "món đơn giản"
+        },
+        {
+          "en": "not ... yet",
+          "vi": "chưa"
+        },
+        {
+          "en": "I hope",
+          "vi": "tôi mong"
+        }
+      ],
+      "answer": "I can do many things. I can ride a bicycle and drive a motorbike. I can cook simple dishes like eggs and noodles. I can speak Vietnamese and a little English. I can't play the guitar yet, but I am learning. My friend teaches me every Tuesday. I hope I can play a song for my mom on her birthday."
+    },
+    {
+      "id": "translation-a2-31",
+      "number": 31,
+      "title": "Đi Siêu Thị",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Chiều nay, tôi và chị gái đi siêu thị mua đồ. Siêu thị cách nhà không xa nên hai chị em đi bộ tới. Chúng tôi mua gạo, trứng, sữa và một ít trái cây. Táo rất rẻ, chỉ một đô la một quả. Chị tôi còn mua thêm một chiếc áo sơ mi mới. Lúc về đến nhà, hai chị em đều mệt nhưng rất vui.",
+      "hintsText": "older sister (chị gái)  ·  not far from (không xa)  ·  cheap (rẻ)  ·  each (mỗi cái)",
+      "hints": [
+        {
+          "en": "older sister",
+          "vi": "chị gái"
+        },
+        {
+          "en": "not far from",
+          "vi": "không xa"
+        },
+        {
+          "en": "cheap",
+          "vi": "rẻ"
+        },
+        {
+          "en": "each",
+          "vi": "mỗi cái"
+        }
+      ],
+      "answer": "This afternoon, my older sister and I went to the supermarket to buy some things. The supermarket is not far from our house, so we walked there. We bought rice, eggs, milk and some fruit. The apples were very cheap, only one dollar each. My sister also bought a new shirt. When we got home, we were both tired but very happy."
+    },
+    {
+      "id": "translation-a2-32",
+      "number": 32,
+      "title": "Một Ngày Mưa",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Hôm nay trời mưa to mà tôi lại không mang ô. Tan học, tôi đứng ở cổng trường chờ tạnh mưa. Bạn cùng lớp của tôi là Tom nhìn thấy tôi và nói: “Mình có hai cái ô, bạn cầm một cái nè!” Tôi rất vui và nói với bạn ấy: “Cảm ơn nha! Mai mình trả lại.” Về đến nhà, tôi tự pha cho mình một tách trà nóng.",
+      "hintsText": "rain heavily (mưa to)  ·  umbrella (cái ô)  ·  school gate (cổng trường)  ·  give back (trả lại)",
+      "hints": [
+        {
+          "en": "rain heavily",
+          "vi": "mưa to"
+        },
+        {
+          "en": "umbrella",
+          "vi": "cái ô"
+        },
+        {
+          "en": "school gate",
+          "vi": "cổng trường"
+        },
+        {
+          "en": "give back",
+          "vi": "trả lại"
+        }
+      ],
+      "answer": "It rained heavily today, and I didn't bring an umbrella. After class, I waited at the school gate for the rain to stop. My classmate Tom saw me and said, “I have two umbrellas. You can take one!” I was very happy and said to him, “Thank you! I'll give it back to you tomorrow.” When I got home, I made myself a cup of hot tea."
+    },
+    {
+      "id": "translation-a2-33",
+      "number": 33,
+      "title": "Đi Ăn Nhà Hàng",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Tối qua, tôi và bạn đi ăn nhà hàng Mỹ lần đầu tiên. Người phục vụ hỏi: “Các bạn muốn ăn gì?” Chúng tôi gọi hai cái bánh hamburger, một ít khoai tây chiên và một đĩa salad, gọi thêm hai ly nước cam. Đồ ăn rất ngon nhưng hơi mặn. Ăn xong, tôi nói bằng tiếng Anh: “Cho tôi xin hoá đơn nhé?” Tổng cộng hết ba mươi đô.",
+      "hintsText": "for the first time (lần đầu tiên)  ·  order (gọi món)  ·  fries (khoai tây chiên)  ·  the bill (hoá đơn)",
+      "hints": [
+        {
+          "en": "for the first time",
+          "vi": "lần đầu tiên"
+        },
+        {
+          "en": "order",
+          "vi": "gọi món"
+        },
+        {
+          "en": "fries",
+          "vi": "khoai tây chiên"
+        },
+        {
+          "en": "the bill",
+          "vi": "hoá đơn"
+        }
+      ],
+      "answer": "Last night, my friend and I went to an American restaurant for the first time. The waiter asked us, “What would you like to eat?” We ordered two burgers, some fries and a salad, and we also asked for two glasses of orange juice. The food was delicious, but a little salty. After dinner, I said in English, “Excuse me, can I have the bill, please?” It was thirty dollars in total."
+    },
+    {
+      "id": "translation-a2-34",
+      "number": 34,
+      "title": "Người Bạn Mới",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Tôi quen một người bạn mới trên mạng. Bạn ấy tên là Emma, đến từ Canada, năm nay hai mươi hai tuổi và đang là sinh viên đại học. Emma muốn học tiếng Việt, còn tôi muốn học tiếng Anh, nên tối nào tụi tôi cũng nhắn tin với nhau. Tôi dạy bạn ấy tiếng Việt, bạn ấy dạy tôi tiếng Anh. Tụi tôi đang lên kế hoạch gặp nhau ở Việt Nam vào mùa hè năm sau.",
+      "hintsText": "online (trên mạng)  ·  university student (sinh viên)  ·  chat (nhắn tin)  ·  plan to (lên kế hoạch)",
+      "hints": [
+        {
+          "en": "online",
+          "vi": "trên mạng"
+        },
+        {
+          "en": "university student",
+          "vi": "sinh viên"
+        },
+        {
+          "en": "chat",
+          "vi": "nhắn tin"
+        },
+        {
+          "en": "plan to",
+          "vi": "lên kế hoạch"
+        }
+      ],
+      "answer": "I met a new friend online. Her name is Emma. She is from Canada, she is twenty-two years old, and she is a university student. She wants to learn Vietnamese, and I want to learn English, so we chat online every evening. I teach her Vietnamese, and she teaches me English. We are planning to meet in Vietnam next summer."
+    },
+    {
+      "id": "translation-a2-35",
+      "number": 35,
+      "title": "Chuyến Đi Nha Trang",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Mùa hè năm ngoái, gia đình tôi đi Nha Trang bốn ngày. Chúng tôi đi tàu hỏa từ Thành phố Hồ Chí Minh, chuyến đi dài nhưng rất vui. Khách sạn của chúng tôi ở rất gần biển nên sáng nào cả nhà cũng đi bơi. Ngày thứ hai, chúng tôi đi thuyền ra mấy hòn đảo nhỏ. Nước trong đến mức có thể nhìn thấy cá. Buổi tối, chúng tôi ăn hải sản ở chợ đêm. Đó là kỳ nghỉ tuyệt nhất mà tôi từng có, và năm sau tôi muốn quay lại.",
+      "hintsText": "take the train (đi tàu hỏa)  ·  close to (gần)  ·  so clear that (trong đến mức)  ·  seafood (hải sản)",
+      "hints": [
+        {
+          "en": "take the train",
+          "vi": "đi tàu hỏa"
+        },
+        {
+          "en": "close to",
+          "vi": "gần"
+        },
+        {
+          "en": "so clear that",
+          "vi": "trong đến mức"
+        },
+        {
+          "en": "seafood",
+          "vi": "hải sản"
+        }
+      ],
+      "answer": "Last summer, my family went to Nha Trang for four days. We took the train from Ho Chi Minh City, and the trip was long but fun. Our hotel was very close to the beach, so we went swimming every morning. On the second day, we took a boat to some small islands. The water was so clear that we could see the fish. In the evening, we ate seafood at a night market. It was the best holiday I have ever had, and I want to go back next year."
+    },
+    {
+      "id": "translation-a2-36",
+      "number": 36,
+      "title": "Tết Năm Ngoái",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Tết năm ngoái, tôi về quê đón Tết cùng gia đình. Trước Tết, cả nhà dọn dẹp toàn bộ ngôi nhà và trang trí bằng hoa. Mẹ và dì tôi gói bánh chưng, còn chúng tôi thức cả đêm để canh nồi bánh. Ngày mùng một, tôi mặc quần áo mới và đi chúc Tết họ hàng. Người lớn lì xì cho trẻ con trong những bao lì xì màu đỏ. Ai cũng trông rất vui vẻ. Tết luôn là khoảng thời gian tôi yêu thích nhất trong năm.",
+      "hintsText": "hometown (quê)  ·  decorate (trang trí)  ·  stay up (thức khuya)  ·  relatives (họ hàng)",
+      "hints": [
+        {
+          "en": "hometown",
+          "vi": "quê"
+        },
+        {
+          "en": "decorate",
+          "vi": "trang trí"
+        },
+        {
+          "en": "stay up",
+          "vi": "thức khuya"
+        },
+        {
+          "en": "relatives",
+          "vi": "họ hàng"
+        }
+      ],
+      "answer": "Last Tet, I went back to my hometown to celebrate with my family. Before Tet, we cleaned the whole house and decorated it with flowers. My mother and my aunt made banh chung, and we stayed up all night to watch the pot. On the first day of the new year, I wore new clothes and visited my relatives. The adults gave the children lucky money in red envelopes. Everyone looked happy. Tet is always my favorite time of the year."
+    },
+    {
+      "id": "translation-a2-37",
+      "number": 37,
+      "title": "Kế Hoạch Cuối Tuần",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Cuối tuần này tôi sẽ có một khoảng thời gian bận rộn nhưng thú vị. Sáng thứ Bảy, tôi sẽ đưa em gái đi học piano. Sau đó, chúng tôi sẽ đi ăn trưa ở một tiệm pizza mới ở trung tâm. Buổi chiều, tôi sẽ gặp bạn bè ở rạp chiếu phim vì đang có một bộ phim hành động mới. Chủ nhật, tôi sẽ ở nhà dọn phòng và ôn bài cho bài kiểm tra tiếng Anh vào thứ Hai. Hy vọng thời tiết sẽ đẹp.",
+      "hintsText": "be going to (sẽ, dự định)  ·  take ... to (đưa ... đến)  ·  downtown (trung tâm)  ·  prepare for (chuẩn bị cho)",
+      "hints": [
+        {
+          "en": "be going to",
+          "vi": "sẽ, dự định"
+        },
+        {
+          "en": "take ... to",
+          "vi": "đưa ... đến"
+        },
+        {
+          "en": "downtown",
+          "vi": "trung tâm"
+        },
+        {
+          "en": "prepare for",
+          "vi": "chuẩn bị cho"
+        }
+      ],
+      "answer": "This weekend, I am going to have a busy but exciting time. On Saturday morning, I am going to take my little sister to her piano class. After that, we are going to have lunch at a new pizza restaurant downtown. In the afternoon, I am going to meet my friends at the cinema because there is a new action movie. On Sunday, I am going to stay at home, clean my room and prepare for my English test on Monday. I hope the weather will be nice."
+    },
+    {
+      "id": "translation-a2-38",
+      "number": 38,
+      "title": "Ngày Đầu Đi Làm",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Hôm qua là ngày đầu tiên tôi đi làm ở công ty mới. Tôi dậy rất sớm vì hồi hộp. Tôi mặc chiếc áo đẹp nhất và đến văn phòng lúc tám giờ kém mười lăm. Quản lý của tôi là chị Hoa dẫn tôi đi tham quan và giới thiệu tôi với mọi người. Đồng nghiệp ai cũng rất thân thiện, một người còn mời tôi đi ăn trưa. Buổi chiều, tôi học cách sử dụng phần mềm của công ty. Đó là một ngày dài, nhưng khi về đến nhà, tôi thấy rất tự hào về bản thân.",
+      "hintsText": "nervous (hồi hộp)  ·  a quarter to eight (tám giờ kém mười lăm)  ·  show me around (dẫn đi tham quan)  ·  proud of (tự hào về)",
+      "hints": [
+        {
+          "en": "nervous",
+          "vi": "hồi hộp"
+        },
+        {
+          "en": "a quarter to eight",
+          "vi": "tám giờ kém mười lăm"
+        },
+        {
+          "en": "show me around",
+          "vi": "dẫn đi tham quan"
+        },
+        {
+          "en": "proud of",
+          "vi": "tự hào về"
+        }
+      ],
+      "answer": "Yesterday was my first day at my new job. I woke up very early because I was nervous. I wore my best shirt and arrived at the office at a quarter to eight. My manager, Ms. Hoa, showed me around and introduced me to everyone. My coworkers were very friendly, and one of them invited me to lunch. In the afternoon, I learned how to use the company's software. It was a long day, but when I got home, I felt proud of myself."
+    },
+    {
+      "id": "translation-a2-39",
+      "number": 39,
+      "title": "Đi Khám Bệnh",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Tuần trước, tôi bị cảm nặng. Tôi bị đau họng, sổ mũi và sốt cao nên đã đi khám bác sĩ. Phòng khám rất đông, tôi phải đợi gần một tiếng. Bác sĩ đo nhiệt độ và khám họng cho tôi. Bác sĩ nói bệnh không nghiêm trọng, nhưng tôi nên nghỉ ở nhà ba ngày. Bác sĩ kê cho tôi ít thuốc và dặn tôi uống thật nhiều nước. Bây giờ tôi đã thấy khỏe hơn nhiều, và ngày mai tôi có thể đi làm lại.",
+      "hintsText": "a bad cold (cảm nặng)  ·  sore throat (đau họng)  ·  should (nên)  ·  medicine (thuốc)",
+      "hints": [
+        {
+          "en": "a bad cold",
+          "vi": "cảm nặng"
+        },
+        {
+          "en": "sore throat",
+          "vi": "đau họng"
+        },
+        {
+          "en": "should",
+          "vi": "nên"
+        },
+        {
+          "en": "medicine",
+          "vi": "thuốc"
+        }
+      ],
+      "answer": "Last week, I had a bad cold. I had a sore throat, a runny nose and a high fever, so I went to see a doctor. The clinic was crowded, and I waited for almost an hour. The doctor checked my temperature and looked at my throat. She said it was not serious, but I should rest at home for three days. She gave me some medicine and told me to drink a lot of water. Now I feel much better, and I can go back to work tomorrow."
+    },
+    {
+      "id": "translation-a2-40",
+      "number": 40,
+      "title": "Mua Hàng Online",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Tháng trước, lần đầu tiên tôi mua một đôi giày trên mạng. Ảnh trên trang web trông rất đẹp, giá lại rẻ hơn ngoài cửa hàng. Tôi chọn size, thanh toán bằng thẻ rồi chờ. Năm ngày sau thì hàng tới. Khi mở ra, tôi rất thất vọng. Đôi giày nhỏ hơn tôi nghĩ và màu cũng khác. Tôi gửi trả lại, và một tuần sau cửa hàng hoàn tiền cho tôi. Bây giờ, trước khi mua bất cứ thứ gì, tôi luôn đọc đánh giá trước.",
+      "hintsText": "pay by card (thanh toán bằng thẻ)  ·  package (gói hàng)  ·  disappointed (thất vọng)  ·  reviews (đánh giá)",
+      "hints": [
+        {
+          "en": "pay by card",
+          "vi": "thanh toán bằng thẻ"
+        },
+        {
+          "en": "package",
+          "vi": "gói hàng"
+        },
+        {
+          "en": "disappointed",
+          "vi": "thất vọng"
+        },
+        {
+          "en": "reviews",
+          "vi": "đánh giá"
+        }
+      ],
+      "answer": "Last month, I bought a pair of shoes online for the first time. The photos on the website looked great, and the price was lower than in the shop. I chose my size, paid by card and waited. The package arrived after five days. When I opened it, I was disappointed. The shoes were smaller than I expected, and the color was different. I sent them back, and the shop gave me my money back a week later. Now I always read the reviews before I buy anything."
+    },
+    {
+      "id": "translation-a2-41",
+      "number": 41,
+      "title": "Hà Nội Và Sài Gòn",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Tôi từng sống ở cả Hà Nội lẫn Sài Gòn, và hai thành phố rất khác nhau. Hà Nội lâu đời và yên tĩnh hơn Sài Gòn. Hà Nội có bốn mùa, mùa đông có thể khá lạnh. Sài Gòn lớn hơn, nhộn nhịp hơn và hiện đại hơn. Ở đó nóng quanh năm, chỉ có mùa mưa và mùa khô. Nhịp sống ở Sài Gòn rất nhanh, còn ở Hà Nội thì chậm rãi hơn. Theo tôi, Hà Nội hợp để tìm hiểu văn hóa, còn Sài Gòn hợp để làm việc.",
+      "hintsText": "both ... and (cả ... lẫn)  ·  quieter than (yên tĩnh hơn)  ·  all year (quanh năm)  ·  in my opinion (theo tôi)",
+      "hints": [
+        {
+          "en": "both ... and",
+          "vi": "cả ... lẫn"
+        },
+        {
+          "en": "quieter than",
+          "vi": "yên tĩnh hơn"
+        },
+        {
+          "en": "all year",
+          "vi": "quanh năm"
+        },
+        {
+          "en": "in my opinion",
+          "vi": "theo tôi"
+        }
+      ],
+      "answer": "I have lived in both Hanoi and Saigon, and they are very different. Hanoi is older and quieter than Saigon. It has four seasons, and the winter can be quite cold. Saigon is bigger, busier and more modern. It is hot all year, with a rainy season and a dry season. Life in Saigon moves fast, while life in Hanoi feels slower. In my opinion, Hanoi is better for culture, but Saigon is better for work."
+    },
+    {
+      "id": "translation-a2-42",
+      "number": 42,
+      "title": "Tuổi Thơ Của Tôi",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Hồi nhỏ, tôi sống ở một ngôi làng nhỏ gần một con sông. Tôi không có nhiều đồ chơi nhưng chưa bao giờ thấy chán. Tan học, tôi với đám bạn thường tắm sông và thả diều ngoài đồng. Mùa hè, tụi tôi trèo cây hái xoài. Tối nào bà tôi cũng kể chuyện cho tôi nghe trước khi tôi ngủ thiếp đi. Bây giờ tôi sống ở thành phố lớn và thường nhớ về những ngày tháng giản dị ấy.",
+      "hintsText": "when I was a child (hồi nhỏ)  ·  used to (đã từng, thường)  ·  pick mangoes (hái xoài)  ·  miss (nhớ)",
+      "hints": [
+        {
+          "en": "when I was a child",
+          "vi": "hồi nhỏ"
+        },
+        {
+          "en": "used to",
+          "vi": "đã từng, thường"
+        },
+        {
+          "en": "pick mangoes",
+          "vi": "hái xoài"
+        },
+        {
+          "en": "miss",
+          "vi": "nhớ"
+        }
+      ],
+      "answer": "When I was a child, I lived in a small village near a river. I didn't have many toys, but I was never bored. After school, my friends and I used to swim in the river and fly kites in the fields. In the summer, we climbed trees to pick mangoes. My grandmother used to tell me stories every night before I fell asleep. Now I live in a big city, and I often miss those simple days."
+    },
+    {
+      "id": "translation-a2-43",
+      "number": 43,
+      "title": "Một Bộ Phim Hay",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Thứ Bảy tuần trước, tôi đi xem một bộ phim Hàn Quốc với bạn thân. Phim kể về một gia đình nghèo làm việc rất chăm chỉ để thay đổi cuộc sống. Lúc đầu, tôi thấy phim hơi chậm, nhưng câu chuyện càng lúc càng hấp dẫn. Các diễn viên diễn rất xuất sắc, nhất là cô bé nhỏ tuổi. Cuối phim, nhiều người trong rạp đã khóc, và tôi cũng vậy. Nếu bạn thích phim về gia đình thì nên xem phim này.",
+      "hintsText": "be about (kể về)  ·  at first (lúc đầu)  ·  more and more (càng lúc càng)  ·  so did I (tôi cũng vậy)",
+      "hints": [
+        {
+          "en": "be about",
+          "vi": "kể về"
+        },
+        {
+          "en": "at first",
+          "vi": "lúc đầu"
+        },
+        {
+          "en": "more and more",
+          "vi": "càng lúc càng"
+        },
+        {
+          "en": "so did I",
+          "vi": "tôi cũng vậy"
+        }
+      ],
+      "answer": "Last Saturday, I watched a Korean movie with my best friend. It was about a poor family who worked very hard to change their lives. At first, I thought the movie was a little slow, but the story became more and more interesting. The actors were excellent, especially the young girl. At the end of the movie, many people in the cinema cried, and so did I. If you like family stories, you should watch it."
+    },
+    {
+      "id": "translation-a2-44",
+      "number": 44,
+      "title": "Học Nấu Ăn",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Hai tháng trước, tôi hoàn toàn không biết nấu ăn. Tôi toàn ăn mì gói hoặc mua đồ ăn ở quán. Rồi tôi quyết định học nấu ăn vì muốn ăn uống lành mạnh hơn và tiết kiệm tiền. Tôi xem video dạy nấu ăn trên YouTube và tập nấu vào mỗi cuối tuần. Món đầu tiên của tôi là một thảm họa vì tôi nêm quá nhiều muối. Nhưng tôi không bỏ cuộc. Giờ tôi đã nấu được hơn mười món, và bạn cùng phòng nói món canh cá của tôi rất ngon.",
+      "hintsText": "not ... at all (hoàn toàn không)  ·  instant noodles (mì gói)  ·  disaster (thảm họa)  ·  give up (bỏ cuộc)",
+      "hints": [
+        {
+          "en": "not ... at all",
+          "vi": "hoàn toàn không"
+        },
+        {
+          "en": "instant noodles",
+          "vi": "mì gói"
+        },
+        {
+          "en": "disaster",
+          "vi": "thảm họa"
+        },
+        {
+          "en": "give up",
+          "vi": "bỏ cuộc"
+        }
+      ],
+      "answer": "Two months ago, I couldn't cook at all. I always ate instant noodles or bought food from restaurants. Then I decided to learn to cook because I wanted to eat more healthily and save money. I watched cooking videos on YouTube and practiced every weekend. My first dish was a disaster because I put too much salt in it. But I didn't give up. Now I can cook more than ten dishes, and my roommate says my fish soup is delicious."
+    },
+    {
+      "id": "translation-a2-45",
+      "number": 45,
+      "title": "Lạc Đường",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Năm ngoái, lần đầu tiên tôi đi Bangkok một mình. Đến ngày thứ hai, khi tôi đang đi bộ đến một ngôi chùa nổi tiếng thì điện thoại đột nhiên hết pin. Tôi không dùng bản đồ được và không biết mình đang ở đâu. Tôi thật sự rất lo. Tôi thử hỏi đường vài người nhưng họ không hiểu tôi nói gì. Cuối cùng, một bạn sinh viên tốt bụng đã giúp tôi. Bạn ấy nói tiếng Anh giỏi và đi bộ cùng tôi đến tận chùa. Từ đó trở đi, mỗi lần đi du lịch tôi luôn mang theo sạc dự phòng.",
+      "hintsText": "was walking ... when (đang đi thì)  ·  died (hết pin)  ·  ask for directions (hỏi đường)  ·  power bank (sạc dự phòng)",
+      "hints": [
+        {
+          "en": "was walking ... when",
+          "vi": "đang đi thì"
+        },
+        {
+          "en": "died",
+          "vi": "hết pin"
+        },
+        {
+          "en": "ask for directions",
+          "vi": "hỏi đường"
+        },
+        {
+          "en": "power bank",
+          "vi": "sạc dự phòng"
+        }
+      ],
+      "answer": "Last year, I visited Bangkok alone for the first time. On the second day, I was walking to a famous temple when my phone suddenly died. I couldn't use the map, and I didn't know where I was. I felt really worried. I tried to ask some people for directions, but they didn't understand me. Finally, a kind student helped me. She spoke good English and walked with me to the temple. Since then, I always carry a power bank when I travel."
+    },
+    {
+      "id": "translation-a2-46",
+      "number": 46,
+      "title": "Dọn Dẹp Nhà Cửa",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Chủ nhật tuần trước, cả nhà tôi dành nguyên buổi sáng để dọn dẹp nhà cửa. Bố tôi sửa cái đèn hỏng trong bếp và lau cửa sổ. Mẹ tôi giặt hết rèm cửa và ga giường. Nhiệm vụ của tôi là dọn phòng mình và nhà tắm. Tôi tìm thấy rất nhiều đồ cũ dưới gầm giường, như vở cũ và đồ chơi. Tôi cho em họ một ít, phần còn lại thì vứt đi. Dọn xong, căn nhà trông sáng sủa và sạch sẽ hẳn. Cả nhà mệt nên gọi pizza về ăn trưa.",
+      "hintsText": "spend ... cleaning (dành thời gian dọn dẹp)  ·  curtains (rèm cửa)  ·  cousin (em họ)  ·  throw away (vứt đi)",
+      "hints": [
+        {
+          "en": "spend ... cleaning",
+          "vi": "dành thời gian dọn dẹp"
+        },
+        {
+          "en": "curtains",
+          "vi": "rèm cửa"
+        },
+        {
+          "en": "cousin",
+          "vi": "em họ"
+        },
+        {
+          "en": "throw away",
+          "vi": "vứt đi"
+        }
+      ],
+      "answer": "Last Sunday, my family spent the whole morning cleaning the house. My father fixed the broken light in the kitchen and cleaned the windows. My mother washed all the curtains and bedsheets. My job was to clean my room and the bathroom. I found many old things under my bed, like old notebooks and toys. I gave some of them to my cousin and threw the rest away. When we finished, the house looked bright and clean. We were tired, so we ordered pizza for lunch."
+    },
+    {
+      "id": "translation-a2-47",
+      "number": 47,
+      "title": "Bữa Tiệc Bất Ngờ",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Thứ Sáu tuần trước là sinh nhật của Nam, bạn thân tôi. Một tuần trước đó, tôi và mấy đứa bạn quyết định tổ chức một bữa tiệc bất ngờ cho cậu ấy. Tụi tôi đặt một phòng nhỏ ở quán karaoke và mua một cái bánh kem thật to. Đến hôm đó, tôi nói với Nam là tụi mình chỉ đi ăn tối bình thường thôi. Khi Nam mở cửa, mọi người đồng thanh hét lên: “Chúc mừng sinh nhật!” Cậu ấy bất ngờ đến mức không nói được câu nào. Rồi Nam bật cười và ôm từng người một. Tụi tôi hát đến tận nửa đêm.",
+      "hintsText": "surprise party (tiệc bất ngờ)  ·  book (đặt chỗ)  ·  shout (hét lên)  ·  hug (ôm)",
+      "hints": [
+        {
+          "en": "surprise party",
+          "vi": "tiệc bất ngờ"
+        },
+        {
+          "en": "book",
+          "vi": "đặt chỗ"
+        },
+        {
+          "en": "shout",
+          "vi": "hét lên"
+        },
+        {
+          "en": "hug",
+          "vi": "ôm"
+        }
+      ],
+      "answer": "Last Friday was my best friend Nam's birthday. A week before, our friends and I decided to plan a surprise party for him. We booked a small room at a karaoke place and bought a big cake. On the day, I told Nam that we were going to have a normal dinner. When he opened the door, everyone shouted, “Happy birthday!” He was so surprised that he couldn't say anything. Then he laughed and hugged all of us. We sang until midnight."
+    },
+    {
+      "id": "translation-a2-48",
+      "number": 48,
+      "title": "Đặt Phòng Khách Sạn",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Tháng sau, tôi và bố mẹ sẽ đi Hội An ba ngày. Hôm qua, tôi gọi điện cho một khách sạn để đặt phòng. Cô lễ tân rất lịch sự. Tôi nói với cô ấy là chúng tôi cần một phòng gia đình cho ba người từ ngày mười lăm đến ngày mười tám. Cô ấy nói giá phòng là một triệu đồng một đêm, đã bao gồm bữa sáng. Tôi còn hỏi khách sạn có cho mượn xe đạp miễn phí không, và cô ấy nói có. Tôi sẽ thanh toán khi đến nơi. Tôi mong chuyến đi này quá!",
+      "hintsText": "book a room (đặt phòng)  ·  receptionist (lễ tân)  ·  including (bao gồm)  ·  can't wait (rất mong)",
+      "hints": [
+        {
+          "en": "book a room",
+          "vi": "đặt phòng"
+        },
+        {
+          "en": "receptionist",
+          "vi": "lễ tân"
+        },
+        {
+          "en": "including",
+          "vi": "bao gồm"
+        },
+        {
+          "en": "can't wait",
+          "vi": "rất mong"
+        }
+      ],
+      "answer": "Next month, my parents and I are going to visit Hoi An for three days. Yesterday, I called a hotel to book a room. The receptionist was very polite. I told her that we needed a family room for three people from the fifteenth to the eighteenth. She said that the room cost one million dong a night, including breakfast. I also asked if the hotel had free bicycles, and she said yes. I will pay when we arrive. I can't wait for the trip!"
+    },
+    {
+      "id": "translation-a2-49",
+      "number": 49,
+      "title": "Mục Tiêu Năm Mới",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Năm mới sắp đến, và tôi đã lập một danh sách mục tiêu. Thứ nhất, tôi sẽ đọc một cuốn sách mỗi tháng, vì năm ngoái tôi dành quá nhiều thời gian cho mạng xã hội. Thứ hai, tôi sẽ chạy bộ ba lần một tuần để giữ sức khỏe. Thứ ba, tôi muốn để dành hai mươi phần trăm tiền lương cho một chuyến du lịch Nhật Bản. Tôi biết điều này sẽ không dễ, nên tôi sẽ viết mục tiêu ra giấy và dán lên bàn làm việc. Hy vọng lần này tôi sẽ giữ được lời hứa với bản thân.",
+      "hintsText": "make a list (lập danh sách)  ·  go jogging (chạy bộ)  ·  save (để dành)  ·  keep my promises (giữ lời hứa)",
+      "hints": [
+        {
+          "en": "make a list",
+          "vi": "lập danh sách"
+        },
+        {
+          "en": "go jogging",
+          "vi": "chạy bộ"
+        },
+        {
+          "en": "save",
+          "vi": "để dành"
+        },
+        {
+          "en": "keep my promises",
+          "vi": "giữ lời hứa"
+        }
+      ],
+      "answer": "The new year is coming, and I have made a list of my goals. First, I am going to read one book every month, because last year I spent too much time on social media. Second, I will go jogging three times a week to stay healthy. Third, I want to save twenty percent of my salary for a trip to Japan. I know it won't be easy, so I will write my goals on a piece of paper and put it on my desk. I hope I can keep my promises this time."
+    },
+    {
+      "id": "translation-a2-50",
+      "number": 50,
+      "title": "Đi Phỏng Vấn Xin Việc",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Thứ Ba tuần trước, tôi đi phỏng vấn xin việc ở một công ty du lịch. Tôi đã chuẩn bị suốt một tuần. Tôi tìm hiểu về công ty và tập trả lời những câu hỏi thường gặp. Hôm phỏng vấn, tôi đến sớm mười năm phút. Trong phòng có ba người, họ hỏi tôi về kinh nghiệm và điểm mạnh của bản thân. Lúc đầu tôi rất run, nhưng tôi cố gắng mỉm cười và nói thật rõ ràng. Hai ngày sau, họ gọi điện báo tôi đã được nhận. Tôi vui đến mức gọi ngay cho mẹ.",
+      "hintsText": "job interview (phỏng vấn xin việc)  ·  experience (kinh nghiệm)  ·  strengths (điểm mạnh)  ·  right away (ngay lập tức)",
+      "hints": [
+        {
+          "en": "job interview",
+          "vi": "phỏng vấn xin việc"
+        },
+        {
+          "en": "experience",
+          "vi": "kinh nghiệm"
+        },
+        {
+          "en": "strengths",
+          "vi": "điểm mạnh"
+        },
+        {
+          "en": "right away",
+          "vi": "ngay lập tức"
+        }
+      ],
+      "answer": "Last Tuesday, I had a job interview at a travel company. I prepared for it for a whole week. I read about the company and practiced answering common questions. On the day of the interview, I arrived fifteen minutes early. There were three people in the room, and they asked me about my experience and my strengths. I was nervous at first, but I tried to smile and speak clearly. Two days later, they called me and said I got the job. I was so happy that I called my mom right away."
+    },
+    {
+      "id": "translation-a2-51",
+      "number": 51,
+      "title": "Một Ngày Tồi Tệ",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Hôm qua là một trong những ngày tệ nhất đời tôi. Đầu tiên, chuông báo thức không reo nên tôi dậy trễ. Vội quá, tôi để quên ví ở nhà. Trên đường đi làm, trời bắt đầu mưa to, rồi xe máy của tôi bị hỏng. Tôi phải dắt xe đến tiệm sửa. Lúc tới được văn phòng thì tôi đã trễ một tiếng, và sếp không vui chút nào. Buổi tối, tôi chỉ muốn đi ngủ. Mong là hôm nay sẽ khá hơn.",
+      "hintsText": "the worst (tệ nhất)  ·  in a hurry (vội vàng)  ·  break down (bị hỏng)  ·  push (đẩy, dắt)",
+      "hints": [
+        {
+          "en": "the worst",
+          "vi": "tệ nhất"
+        },
+        {
+          "en": "in a hurry",
+          "vi": "vội vàng"
+        },
+        {
+          "en": "break down",
+          "vi": "bị hỏng"
+        },
+        {
+          "en": "push",
+          "vi": "đẩy, dắt"
+        }
+      ],
+      "answer": "Yesterday was one of the worst days of my life. First, my alarm didn't ring, so I woke up late. I was in a hurry and forgot my wallet at home. On the way to work, it started to rain heavily, and my motorbike broke down. I had to push it to a repair shop. When I finally got to the office, I was an hour late, and my boss was not happy. In the evening, I just wanted to sleep. I hope today will be better."
+    },
+    {
+      "id": "translation-a2-52",
+      "number": 52,
+      "title": "Bắt Đầu Tập Thể Dục",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Năm ngoái, lúc nào tôi cũng thấy mệt mỏi và tăng năm ký. Bác sĩ nói tôi cần tập thể dục nhiều hơn. Thế là tôi bắt đầu đi tập gym sau giờ làm. Lúc đầu thật sự rất khó. Người tôi ê ẩm, và đã nhiều lần tôi muốn bỏ. Bạn tôi động viên tôi, và hai đứa đi tập cùng nhau ba buổi một tuần. Sau ba tháng, tôi thấy khỏe hơn và tràn đầy năng lượng hơn. Bây giờ tập thể dục đã trở thành một phần cuộc sống của tôi, và tôi thấy vui hơn trước rất nhiều.",
+      "hintsText": "gain (tăng (cân))  ·  encourage (động viên)  ·  energy (năng lượng)  ·  part of my life (một phần cuộc sống)",
+      "hints": [
+        {
+          "en": "gain (tăng (cân))",
+          "vi": ""
+        },
+        {
+          "en": "encourage",
+          "vi": "động viên"
+        },
+        {
+          "en": "energy",
+          "vi": "năng lượng"
+        },
+        {
+          "en": "part of my life",
+          "vi": "một phần cuộc sống"
+        }
+      ],
+      "answer": "Last year, I was always tired, and I gained five kilos. My doctor told me that I needed to exercise more. So I started going to the gym after work. At first, it was really hard. My body hurt, and I wanted to stop many times. My friend encouraged me, and we went together three times a week. After three months, I felt stronger and had more energy. Now exercise is part of my life, and I feel much happier than before."
+    },
+    {
+      "id": "translation-a2-53",
+      "number": 53,
+      "title": "Điện Thoại Bị Hỏng",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Cuối tuần trước, tôi làm rơi điện thoại khi đang xuống xe buýt. Màn hình bị vỡ và máy không lên nguồn nữa. Tôi mang nó ra một tiệm sửa gần nhà. Anh thợ ở đó nói phải thay màn hình, tốn một triệu rưỡi. Không còn cách nào khác nên tôi đồng ý. Tôi phải sống hai ngày không có điện thoại. Lúc đầu tôi thấy rất lạ, nhưng sau đó tôi nhận ra mình có nhiều thời gian hơn để đọc sách và trò chuyện với gia đình.",
+      "hintsText": "drop (làm rơi)  ·  get off (xuống xe)  ·  turn on (bật, lên nguồn)  ·  realize (nhận ra)",
+      "hints": [
+        {
+          "en": "drop",
+          "vi": "làm rơi"
+        },
+        {
+          "en": "get off",
+          "vi": "xuống xe"
+        },
+        {
+          "en": "turn on",
+          "vi": "bật, lên nguồn"
+        },
+        {
+          "en": "realize",
+          "vi": "nhận ra"
+        }
+      ],
+      "answer": "Last weekend, I dropped my phone while I was getting off the bus. The screen broke, and the phone didn't turn on. I took it to a repair shop near my house. The man there said that he had to change the screen and it would cost one and a half million dong. I didn't have a choice, so I agreed. I had to live without a phone for two days. At first, I felt strange, but then I realized that I had more time to read and talk with my family."
+    },
+    {
+      "id": "translation-a2-54",
+      "number": 54,
+      "title": "Đi Xem Ca Nhạc",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Tháng trước, lần đầu tiên tôi đi xem một buổi hòa nhạc. Ban nhạc tôi thích nhất đến biểu diễn ở thành phố tôi, nên tôi đã mua hai vé từ một tháng trước. Tôi đi cùng em gái. Buổi diễn bắt đầu lúc tám giờ, nhưng chúng tôi đến từ sáu giờ vì muốn đứng gần sân khấu. Ở đó có hàng nghìn người. Khi ban nhạc bước ra, ai cũng hét lên. Chúng tôi hát theo từng bài một. Mười một giờ buổi diễn kết thúc, và tôi gần như mất giọng. Đó là một đêm tuyệt vời.",
+      "hintsText": "concert (buổi hòa nhạc)  ·  stage (sân khấu)  ·  sing along (hát theo)  ·  my voice was gone (mất giọng)",
+      "hints": [
+        {
+          "en": "concert",
+          "vi": "buổi hòa nhạc"
+        },
+        {
+          "en": "stage",
+          "vi": "sân khấu"
+        },
+        {
+          "en": "sing along",
+          "vi": "hát theo"
+        },
+        {
+          "en": "my voice was gone",
+          "vi": "mất giọng"
+        }
+      ],
+      "answer": "Last month, I went to a music concert for the first time. My favorite band was playing in my city, so I bought two tickets a month before. I went with my younger sister. The concert started at eight, but we arrived at six because we wanted to stand near the stage. There were thousands of people there. When the band came out, everybody screamed. We sang along to every song. The concert ended at eleven, and my voice was almost gone. It was an amazing night."
+    },
+    {
+      "id": "translation-a2-55",
+      "number": 55,
+      "title": "Ở Sân Bay",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Tháng trước, tôi bay sang Singapore để đi công tác. Tôi đến sân bay sớm hai tiếng. Đầu tiên, tôi làm thủ tục và gửi vali. Sau đó tôi đi qua cửa kiểm tra an ninh. Nhân viên yêu cầu tôi lấy laptop ra khỏi túi. Xong xuôi, tôi còn thời gian nên mua một ly cà phê và một cái bánh mì kẹp. Không may là chuyến bay bị hoãn một tiếng vì thời tiết xấu. Trong lúc chờ, tôi đọc sách. Chuyến bay rất êm, và tôi đã đến nơi an toàn.",
+      "hintsText": "business trip (chuyến công tác)  ·  check in (làm thủ tục)  ·  security (kiểm tra an ninh)  ·  delayed (bị hoãn)",
+      "hints": [
+        {
+          "en": "business trip",
+          "vi": "chuyến công tác"
+        },
+        {
+          "en": "check in",
+          "vi": "làm thủ tục"
+        },
+        {
+          "en": "security",
+          "vi": "kiểm tra an ninh"
+        },
+        {
+          "en": "delayed",
+          "vi": "bị hoãn"
+        }
+      ],
+      "answer": "Last month, I flew to Singapore for a business trip. I got to the airport two hours early. First, I checked in and dropped off my suitcase. Then I went through security. The officer asked me to take my laptop out of my bag. After that, I had some time, so I bought a coffee and a sandwich. Unfortunately, my flight was delayed for one hour because of bad weather. I read a book while I was waiting. The flight was smooth, and I arrived safely."
+    },
+    {
+      "id": "translation-a2-56",
+      "number": 56,
+      "title": "Hàng Xóm Của Tôi",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Tôi có hai nhà hàng xóm, và họ rất khác nhau. Bên trái là chú Tuấn, một thầy giáo đã nghỉ hưu. Chú ít nói và dậy rất sớm để tập thể dục. Chú hay cho tôi rau trong vườn nhà chú. Bên phải là một cặp vợ chồng trẻ có một em bé. Nhà họ ồn hơn vì em bé hay khóc ban đêm, nhưng họ rất tốt bụng. Tuần trước, lúc tôi bị ốm, họ đã nấu cháo cho tôi. Tôi thấy mình thật may mắn khi có những người hàng xóm tốt như vậy.",
+      "hintsText": "retired (đã nghỉ hưu)  ·  couple (cặp vợ chồng)  ·  noisier (ồn hơn)  ·  such nice (tốt như vậy)",
+      "hints": [
+        {
+          "en": "retired",
+          "vi": "đã nghỉ hưu"
+        },
+        {
+          "en": "couple",
+          "vi": "cặp vợ chồng"
+        },
+        {
+          "en": "noisier",
+          "vi": "ồn hơn"
+        },
+        {
+          "en": "such nice",
+          "vi": "tốt như vậy"
+        }
+      ],
+      "answer": "I have two neighbors, and they are very different. Mr. Tuan lives on the left. He is a retired teacher. He is quiet and gets up very early to do exercise. He often gives me vegetables from his garden. On the right, there is a young couple with a baby. They are noisier because the baby often cries at night, but they are very kind. Last week, when I was sick, they cooked rice porridge for me. I feel lucky to have such nice neighbors."
+    },
+    {
+      "id": "translation-a2-57",
+      "number": 57,
+      "title": "Làm Thêm Cuối Tuần",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Tôi là sinh viên đại học và đang làm thêm ở một quán trà sữa. Tôi làm vào thứ Bảy và Chủ nhật hằng tuần, từ hai giờ chiều đến mười giờ tối. Tôi phải nhận order, pha nước và lau bàn. Công việc khá mệt, nhất là vào những hôm đông khách, nhưng tôi đã học được rất nhiều điều. Tôi trở nên kiên nhẫn hơn và giao tiếp với người lạ tốt hơn. Tiền lương không nhiều, nhưng đủ giúp tôi trả tiền sách và tiền điện thoại.",
+      "hintsText": "part-time job (việc làm thêm)  ·  take orders (nhận order)  ·  patient (kiên nhẫn)  ·  strangers (người lạ)",
+      "hints": [
+        {
+          "en": "part-time job",
+          "vi": "việc làm thêm"
+        },
+        {
+          "en": "take orders",
+          "vi": "nhận order"
+        },
+        {
+          "en": "patient",
+          "vi": "kiên nhẫn"
+        },
+        {
+          "en": "strangers",
+          "vi": "người lạ"
+        }
+      ],
+      "answer": "I am a university student, and I have a part-time job at a bubble tea shop. I work every Saturday and Sunday from two to ten p.m. I have to take orders, make drinks and clean the tables. The job is tiring, especially on busy days, but I have learned a lot. I have become more patient, and I am better at talking to strangers. The money is not much, but it helps me pay for my books and my phone bill."
+    },
+    {
+      "id": "translation-a2-58",
+      "number": 58,
+      "title": "Tết Trung Thu",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Trung thu năm ngoái, tôi về quê chơi với mấy đứa cháu. Buổi chiều, chúng tôi cùng nhau làm lồng đèn giấy. Việc này khó hơn tôi nghĩ, nhưng bọn trẻ rất thích. Buổi tối, trăng tròn và sáng. Chúng tôi bày bánh trung thu, trái cây và trà lên bàn ngoài sân. Rồi bọn trẻ cầm lồng đèn đi quanh xóm với những đứa trẻ khác. Nhìn chúng cười đùa và ca hát làm tôi nhớ lại tuổi thơ của chính mình.",
+      "hintsText": "nieces and nephews (các cháu)  ·  lanterns (lồng đèn)  ·  mooncakes (bánh trung thu)  ·  my own childhood (tuổi thơ của chính mình)",
+      "hints": [
+        {
+          "en": "nieces and nephews",
+          "vi": "các cháu"
+        },
+        {
+          "en": "lanterns",
+          "vi": "lồng đèn"
+        },
+        {
+          "en": "mooncakes",
+          "vi": "bánh trung thu"
+        },
+        {
+          "en": "my own childhood",
+          "vi": "tuổi thơ của chính mình"
+        }
+      ],
+      "answer": "Last Mid-Autumn Festival, I went back to my hometown to spend time with my nieces and nephews. In the afternoon, we made paper lanterns together. It was harder than I thought, but the children loved it. In the evening, the moon was big and bright. We put mooncakes, fruit and tea on a table in the yard. Then the children carried their lanterns and walked around the village with other kids. Watching them laugh and sing made me remember my own childhood."
+    },
+    {
+      "id": "translation-a2-59",
+      "number": 59,
+      "title": "Học Lái Xe Ô Tô",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Năm ngoái, tôi quyết định học lái xe ô tô. Tôi đăng ký một khóa học ở trường dạy lái xe gần nhà. Thầy dạy tôi khá nghiêm khắc, nhưng thầy giải thích mọi thứ rất rõ ràng. Buổi học đầu tiên, tôi căng thẳng đến mức hai tay cứ run lẩy bẩy. Đỗ xe là phần khó nhất với tôi. Tôi tập đi tập lại phần này rất nhiều lần. Sau ba tháng, tôi đi thi lấy bằng lái. Lần đầu tôi trượt, nhưng lần thứ hai thì đậu. Bây giờ tôi đã có thể chở bố mẹ về quê.",
+      "hintsText": "sign up for (đăng ký)  ·  strict (nghiêm khắc)  ·  again and again (đi lại nhiều lần)  ·  pass the test (thi đậu)",
+      "hints": [
+        {
+          "en": "sign up for",
+          "vi": "đăng ký"
+        },
+        {
+          "en": "strict",
+          "vi": "nghiêm khắc"
+        },
+        {
+          "en": "again and again",
+          "vi": "đi lại nhiều lần"
+        },
+        {
+          "en": "pass the test",
+          "vi": "thi đậu"
+        }
+      ],
+      "answer": "Last year, I decided to learn to drive a car. I signed up for a course at a driving school near my house. My teacher was strict, but he explained everything clearly. In the first lesson, I was so nervous that my hands were shaking. Parking was the most difficult part for me. I practiced it again and again. After three months, I took the driving test. I failed the first time, but I passed the second time. Now I can drive my parents to the countryside."
+    },
+    {
+      "id": "translation-a2-60",
+      "number": 60,
+      "title": "Gặp Lại Bạn Cũ",
+      "level": "A2",
+      "levelFocus": "Thì quá khứ đơn, tương lai (will / be going to), so sánh, used to",
+      "vietnamese": "Thứ Bảy tuần trước, khi tôi đang đi mua sắm ở trung tâm thương mại thì có ai đó gọi tên tôi. Tôi quay lại và thấy Linh, bạn học cấp ba của tôi. Tụi tôi đã gần mười năm không gặp nhau! Linh trông hơi khác, nhưng nụ cười thì vẫn như xưa. Hai đứa vào một quán cà phê và nói chuyện suốt ba tiếng. Linh kể bây giờ bạn ấy đang làm thiết kế và vừa mới chuyển về lại thành phố. Trước khi chia tay, tụi tôi hứa sẽ gặp nhau thường xuyên hơn.",
+      "hintsText": "turn around (quay lại)  ·  hadn't seen each other (đã không gặp nhau)  ·  the same (như cũ)  ·  promise (hứa)",
+      "hints": [
+        {
+          "en": "turn around",
+          "vi": "quay lại"
+        },
+        {
+          "en": "hadn't seen each other",
+          "vi": "đã không gặp nhau"
+        },
+        {
+          "en": "the same",
+          "vi": "như cũ"
+        },
+        {
+          "en": "promise",
+          "vi": "hứa"
+        }
+      ],
+      "answer": "Last Saturday, I was shopping at a mall when someone called my name. I turned around and saw Linh, my classmate from high school. We hadn't seen each other for almost ten years! She looked a little different, but her smile was the same. We went to a café and talked for three hours. She told me that she was working as a designer and had just moved back to the city. Before we said goodbye, we promised to meet more often."
+    },
+    {
+      "id": "translation-b1-61",
+      "number": 61,
+      "title": "Lợi Ích Của Việc Đọc Sách",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Tôi mê đọc sách từ hồi còn nhỏ, và tôi tin rằng đây là một trong những thói quen tốt nhất mà một người có thể có. Thứ nhất, đọc sách giúp chúng ta học từ mới và nâng cao khả năng ngôn ngữ. Thứ hai, sách cho chúng ta trải nghiệm cuộc sống của người khác và nhìn thế giới từ nhiều góc độ khác nhau. Điều này giúp chúng ta biết thấu hiểu và cởi mở hơn. Đọc sách trước khi ngủ cũng giúp tôi thư giãn tốt hơn là lướt điện thoại. Nhiều người nói họ không có thời gian đọc, nhưng tôi nghĩ chỉ cần mười lăm phút mỗi ngày cũng có thể tạo ra khác biệt lớn. Nếu bạn chưa biết bắt đầu từ đâu, hãy chọn một cuốn sách ngắn về chủ đề mà bạn thật sự yêu thích.",
+      "hintsText": "since I was a child (từ hồi nhỏ)  ·  points of view (góc nhìn)  ·  open-minded (cởi mở)  ·  make a big difference (tạo khác biệt lớn)",
+      "hints": [
+        {
+          "en": "since I was a child",
+          "vi": "từ hồi nhỏ"
+        },
+        {
+          "en": "points of view",
+          "vi": "góc nhìn"
+        },
+        {
+          "en": "open-minded",
+          "vi": "cởi mở"
+        },
+        {
+          "en": "make a big difference",
+          "vi": "tạo khác biệt lớn"
+        }
+      ],
+      "answer": "I have loved reading since I was a child, and I believe it is one of the best habits a person can have. First, reading helps us learn new words and improve our language skills. Second, books allow us to experience other people's lives and see the world from different points of view. This makes us more understanding and open-minded. Reading before bed also helps me relax better than scrolling on my phone. Some people say they don't have time to read, but I think even fifteen minutes a day can make a big difference. If you are not sure where to start, choose a short book about a topic you really enjoy."
+    },
+    {
+      "id": "translation-b1-62",
+      "number": 62,
+      "title": "Mạng Xã Hội",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Mạng xã hội đã trở thành một phần lớn trong cuộc sống của chúng ta. Một mặt, nó có nhiều lợi ích. Chúng ta có thể giữ liên lạc với bạn bè ở xa, cập nhật tin tức nhanh chóng và thậm chí là tìm việc làm. Nhiều doanh nghiệp nhỏ cũng dùng nó để bán sản phẩm. Mặt khác, nó có thể gây hại nếu chúng ta dùng quá nhiều. Một số người so sánh cuộc sống của mình với những bức ảnh hoàn hảo trên mạng rồi cảm thấy buồn bã. Có người lại phí hàng giờ lướt mạng thay vì ngủ hoặc học bài. Theo tôi, mạng xã hội giống như một con dao: nó hữu ích, nhưng chúng ta cần dùng cẩn thận. Bây giờ tôi đã tắt thông báo và chỉ kiểm tra ứng dụng hai lần mỗi ngày.",
+      "hintsText": "stay in touch (giữ liên lạc)  ·  on the other hand (mặt khác)  ·  harmful (có hại)  ·  notifications (thông báo)",
+      "hints": [
+        {
+          "en": "stay in touch",
+          "vi": "giữ liên lạc"
+        },
+        {
+          "en": "on the other hand",
+          "vi": "mặt khác"
+        },
+        {
+          "en": "harmful",
+          "vi": "có hại"
+        },
+        {
+          "en": "notifications",
+          "vi": "thông báo"
+        }
+      ],
+      "answer": "Social media has become a big part of our lives. On the one hand, it has many advantages. We can stay in touch with friends who live far away, get news quickly and even find jobs. Many small businesses also use it to sell their products. On the other hand, it can be harmful if we use it too much. Some people compare their lives with the perfect pictures they see online and feel unhappy. Others waste hours scrolling instead of sleeping or studying. In my opinion, social media is like a knife: it is useful, but we need to use it carefully. I now turn off notifications and only check my apps twice a day."
+    },
+    {
+      "id": "translation-b1-63",
+      "number": 63,
+      "title": "Làm Việc Ở Nhà",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Từ năm ngoái, công ty tôi đã cho nhân viên làm việc ở nhà hai ngày mỗi tuần. Lúc đầu tôi rất thích. Tôi không phải kẹt xe, và có thể mặc đồ thoải mái cả ngày. Tôi còn tiết kiệm được tiền ăn trưa và tiền xăng. Tuy nhiên, sau vài tháng, tôi bắt đầu nhận ra một số vấn đề. Đôi khi tôi thấy cô đơn vì không được gặp đồng nghiệp. Việc dừng làm việc cũng rất khó vì bàn làm việc nằm ngay cạnh giường. Bây giờ tôi có một lịch trình rõ ràng: bắt đầu lúc tám giờ, nghỉ trưa đàng hoàng và gập laptop lúc năm giờ. Tôi nghĩ làm việc ở nhà rất tuyệt, nhưng chỉ khi bạn biết tự quản lý bản thân.",
+      "hintsText": "allow (cho phép)  ·  sit in traffic (kẹt xe)  ·  lonely (cô đơn)  ·  manage yourself (tự quản lý bản thân)",
+      "hints": [
+        {
+          "en": "allow",
+          "vi": "cho phép"
+        },
+        {
+          "en": "sit in traffic",
+          "vi": "kẹt xe"
+        },
+        {
+          "en": "lonely",
+          "vi": "cô đơn"
+        },
+        {
+          "en": "manage yourself",
+          "vi": "tự quản lý bản thân"
+        }
+      ],
+      "answer": "Since last year, my company has allowed us to work from home two days a week. At first, I loved it. I didn't have to sit in traffic, and I could wear comfortable clothes all day. I also saved money on lunch and gas. However, after a few months, I noticed some problems. I sometimes felt lonely because I didn't see my coworkers. It was also hard to stop working because my desk was right next to my bed. Now I have a clear routine: I start at eight, take a real lunch break and close my laptop at five. I think working from home is great, but only if you can manage yourself well."
+    },
+    {
+      "id": "translation-b1-64",
+      "number": 64,
+      "title": "Hành Trình Học Tiếng Anh",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Tôi đã học tiếng Anh được sáu năm, nhưng suốt một thời gian dài, tôi không nói được. Ở trường, tôi chỉ học ngữ pháp và làm bài trắc nghiệm. Lần đầu tiên gặp người nước ngoài, tôi đứng hình và không nói được câu nào. Hôm đó, tôi quyết định thay đổi cách học. Tôi bắt đầu dịch những câu ngắn từ tiếng Việt sang tiếng Anh mỗi ngày và nói to chúng lên. Tôi cũng xem video có phụ đề tiếng Anh. Sau vài tháng, tôi nhận ra mình có thể trả lời những câu hỏi đơn giản mà không cần nghĩ bằng tiếng Việt trước. Tôi vẫn chưa nói trôi chảy, nhưng tôi đã tự tin hơn trước rất nhiều.",
+      "hintsText": "have been learning (đã học được)  ·  froze (đứng hình)  ·  out loud (thành tiếng)  ·  fluent (trôi chảy)",
+      "hints": [
+        {
+          "en": "have been learning",
+          "vi": "đã học được"
+        },
+        {
+          "en": "froze",
+          "vi": "đứng hình"
+        },
+        {
+          "en": "out loud",
+          "vi": "thành tiếng"
+        },
+        {
+          "en": "fluent",
+          "vi": "trôi chảy"
+        }
+      ],
+      "answer": "I have been learning English for six years, but for a long time, I couldn't speak it. At school, I only studied grammar and did multiple-choice tests. When I met a foreigner for the first time, I froze and couldn't say a single word. That day, I decided to change the way I learned. I started translating short sentences from Vietnamese into English every day and saying them out loud. I also watched videos with English subtitles. After a few months, I noticed that I could answer simple questions without thinking in Vietnamese first. I'm not fluent yet, but I'm much more confident than before."
+    },
+    {
+      "id": "translation-b1-65",
+      "number": 65,
+      "title": "Thành Phố Hay Nông Thôn",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Nhiều người trẻ rời quê lên thành phố lớn để tìm công việc tốt hơn. Năm năm trước, tôi cũng làm như vậy. Sống ở thành phố có nhiều cái lợi. Ở đây có nhiều cơ hội hơn, bệnh viện tốt hơn và có rất nhiều thứ để làm vào buổi tối. Tuy nhiên, cuộc sống ở đây cũng rất áp lực. Tiền thuê nhà đắt đỏ, không khí ô nhiễm và ngày nào cũng kẹt xe. Ngược lại, cuộc sống ở nông thôn chậm rãi và yên bình hơn, nhưng lại khó tìm được một công việc lương cao. Nếu được chọn, tôi sẽ làm việc ở thành phố thêm mười năm nữa rồi về quê tận hưởng một cuộc sống yên tĩnh.",
+      "hintsText": "opportunities (cơ hội)  ·  stressful (áp lực)  ·  in contrast (ngược lại)  ·  well-paid (lương cao)",
+      "hints": [
+        {
+          "en": "opportunities",
+          "vi": "cơ hội"
+        },
+        {
+          "en": "stressful",
+          "vi": "áp lực"
+        },
+        {
+          "en": "in contrast",
+          "vi": "ngược lại"
+        },
+        {
+          "en": "well-paid",
+          "vi": "lương cao"
+        }
+      ],
+      "answer": "Many young people move from the countryside to big cities to look for better jobs. I did the same thing five years ago. Living in the city has many benefits. There are more opportunities, better hospitals and lots of things to do at night. However, life here is also stressful. Rent is expensive, the air is polluted and traffic jams happen every day. In contrast, life in the countryside is slower and more peaceful, but it can be hard to find a well-paid job. If I could choose, I would work in the city for ten more years and then move back to the countryside to enjoy a quiet life."
+    },
+    {
+      "id": "translation-b1-66",
+      "number": 66,
+      "title": "Nếu Tôi Trúng Số",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Đôi khi tôi tưởng tượng mình sẽ làm gì nếu trúng xổ số. Trước tiên, tôi sẽ mua cho bố mẹ một căn nhà vì bố mẹ đã vất vả cả đời. Sau đó, tôi sẽ lo cho em trai đi du học. Tôi sẽ không nghỉ việc ngay, vì tôi nghĩ công việc mang lại ý nghĩa cho cuộc sống. Tuy vậy, tôi sẽ đi du lịch nhiều hơn, có thể là châu Âu và Nam Mỹ. Tôi cũng sẽ góp một phần tiền cho trẻ em ở vùng nghèo để các em được đến trường. Tất nhiên, tôi biết khả năng trúng số là rất nhỏ. Vậy nên bây giờ, tôi sẽ tiếp tục làm việc chăm chỉ và tiết kiệm từng chút một.",
+      "hintsText": "win the lottery (trúng số)  ·  study abroad (du học)  ·  quit my job (nghỉ việc)  ·  little by little (từng chút một)",
+      "hints": [
+        {
+          "en": "win the lottery",
+          "vi": "trúng số"
+        },
+        {
+          "en": "study abroad",
+          "vi": "du học"
+        },
+        {
+          "en": "quit my job",
+          "vi": "nghỉ việc"
+        },
+        {
+          "en": "little by little",
+          "vi": "từng chút một"
+        }
+      ],
+      "answer": "Sometimes I imagine what I would do if I won the lottery. First, I would buy a house for my parents because they have worked hard all their lives. Then I would pay for my younger brother to study abroad. I wouldn't quit my job immediately, because I think work gives life meaning. However, I would travel more, maybe to Europe and South America. I would also give some money to children in poor areas so that they could go to school. Of course, I know that the chance of winning is very small. So for now, I'll keep working hard and saving money little by little."
+    },
+    {
+      "id": "translation-b1-67",
+      "number": 67,
+      "title": "Thói Quen Dậy Sớm",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Phần lớn cuộc đời, tôi là một “cú đêm”. Tôi thường thức đến hai giờ sáng và thức dậy trong trạng thái mệt mỏi. Sáu tháng trước, tôi quyết định thử dậy lúc năm giờ rưỡi. Hai tuần đầu thật kinh khủng, và tôi suýt bỏ cuộc. Bí quyết là đi ngủ sớm hơn và để điện thoại bên ngoài phòng ngủ. Giờ đây, tôi dùng những buổi sáng yên tĩnh để tập thể dục, đọc sách và lên kế hoạch cho cả ngày. Tôi làm việc hiệu quả hơn và hiếm khi thấy căng thẳng ở chỗ làm. Tôi không nghĩ ai cũng cần dậy sớm, nhưng thay đổi thói quen này thật sự đã giúp cuộc sống của tôi tốt lên.",
+      "hintsText": "night owl (cú đêm)  ·  the secret (bí quyết)  ·  productive (làm việc hiệu quả)  ·  rarely (hiếm khi)",
+      "hints": [
+        {
+          "en": "night owl",
+          "vi": "cú đêm"
+        },
+        {
+          "en": "the secret",
+          "vi": "bí quyết"
+        },
+        {
+          "en": "productive",
+          "vi": "làm việc hiệu quả"
+        },
+        {
+          "en": "rarely",
+          "vi": "hiếm khi"
+        }
+      ],
+      "answer": "For most of my life, I was a night owl. I often stayed up until two a.m. and woke up feeling tired. Six months ago, I decided to try getting up at five thirty. The first two weeks were terrible, and I almost gave up. The secret was going to bed earlier and leaving my phone outside my bedroom. Now I use my quiet mornings to exercise, read and plan my day. I have become more productive, and I rarely feel stressed at work. I don't think everyone needs to wake up early, but changing this habit has really improved my life."
+    },
+    {
+      "id": "translation-b1-68",
+      "number": 68,
+      "title": "Trồng Cây Xanh",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Hai năm trước, ban công nhà tôi chỉ là một góc trống để phơi đồ. Rồi một hôm, tôi mua thử một chậu cây lưỡi hổ vì nghe nói nó giúp không khí trong lành hơn. Từ đó, tôi bắt đầu mê trồng cây. Đến giờ, tôi đã trồng được hơn hai mươi chậu, từ hoa, cây cảnh đến rau thơm và cà chua. Mỗi sáng, tôi dành mười lăm phút tưới cây trước khi đi làm, và đó là khoảng thời gian bình yên nhất trong ngày. Căn phòng mát hơn, không khí dễ chịu hơn, và tôi còn có rau sạch để nấu ăn. Điều làm tôi vui nhất là mấy nhà hàng xóm cũng bắt đầu trồng cây theo. Giờ cả dãy nhà nhìn xanh mát hẳn. Nếu bạn đang thấy căng thẳng, hãy thử trồng cây xem. Bạn không cần một khu vườn lớn, chỉ một chậu cây nhỏ là đủ để bắt đầu.",
+      "hintsText": "balcony (ban công)  ·  fall in love with (mê, say mê)  ·  water the plants (tưới cây)  ·  peaceful (bình yên)",
+      "hints": [
+        {
+          "en": "balcony",
+          "vi": "ban công"
+        },
+        {
+          "en": "fall in love with",
+          "vi": "mê, say mê"
+        },
+        {
+          "en": "water the plants",
+          "vi": "tưới cây"
+        },
+        {
+          "en": "peaceful",
+          "vi": "bình yên"
+        }
+      ],
+      "answer": "Two years ago, my balcony was just an empty corner for drying clothes. Then one day, I bought a snake plant because I had heard that it makes the air cleaner. Since then, I have fallen in love with growing plants. So far, I have grown more than twenty pots, from flowers and houseplants to herbs and tomatoes. Every morning, I spend fifteen minutes watering my plants before work, and it is the most peaceful part of my day. My room is cooler, the air feels fresher, and I even have clean vegetables for cooking. What makes me happiest is that my neighbors have started growing plants too. Now the whole street looks green and fresh. If you are feeling stressed, try growing some plants. You don't need a big garden; one small pot is enough to start."
+    },
+    {
+      "id": "translation-b1-69",
+      "number": 69,
+      "title": "Người Tôi Ngưỡng Mộ",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Người tôi ngưỡng mộ nhất là mẹ tôi. Hồi tôi còn nhỏ, bố tôi đi làm ở tỉnh khác, nên mẹ gần như một mình nuôi hai đứa con. Mẹ buôn bán ở chợ từ sáng sớm đến tối mịt, nhưng chưa bao giờ than phiền. Kể cả những lúc nhà không có nhiều tiền, mẹ vẫn luôn lo cho chúng tôi đủ ăn và được đi học. Mẹ dạy tôi sống trung thực, làm việc chăm chỉ và đối xử tử tế với người khác. Bây giờ khi đã đi làm, tôi mới hiểu cuộc sống của mẹ đã vất vả đến nhường nào. Tôi mong một ngày nào đó mình có thể chăm sóc mẹ như cách mẹ đã chăm sóc chúng tôi.",
+      "hintsText": "admire (ngưỡng mộ)  ·  raise (nuôi nấng)  ·  complain (than phiền)  ·  treat others with kindness (đối xử tử tế với người khác)",
+      "hints": [
+        {
+          "en": "admire",
+          "vi": "ngưỡng mộ"
+        },
+        {
+          "en": "raise",
+          "vi": "nuôi nấng"
+        },
+        {
+          "en": "complain",
+          "vi": "than phiền"
+        },
+        {
+          "en": "treat others with kindness",
+          "vi": "đối xử tử tế với người khác"
+        }
+      ],
+      "answer": "The person I admire most is my mother. When I was young, my father worked in another province, so my mother raised two children mostly on her own. She worked at a market from early morning until late at night, but she never complained. Even when we didn't have much money, she always made sure that we had enough food and could go to school. She taught me to be honest, to work hard and to treat others with kindness. Now that I have a job, I understand how difficult her life was. I hope that one day I can take care of her the way she took care of us."
+    },
+    {
+      "id": "translation-b1-70",
+      "number": 70,
+      "title": "Bài Học Từ Thất Bại",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Hai năm trước, tôi cùng một người bạn mở một shop quần áo online nhỏ. Tụi tôi rất hào hứng và dồn gần hết tiền tiết kiệm để nhập hàng. Đáng tiếc là tụi tôi đã không nghiên cứu thị trường kỹ càng. Giá bán quá cao, và tụi tôi cũng không biết cách quảng cáo. Sau tám tháng, tụi tôi phải đóng cửa shop. Tôi thấy xấu hổ và suốt một thời gian dài không muốn nhắc đến chuyện đó. Giờ nhìn lại, tôi nhận ra thất bại đã dạy tôi nhiều hơn bất kỳ thành công nào. Tôi học được cách lên kế hoạch cẩn thận, lắng nghe khách hàng và không bao giờ đầu tư số tiền mà mình không chịu được nếu mất. Thất bại thật đau đớn, nhưng nó cũng là một người thầy tuyệt vời.",
+      "hintsText": "savings (tiền tiết kiệm)  ·  research the market (nghiên cứu thị trường)  ·  embarrassed (xấu hổ)  ·  looking back (nhìn lại)",
+      "hints": [
+        {
+          "en": "savings",
+          "vi": "tiền tiết kiệm"
+        },
+        {
+          "en": "research the market",
+          "vi": "nghiên cứu thị trường"
+        },
+        {
+          "en": "embarrassed",
+          "vi": "xấu hổ"
+        },
+        {
+          "en": "looking back",
+          "vi": "nhìn lại"
+        }
+      ],
+      "answer": "Two years ago, I opened a small online clothing shop with a friend. We were excited and spent almost all our savings on stock. Unfortunately, we didn't research the market carefully. Our prices were too high, and we didn't know how to advertise. After eight months, we had to close the shop. I felt embarrassed and didn't want to talk about it for a long time. Looking back now, I realize that failure taught me more than success ever could. I learned to plan carefully, listen to customers and never invest money that I can't afford to lose. Failure is painful, but it is also a great teacher."
+    },
+    {
+      "id": "translation-b1-71",
+      "number": 71,
+      "title": "Du Lịch Một Mình",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Năm ngoái, tôi có chuyến du lịch một mình đầu tiên đến Thái Lan. Trước khi đi, gia đình tôi rất lo vì nghĩ đi một mình sẽ nguy hiểm. Thật ra tôi cũng hơi sợ. Nhưng hóa ra chuyến đi lại là một trong những trải nghiệm tuyệt nhất đời tôi. Không có ai đi cùng, tôi phải tự đưa ra mọi quyết định, từ chọn quán ăn cho đến tìm đường. Tôi cũng gặp được rất nhiều người thú vị ở nhà nghỉ, và vài người trong số họ đến giờ vẫn là bạn của tôi. Đi du lịch một mình giúp tôi tự lập và tự tin hơn. Nếu bạn chưa từng thử, tôi khuyên bạn nên bắt đầu bằng một chuyến đi ngắn đến một nơi an toàn.",
+      "hintsText": "solo trip (chuyến đi một mình)  ·  turn out (hóa ra)  ·  hostel (nhà nghỉ giá rẻ)  ·  independent (tự lập)",
+      "hints": [
+        {
+          "en": "solo trip",
+          "vi": "chuyến đi một mình"
+        },
+        {
+          "en": "turn out",
+          "vi": "hóa ra"
+        },
+        {
+          "en": "hostel",
+          "vi": "nhà nghỉ giá rẻ"
+        },
+        {
+          "en": "independent",
+          "vi": "tự lập"
+        }
+      ],
+      "answer": "Last year, I took my first solo trip to Thailand. Before I left, my family was worried because they thought it was dangerous to travel alone. Honestly, I was a bit scared too. But the trip turned out to be one of the best experiences of my life. Without anyone else, I had to make all my own decisions, from choosing restaurants to finding my way around. I also met many interesting people at my hostel, and some of them are still my friends today. Traveling alone made me more independent and confident. If you have never tried it, I recommend starting with a short trip to a safe place."
+    },
+    {
+      "id": "translation-b1-72",
+      "number": 72,
+      "title": "Điện Thoại Và Giấc Ngủ",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Vài tháng trước, tôi bị khó ngủ. Tôi thường nằm trên giường hàng giờ liền và mệt mỏi suốt cả ngày. Rồi tôi đọc được một bài báo giải thích rằng ánh sáng xanh từ màn hình điện thoại khiến não bộ khó đi vào giấc ngủ hơn. Tôi nhận ra đêm nào mình cũng nằm dùng điện thoại trên giường ít nhất một tiếng. Thế là tôi đặt ra một quy tắc mới: không dùng điện thoại sau mười giờ tối. Tôi mua một chiếc đồng hồ báo thức giá rẻ và bắt đầu sạc điện thoại ở trong bếp. Tuần đầu khá khó khăn, nhưng chẳng bao lâu sau tôi đã ngủ nhanh hơn hẳn. Nếu bạn thường xuyên thấy mệt mỏi, hãy xem lại thời gian dùng màn hình trước khi ngủ.",
+      "hintsText": "have trouble sleeping (khó ngủ)  ·  an article (bài báo)  ·  fall asleep (chìm vào giấc ngủ)  ·  screen time (thời gian dùng màn hình)",
+      "hints": [
+        {
+          "en": "have trouble sleeping",
+          "vi": "khó ngủ"
+        },
+        {
+          "en": "an article",
+          "vi": "bài báo"
+        },
+        {
+          "en": "fall asleep",
+          "vi": "chìm vào giấc ngủ"
+        },
+        {
+          "en": "screen time",
+          "vi": "thời gian dùng màn hình"
+        }
+      ],
+      "answer": "A few months ago, I had trouble sleeping. I would lie in bed for hours, and I felt tired all day. Then I read an article which explained that the blue light from phone screens makes it harder for our brains to fall asleep. I realized that I had been using my phone in bed every night for at least an hour. So I made a new rule: no phones after ten p.m. I bought a cheap alarm clock and started charging my phone in the kitchen. The first week was difficult, but soon I was falling asleep much faster. If you often feel tired, check your screen time before bed."
+    },
+    {
+      "id": "translation-b1-73",
+      "number": 73,
+      "title": "Tiết Kiệm Tiền",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Khi mới đi làm, tháng nào tôi cũng tiêu hết sạch lương. Tôi mua những bộ quần áo không cần thiết, gần như ngày nào cũng ăn ngoài và chẳng bao giờ biết tiền của mình đã đi đâu. Một hôm, xe máy của tôi bị hỏng mà tôi lại không có đủ tiền để sửa. Đó là một hồi chuông cảnh tỉnh. Từ đó, tôi làm theo một quy tắc đơn giản: ngay khi nhận lương, tôi bỏ hai mươi phần trăm vào tài khoản tiết kiệm. Tôi cũng ghi lại mọi khoản chi tiêu vào một ứng dụng. Lúc đầu không dễ chút nào, nhưng sau một năm, tôi đã để dành đủ một khoản quỹ dự phòng. Tôi học được rằng thói quen tốt quan trọng hơn một mức lương cao.",
+      "hintsText": "salary (lương)  ·  a wake-up call (hồi chuông cảnh tỉnh)  ·  as soon as (ngay khi)  ·  emergency fund (quỹ dự phòng)",
+      "hints": [
+        {
+          "en": "salary",
+          "vi": "lương"
+        },
+        {
+          "en": "a wake-up call",
+          "vi": "hồi chuông cảnh tỉnh"
+        },
+        {
+          "en": "as soon as",
+          "vi": "ngay khi"
+        },
+        {
+          "en": "emergency fund",
+          "vi": "quỹ dự phòng"
+        }
+      ],
+      "answer": "When I got my first job, I spent all my salary every month. I bought clothes I didn't need, ate out almost every day and never knew where my money went. One day, my motorbike broke down, and I didn't have enough money to fix it. That was a wake-up call. Since then, I have followed a simple rule: as soon as I receive my salary, I put twenty percent into a savings account. I also write down everything I spend in an app. It wasn't easy at first, but after one year, I have saved enough for an emergency fund. I have learned that good habits matter more than a big salary."
+    },
+    {
+      "id": "translation-b1-74",
+      "number": 74,
+      "title": "Công Việc Mơ Ước",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Công việc mơ ước của tôi là trở thành một nhiếp ảnh gia du lịch. Từ hồi còn là thiếu niên, tôi đã rất thích chụp ảnh phong cảnh và con người. Tôi thích ghi lại những khoảnh khắc nhỏ, như một bà cụ bán hoa hay lũ trẻ chơi đùa dưới mưa. Một nhiếp ảnh gia du lịch có thể đến những đất nước mới, tìm hiểu các nền văn hóa khác nhau và kể những câu chuyện đẹp qua từng bức ảnh. Tất nhiên, công việc này không dễ dàng. Rất khó để có thu nhập ổn định, và bạn phải xa gia đình rất nhiều. Hiện tại tôi đang làm văn phòng, nhưng cuối tuần tôi đi học nhiếp ảnh. Tôi tin rằng nếu cứ tiếp tục luyện tập, một ngày nào đó giấc mơ của tôi sẽ thành hiện thực.",
+      "hintsText": "photographer (nhiếp ảnh gia)  ·  capture (ghi lại)  ·  stable income (thu nhập ổn định)  ·  come true (thành hiện thực)",
+      "hints": [
+        {
+          "en": "photographer",
+          "vi": "nhiếp ảnh gia"
+        },
+        {
+          "en": "capture",
+          "vi": "ghi lại"
+        },
+        {
+          "en": "stable income",
+          "vi": "thu nhập ổn định"
+        },
+        {
+          "en": "come true",
+          "vi": "thành hiện thực"
+        }
+      ],
+      "answer": "My dream job is to become a travel photographer. Since I was a teenager, I have loved taking pictures of places and people. I enjoy capturing small moments, like an old woman selling flowers or children playing in the rain. A travel photographer can visit new countries, learn about different cultures and share beautiful stories through photos. Of course, this job is not easy. It is hard to earn a stable income, and you have to spend a lot of time away from your family. Right now, I am working in an office, but I take photography classes on weekends. I believe that if I keep practicing, my dream will come true one day."
+    },
+    {
+      "id": "translation-b1-75",
+      "number": 75,
+      "title": "Ăn Uống Lành Mạnh",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Ăn uống lành mạnh không nhất thiết phải khó khăn hay tốn kém. Trước đây, tôi nghĩ ăn uống lành mạnh nghĩa là chỉ ăn salad, nên chưa bao giờ thử. Rồi một chuyên gia dinh dưỡng cho tôi vài lời khuyên đơn giản đã làm thay đổi thói quen của tôi. Thứ nhất, cô ấy bảo tôi lấp đầy một nửa đĩa bằng rau trong mỗi bữa ăn. Thứ hai, tôi nên uống nước lọc thay vì đồ uống ngọt như trà sữa hay nước ngọt. Thứ ba, tôi nên nấu ăn ở nhà thường xuyên hơn vì đồ ăn ngoài hàng thường có quá nhiều dầu mỡ và muối. Tôi làm theo lời khuyên của cô ấy trong ba tháng và thấy khỏe hơn rất nhiều. Thỉnh thoảng tôi vẫn ăn những món vặt mình thích, nhưng giờ chỉ ăn một lượng nhỏ thôi.",
+      "hintsText": "nutritionist (chuyên gia dinh dưỡng)  ·  fill half of my plate (lấp đầy nửa đĩa)  ·  instead of (thay vì)  ·  in small amounts (một lượng nhỏ)",
+      "hints": [
+        {
+          "en": "nutritionist",
+          "vi": "chuyên gia dinh dưỡng"
+        },
+        {
+          "en": "fill half of my plate",
+          "vi": "lấp đầy nửa đĩa"
+        },
+        {
+          "en": "instead of",
+          "vi": "thay vì"
+        },
+        {
+          "en": "in small amounts",
+          "vi": "một lượng nhỏ"
+        }
+      ],
+      "answer": "Eating healthily doesn't have to be difficult or expensive. In the past, I thought it meant eating only salad, so I never tried. Then a nutritionist gave me some simple advice that changed my habits. First, she told me to fill half of my plate with vegetables at every meal. Second, I should drink water instead of sweet drinks like milk tea and soft drinks. Third, I should cook at home more often because restaurant food usually has too much oil and salt. I followed her advice for three months, and I felt much healthier. I still eat my favorite snacks sometimes, but now I enjoy them in small amounts."
+    },
+    {
+      "id": "translation-b1-76",
+      "number": 76,
+      "title": "Học Online Hay Học Trên Lớp",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Ngày càng có nhiều người chọn học online thay vì đến lớp. Học online có những ưu điểm rõ ràng. Nó thường rẻ hơn, và học viên có thể học bất cứ lúc nào, ở bất cứ đâu, rất phù hợp với những người đi làm toàn thời gian. Tuy nhiên, học online đòi hỏi tính kỷ luật rất cao. Không có giáo viên giám sát, chúng ta rất dễ bị phân tâm hoặc bỏ dở giữa chừng. Ngược lại, học trên lớp cho học viên cơ hội hỏi trực tiếp và luyện tập cùng bạn học. Cá nhân tôi thích kết hợp cả hai. Tôi học một khóa online về ngữ pháp và từ vựng, và tham gia một câu lạc bộ nói tiếng Anh vào mỗi thứ Bảy để luyện tập với người thật.",
+      "hintsText": "anytime and anywhere (mọi lúc mọi nơi)  ·  self-discipline (tính kỷ luật)  ·  get distracted (bị phân tâm)  ·  a mix of both (kết hợp cả hai)",
+      "hints": [
+        {
+          "en": "anytime and anywhere",
+          "vi": "mọi lúc mọi nơi"
+        },
+        {
+          "en": "self-discipline",
+          "vi": "tính kỷ luật"
+        },
+        {
+          "en": "get distracted",
+          "vi": "bị phân tâm"
+        },
+        {
+          "en": "a mix of both",
+          "vi": "kết hợp cả hai"
+        }
+      ],
+      "answer": "More and more people are choosing to study online instead of going to a classroom. Online learning has clear advantages. It is usually cheaper, and students can study anytime and anywhere, which is perfect for people who work full-time. However, it requires a lot of self-discipline. Without a teacher watching, it is easy to get distracted or stop halfway. Classroom learning, on the other hand, gives students the chance to ask questions directly and practice with classmates. Personally, I prefer a mix of both. I take an online course for grammar and vocabulary, and I join a speaking club every Saturday to practice with real people."
+    },
+    {
+      "id": "translation-b1-77",
+      "number": 77,
+      "title": "Một Kỷ Niệm Đáng Nhớ",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Một trong những kỷ niệm đáng nhớ nhất của tôi xảy ra năm tôi mười lăm tuổi. Lớp tôi đi cắm trại ở một vườn quốc gia. Đêm thứ hai, một cơn bão lớn ập đến và gió thổi bay cả lều của chúng tôi. Ai nấy đều ướt sũng, lạnh cóng và sợ hãi. Cô giáo bình tĩnh dẫn chúng tôi đến một căn nhà nhỏ gần đó, nơi một cặp vợ chồng già cho chúng tôi trú lại. Họ pha trà gừng nóng và nấu mì gói cho cả hai mươi học sinh. Chúng tôi ngồi quây quần, kể chuyện và cười đùa đến sáng. Tôi không nhớ nhiều về phong cảnh đẹp của vườn quốc gia, nhưng tôi sẽ không bao giờ quên lòng tốt của những người xa lạ ấy.",
+      "hintsText": "memorable (đáng nhớ)  ·  blow ... away (thổi bay)  ·  calmly (bình tĩnh)  ·  kindness (lòng tốt)",
+      "hints": [
+        {
+          "en": "memorable",
+          "vi": "đáng nhớ"
+        },
+        {
+          "en": "blow ... away",
+          "vi": "thổi bay"
+        },
+        {
+          "en": "calmly",
+          "vi": "bình tĩnh"
+        },
+        {
+          "en": "kindness",
+          "vi": "lòng tốt"
+        }
+      ],
+      "answer": "One of my most memorable experiences happened when I was fifteen. My class went on a camping trip to a national park. On the second night, there was a big storm, and the wind blew our tent away. We were wet, cold and scared. Our teacher calmly led us to a small house nearby, where an old couple let us stay. They made hot ginger tea and cooked instant noodles for twenty students. We sat together, told stories and laughed until morning. I don't remember much about the beautiful scenery of the park, but I will never forget the kindness of those strangers."
+    },
+    {
+      "id": "translation-b1-78",
+      "number": 78,
+      "title": "Quản Lý Thời Gian",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Tôi từng than phiền rằng một ngày không đủ giờ. Lúc nào tôi cũng bận rộn nhưng chẳng bao giờ làm xong những việc quan trọng. Rồi tôi học được một phương pháp đơn giản từ một cuốn sách. Mỗi tối, tôi viết ra ba việc quan trọng nhất cho ngày hôm sau. Buổi sáng, tôi làm những việc đó trước tiên, trước khi kiểm tra email hay mạng xã hội. Tôi cũng chia những dự án lớn thành nhiều bước nhỏ để không cảm thấy quá tải. Một điều nữa giúp ích cho tôi là biết nói “không” với những việc không cần thiết. Từ khi bắt đầu làm như vậy, tôi có nhiều thời gian rảnh hơn và bớt căng thẳng hơn hẳn. Quản lý thời gian tốt nghĩa là tập trung vào những gì thật sự quan trọng.",
+      "hintsText": "tasks (công việc, nhiệm vụ)  ·  break ... into (chia ... thành)  ·  overwhelming (quá tải)  ·  say no to (từ chối)",
+      "hints": [
+        {
+          "en": "tasks",
+          "vi": "công việc, nhiệm vụ"
+        },
+        {
+          "en": "break ... into",
+          "vi": "chia ... thành"
+        },
+        {
+          "en": "overwhelming",
+          "vi": "quá tải"
+        },
+        {
+          "en": "say no to",
+          "vi": "từ chối"
+        }
+      ],
+      "answer": "I used to complain that there were not enough hours in a day. I was always busy, but I never finished the important things. Then I learned a simple method from a book. Every evening, I write down the three most important tasks for the next day. In the morning, I do these tasks first, before checking email or social media. I also break big projects into smaller steps so that they don't feel overwhelming. Another thing that helps me is saying no to things that are not necessary. Since I started doing this, I have had more free time and felt much less stressed. Good time management means focusing on what really matters."
+    },
+    {
+      "id": "translation-b1-79",
+      "number": 79,
+      "title": "Nuôi Thú Cưng",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Nuôi thú cưng có thể mang lại rất nhiều niềm vui, nhưng đó cũng là một trách nhiệm lớn. Năm ngoái, tôi nhận nuôi một chú mèo từ trạm cứu hộ động vật. Ngày nào nó cũng làm tôi bật cười, và được về nhà với nó sau một ngày làm việc dài khiến tôi bớt cô đơn hơn. Các nghiên cứu cho thấy thú cưng có thể giúp giảm căng thẳng. Tuy nhiên, trước khi nuôi thú cưng, bạn nên suy nghĩ kỹ. Thú cưng cần thức ăn, tiêm phòng và đi khám thú y định kỳ, những thứ này có thể khá tốn kém. Chúng cũng cần thời gian và sự quan tâm. Nếu bạn hay đi xa hoặc làm việc nhiều giờ liền, có lẽ lúc này nuôi thú cưng không phải là lựa chọn phù hợp với bạn.",
+      "hintsText": "responsibility (trách nhiệm)  ·  adopt (nhận nuôi)  ·  animal shelter (trạm cứu hộ động vật)  ·  the vet (bác sĩ thú y)",
+      "hints": [
+        {
+          "en": "responsibility",
+          "vi": "trách nhiệm"
+        },
+        {
+          "en": "adopt",
+          "vi": "nhận nuôi"
+        },
+        {
+          "en": "animal shelter",
+          "vi": "trạm cứu hộ động vật"
+        },
+        {
+          "en": "the vet",
+          "vi": "bác sĩ thú y"
+        }
+      ],
+      "answer": "Having a pet can bring a lot of joy, but it is also a big responsibility. Last year, I adopted a cat from an animal shelter. She makes me laugh every day, and coming home to her after a long day at work makes me feel less lonely. Studies show that pets can help reduce stress. However, before getting a pet, you should think carefully. Pets need food, vaccinations and regular visits to the vet, which can be expensive. They also need time and attention. If you travel often or work very long hours, maybe a pet is not a good choice for you right now."
+    },
+    {
+      "id": "translation-b1-80",
+      "number": 80,
+      "title": "Làm Việc Nhóm",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Hồi mới đi làm, tôi tin rằng tự mình làm thì việc gì cũng tốt hơn. Tôi hiếm khi nhờ giúp đỡ và không thích chia sẻ ý tưởng. Rồi quản lý giao cho tôi phụ trách một dự án nhóm với bốn người khác. Lúc đầu, cả nhóm cãi nhau rất nhiều vì mỗi người một ý. Nhưng dần dần, tôi học được cách lắng nghe. Tôi phát hiện ra một đồng nghiệp rất giỏi thiết kế, còn một người khác thì rất giỏi tính toán. Khi chúng tôi kết hợp điểm mạnh của nhau, kết quả cuối cùng tốt hơn rất nhiều so với bất cứ thứ gì tôi có thể tự làm một mình. Từ đó, tôi hiểu rằng làm việc nhóm không phải lúc nào cũng dễ, nhưng thường là chìa khóa dẫn đến thành công.",
+      "hintsText": "by myself (một mình)  ·  in charge of (phụ trách)  ·  argue (tranh cãi)  ·  the key to success (chìa khóa thành công)",
+      "hints": [
+        {
+          "en": "by myself",
+          "vi": "một mình"
+        },
+        {
+          "en": "in charge of",
+          "vi": "phụ trách"
+        },
+        {
+          "en": "argue",
+          "vi": "tranh cãi"
+        },
+        {
+          "en": "the key to success",
+          "vi": "chìa khóa thành công"
+        }
+      ],
+      "answer": "In my first job, I believed that I could do everything better by myself. I rarely asked for help and didn't like sharing my ideas. Then my manager put me in charge of a team project with four other people. At first, we argued a lot because everyone had different opinions. But slowly, I learned to listen. I discovered that one coworker was great at design, while another was very good with numbers. When we combined our strengths, the final result was much better than anything I could have done alone. Since then, I have understood that teamwork is not always easy, but it is often the key to success."
+    },
+    {
+      "id": "translation-b1-81",
+      "number": 81,
+      "title": "Áp Lực Đồng Trang Lứa",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Mỗi lần lướt mạng xã hội, tôi thường có cảm giác như ai cùng tuổi mình cũng đang thành công hơn mình. Có đứa bạn đã mua xe hơi, có đứa đã lập gia đình, có đứa thì đang đi du lịch vòng quanh thế giới. Có một thời gian, chuyện đó khiến tôi thấy mình là kẻ thất bại. Tôi bắt đầu làm việc nhiều giờ hơn và mua những thứ vượt quá khả năng chi trả chỉ để theo kịp người ta. Rồi một người bạn thân nhắc tôi rằng người ta chỉ đăng lên mạng những khoảnh khắc đẹp nhất của cuộc đời họ. Mỗi người đều có một dòng thời gian riêng. Giờ đây, thay vì so sánh bản thân với người khác, tôi so sánh mình với chính mình của năm ngoái. Chỉ cần mình tiến bộ hơn một chút là đủ rồi.",
+      "hintsText": "everyone my age (người cùng tuổi)  ·  a failure (kẻ thất bại)  ·  keep up (theo kịp)  ·  timeline (dòng thời gian)",
+      "hints": [
+        {
+          "en": "everyone my age",
+          "vi": "người cùng tuổi"
+        },
+        {
+          "en": "a failure",
+          "vi": "kẻ thất bại"
+        },
+        {
+          "en": "keep up",
+          "vi": "theo kịp"
+        },
+        {
+          "en": "timeline",
+          "vi": "dòng thời gian"
+        }
+      ],
+      "answer": "When I scroll through social media, it often seems like everyone my age is doing better than me. Some of my friends have bought cars, some have gotten married and others are traveling around the world. For a while, this made me feel like a failure. I started working longer hours and buying things I couldn't afford just to keep up. Then a close friend reminded me that people only post the best parts of their lives online. Everyone has their own timeline. Now, instead of comparing myself with others, I compare myself with who I was last year. If I have grown a little, that is enough."
+    },
+    {
+      "id": "translation-b1-82",
+      "number": 82,
+      "title": "Rác Thải Nhựa",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Tháng trước, tôi thử một thử thách nhỏ: suốt một tuần, giữ lại mọi đồ nhựa mình dùng thay vì vứt đi. Đến cuối tuần, tôi không tin vào mắt mình. Có chín cái ly trà sữa, hơn chục hộp đựng đồ ăn, một nắm ống hút và gần ba mươi cái túi ni-lông. Phần lớn đến từ đồ ăn đặt qua ứng dụng và đồ uống mua mang đi. Tôi chưa bao giờ nghĩ một người lại có thể thải ra nhiều rác nhựa đến vậy. Kể từ hôm đó, tôi đã thay đổi vài thói quen. Tôi mang theo bình nước riêng, để sẵn một cái túi vải trong cốp xe và luôn chọn “không lấy dụng cụ ăn uống” khi đặt đồ ăn. Tôi vẫn chưa bỏ được trà sữa, nhưng giờ tôi mang ly riêng ra quán. Nếu bạn nghĩ mình không dùng nhiều nhựa, hãy thử giữ lại trong một tuần xem. Có khi bạn sẽ bất ngờ đấy.",
+      "hintsText": "plastic waste (rác thải nhựa)  ·  takeaway (mua mang đi)  ·  cutlery (dụng cụ ăn uống)  ·  give up (từ bỏ)",
+      "hints": [
+        {
+          "en": "plastic waste",
+          "vi": "rác thải nhựa"
+        },
+        {
+          "en": "takeaway",
+          "vi": "mua mang đi"
+        },
+        {
+          "en": "cutlery",
+          "vi": "dụng cụ ăn uống"
+        },
+        {
+          "en": "give up",
+          "vi": "từ bỏ"
+        }
+      ],
+      "answer": "Last month, I tried a small challenge: for one week, I kept all the plastic I used instead of throwing it away. At the end of the week, I couldn't believe my eyes. There were nine bubble tea cups, more than ten food containers, a handful of straws and nearly thirty plastic bags. Most of it came from food delivery apps and takeaway drinks. I never thought one person could create so much plastic waste. Since that day, I have changed a few habits. I carry my own water bottle, keep a cloth bag under my motorbike seat and always choose “no cutlery” when I order food. I haven't given up bubble tea yet, but now I bring my own cup to the shop. If you think you don't use much plastic, try keeping it for a week. You might be surprised."
+    },
+    {
+      "id": "translation-b1-83",
+      "number": 83,
+      "title": "Giao Thông Giờ Cao Điểm",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Ngày nào tôi cũng mất gần hai tiếng ngoài đường. Vào giờ cao điểm, đường phố ở thành phố tôi đầy xe máy, ô tô và xe buýt. Có lúc tôi đứng yên mười phút ở một ngã tư lớn. Tiếng ồn, cái nóng và khói bụi khiến tôi kiệt sức trước cả khi đến công ty. Tôi đã thử đi sớm hơn, nhưng hình như năm nào kẹt xe cũng bắt đầu sớm hơn. Gần đây, một tuyến metro mới vừa mở gần nhà tôi, và tôi đã bắt đầu đi bằng metro. Nó sạch sẽ, mát mẻ và luôn đúng giờ. Tôi hy vọng thành phố sẽ xây thêm nhiều tuyến metro để mọi người bớt thời gian ngoài đường và có thêm thời gian bên gia đình.",
+      "hintsText": "rush hour (giờ cao điểm)  ·  intersection (ngã tư)  ·  exhausted (kiệt sức)  ·  on time (đúng giờ)",
+      "hints": [
+        {
+          "en": "rush hour",
+          "vi": "giờ cao điểm"
+        },
+        {
+          "en": "intersection",
+          "vi": "ngã tư"
+        },
+        {
+          "en": "exhausted",
+          "vi": "kiệt sức"
+        },
+        {
+          "en": "on time",
+          "vi": "đúng giờ"
+        }
+      ],
+      "answer": "Every day, I spend almost two hours in traffic. During rush hour, the roads in my city are full of motorbikes, cars and buses. Sometimes I don't move for ten minutes at a big intersection. The noise, the heat and the smoke make me exhausted before I even arrive at work. I have tried leaving home earlier, but the traffic seems to start earlier every year. Recently, a new metro line opened near my house, and I have started using it. It is clean, cool and always on time. I hope the city will build more metro lines so that people can spend less time on the road and more time with their families."
+    },
+    {
+      "id": "translation-b1-84",
+      "number": 84,
+      "title": "Học Một Kỹ Năng Mới",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Năm hai mươi tám tuổi, tôi quyết định học đàn piano, điều mà tôi đã ao ước từ hồi còn nhỏ. Nhiều người nói với tôi là đã quá muộn rồi, nhưng tôi không nghe. Tôi mua một cây đàn phím điện cũ và bắt đầu học bằng các bài học online miễn phí. Lúc đầu, các ngón tay tôi cứng đơ và tôi chỉ có thể đàn rất chậm. Tối nào tôi cũng tập hai mươi phút, kể cả khi mệt. Sau sáu tháng, tôi đã có thể đàn trọn vẹn bài hát đầu tiên cho gia đình nghe. Mọi người đều bất ngờ và vỗ tay rất lâu. Trải nghiệm này dạy tôi rằng không bao giờ là quá muộn để học một điều mới, miễn là bạn đủ kiên nhẫn.",
+      "hintsText": "second-hand (đồ cũ)  ·  stiff (cứng đơ)  ·  be able to (có thể)  ·  as long as (miễn là)",
+      "hints": [
+        {
+          "en": "second-hand",
+          "vi": "đồ cũ"
+        },
+        {
+          "en": "stiff",
+          "vi": "cứng đơ"
+        },
+        {
+          "en": "be able to",
+          "vi": "có thể"
+        },
+        {
+          "en": "as long as",
+          "vi": "miễn là"
+        }
+      ],
+      "answer": "At twenty-eight, I decided to learn to play the piano, something I had wanted to do since I was a child. Many people told me it was too late, but I didn't listen. I bought a second-hand keyboard and started with free online lessons. At first, my fingers felt stiff, and I could only play very slowly. I practiced for twenty minutes every evening, even when I was tired. After six months, I was able to play my first complete song for my family. They were surprised and clapped for a long time. This experience taught me that it is never too late to learn something new, as long as you are patient."
+    },
+    {
+      "id": "translation-b1-85",
+      "number": 85,
+      "title": "Ăn Ngoài Hay Nấu Ở Nhà",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Ở các thành phố lớn, việc ăn ngoài đã trở nên rất phổ biến. Nó tiện lợi, và bạn có thể thử nhiều món khác nhau mà không tốn thời gian trong bếp. Sau một ngày dài làm việc, đặt đồ ăn qua ứng dụng có vẻ là lựa chọn dễ nhất. Tuy nhiên, tôi nhận thấy nấu ăn ở nhà có rất nhiều lợi ích. Nấu ở nhà rẻ hơn và lành mạnh hơn vì tôi có thể kiểm soát lượng dầu, đường và muối. Nấu ăn cũng giúp tôi thư giãn và cho tôi cơ hội dành thời gian bên người yêu. Tất nhiên, tôi vẫn ăn ngoài vào cuối tuần hoặc khi gặp bạn bè. Tôi nghĩ cách tốt nhất là tìm sự cân bằng phù hợp với lối sống của bạn.",
+      "hintsText": "convenient (tiện lợi)  ·  control (kiểm soát)  ·  partner (người yêu, bạn đời)  ·  find a balance (tìm sự cân bằng)",
+      "hints": [
+        {
+          "en": "convenient",
+          "vi": "tiện lợi"
+        },
+        {
+          "en": "control",
+          "vi": "kiểm soát"
+        },
+        {
+          "en": "partner",
+          "vi": "người yêu, bạn đời"
+        },
+        {
+          "en": "find a balance",
+          "vi": "tìm sự cân bằng"
+        }
+      ],
+      "answer": "In big cities, eating out has become very common. It is convenient, and you can try many different dishes without spending time in the kitchen. After a long day at work, ordering food on an app seems like the easiest choice. However, I have found that cooking at home has many benefits. It is cheaper and healthier because I can control how much oil, sugar and salt I use. Cooking also helps me relax and gives me a chance to spend time with my partner. Of course, I still eat out on weekends or when I meet friends. I think the best way is to find a balance that fits your lifestyle."
+    },
+    {
+      "id": "translation-b1-86",
+      "number": 86,
+      "title": "Đi Du Học",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Nhiều học sinh Việt Nam mơ ước được đi du học, và em họ tôi là một trong số đó. Năm ngoái, em ấy giành được học bổng sang Úc học. Du học có rất nhiều lợi ích. Du học sinh có thể cải thiện tiếng Anh nhanh chóng, trải nghiệm một nền văn hóa mới và trở nên tự lập hơn. Tấm bằng của một trường đại học nước ngoài cũng có thể giúp các bạn tìm được việc làm tốt hơn sau này. Tuy nhiên, cũng có không ít thử thách. Em họ tôi kể rằng mấy tháng đầu em ấy rất nhớ nhà. Em ấy cũng phải đi làm thêm để trang trải chi phí sinh hoạt. Theo tôi, du học là một trải nghiệm quý giá, nhưng học sinh nên chuẩn bị thật kỹ cả về tinh thần lẫn tài chính.",
+      "hintsText": "scholarship (học bổng)  ·  homesick (nhớ nhà)  ·  living costs (chi phí sinh hoạt)  ·  well prepared (chuẩn bị kỹ)",
+      "hints": [
+        {
+          "en": "scholarship",
+          "vi": "học bổng"
+        },
+        {
+          "en": "homesick",
+          "vi": "nhớ nhà"
+        },
+        {
+          "en": "living costs",
+          "vi": "chi phí sinh hoạt"
+        },
+        {
+          "en": "well prepared",
+          "vi": "chuẩn bị kỹ"
+        }
+      ],
+      "answer": "Many Vietnamese students dream of studying abroad, and my cousin is one of them. Last year, she got a scholarship to study in Australia. Studying abroad has many advantages. Students can improve their English quickly, experience a new culture and become more independent. A degree from a foreign university may also help them find a better job later. However, there are also challenges. My cousin told me that she felt very homesick in the first few months. She also had to work part-time to pay for her living costs. In my opinion, studying abroad is a valuable experience, but students should be well prepared, both mentally and financially."
+    },
+    {
+      "id": "translation-b1-87",
+      "number": 87,
+      "title": "Người Hướng Nội",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Tôi là người hướng nội, và suốt một thời gian dài, tôi cứ nghĩ mình có vấn đề. Ở các bữa tiệc, tôi thích nói chuyện với một hai người hơn là với cả nhóm. Sau khi ở chỗ đông người, tôi cần ở một mình để “sạc lại năng lượng”. Mọi người hay nói tôi nhút nhát hoặc khó gần, nhưng không phải vậy. Đơn giản là tôi thích những cuộc trò chuyện sâu sắc hơn là những câu chuyện xã giao. Sau này, tôi mới biết hướng nội là chuyện hoàn toàn bình thường, và nhiều nhà văn, nhà khoa học vĩ đại cũng là người hướng nội. Giờ đây, tôi chấp nhận con người thật của mình. Tôi vẫn đi chơi với bạn bè, nhưng tôi cũng cho phép bản thân có những khoảng lặng mà không thấy áy náy.",
+      "hintsText": "introvert (người hướng nội)  ·  recharge (nạp lại năng lượng)  ·  small talk (chuyện xã giao)  ·  feel guilty (thấy áy náy)",
+      "hints": [
+        {
+          "en": "introvert",
+          "vi": "người hướng nội"
+        },
+        {
+          "en": "recharge",
+          "vi": "nạp lại năng lượng"
+        },
+        {
+          "en": "small talk",
+          "vi": "chuyện xã giao"
+        },
+        {
+          "en": "feel guilty",
+          "vi": "thấy áy náy"
+        }
+      ],
+      "answer": "I am an introvert, and for a long time, I thought something was wrong with me. At parties, I preferred to talk to one or two people instead of the whole group. After spending time in crowds, I needed to be alone to recharge. People often said I was shy or unfriendly, but that wasn't true. I simply enjoy deep conversations more than small talk. Later, I learned that being an introvert is completely normal, and that many great writers and scientists were introverts too. Now I accept who I am. I still go out with friends, but I also give myself quiet time without feeling guilty."
+    },
+    {
+      "id": "translation-b1-88",
+      "number": 88,
+      "title": "Trí Tuệ Nhân Tạo",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Trí tuệ nhân tạo, hay AI, đang thay đổi cách chúng ta sống và làm việc. Ngày nay, nhiều người dùng các công cụ AI để viết email, dịch tài liệu và thậm chí lên kế hoạch cho chuyến đi. Ở công ty tôi, AI giúp chúng tôi trả lời câu hỏi của khách hàng nhanh hơn trước rất nhiều. Tôi nghĩ AI rất hữu ích vì nó giúp tiết kiệm thời gian cho những công việc nhàm chán, lặp đi lặp lại. Tuy nhiên, một số người lo rằng AI sẽ cướp mất việc làm của họ. Số khác thì lo học sinh sẽ không còn tự suy nghĩ nữa. Theo tôi, AI là một công cụ mạnh mẽ, nhưng nó không thể thay thế sự sáng tạo và lòng tốt của con người. Những ai biết cách sử dụng AI tốt sẽ có lợi thế lớn trong tương lai.",
+      "hintsText": "repetitive (lặp đi lặp lại)  ·  replace (thay thế)  ·  think for themselves (tự suy nghĩ)  ·  advantage (lợi thế)",
+      "hints": [
+        {
+          "en": "repetitive",
+          "vi": "lặp đi lặp lại"
+        },
+        {
+          "en": "replace",
+          "vi": "thay thế"
+        },
+        {
+          "en": "think for themselves",
+          "vi": "tự suy nghĩ"
+        },
+        {
+          "en": "advantage",
+          "vi": "lợi thế"
+        }
+      ],
+      "answer": "Artificial intelligence, or AI, is changing the way we live and work. Today, many people use AI tools to write emails, translate documents and even plan their trips. At my office, AI helps us answer customer questions much faster than before. I think AI is very useful because it saves time on boring, repetitive tasks. However, some people are worried that AI will replace their jobs. Others are concerned that students will stop thinking for themselves. In my opinion, AI is a powerful tool, but it can't replace human creativity and kindness. The people who learn how to use AI well will have a big advantage in the future."
+    },
+    {
+      "id": "translation-b1-89",
+      "number": 89,
+      "title": "Lời Khuyên Đáng Giá",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Lời khuyên đáng giá nhất mà tôi từng nhận được là từ người sếp đầu tiên của mình. Trong tháng đầu đi làm, tôi mắc một lỗi lớn trong bản báo cáo và rất sợ chị ấy sẽ nổi giận. Nhưng không, chị gọi tôi vào phòng và nói: “Ai cũng mắc lỗi cả. Điều quan trọng là em làm gì tiếp theo.” Chị bảo tôi tìm hiểu xem tại sao lỗi xảy ra và nghĩ cách để phòng tránh. Tôi làm theo lời khuyên của chị và lập ra một danh sách kiểm tra mà đến giờ tôi vẫn dùng. Từ đó, tôi không còn quá sợ mắc lỗi nữa. Tôi xem chúng là cơ hội để học hỏi, và tôi cũng cố gắng dành lời khuyên đó cho những đồng nghiệp trẻ hơn.",
+      "hintsText": "receive (nhận được)  ·  make a mistake (mắc lỗi)  ·  prevent (phòng tránh)  ·  checklist (danh sách kiểm tra)",
+      "hints": [
+        {
+          "en": "receive",
+          "vi": "nhận được"
+        },
+        {
+          "en": "make a mistake",
+          "vi": "mắc lỗi"
+        },
+        {
+          "en": "prevent",
+          "vi": "phòng tránh"
+        },
+        {
+          "en": "checklist",
+          "vi": "danh sách kiểm tra"
+        }
+      ],
+      "answer": "The best advice I have ever received came from my first boss. During my first month at work, I made a big mistake in a report, and I was afraid that she would be angry. Instead, she called me into her office and said, “Everyone makes mistakes. What matters is what you do next.” She told me to find out why the mistake happened and to think of a way to prevent it. I followed her advice, and I created a checklist that I still use today. Since then, I haven't been so afraid of making mistakes. I see them as chances to learn, and I try to give the same advice to younger coworkers."
+    },
+    {
+      "id": "translation-b1-90",
+      "number": 90,
+      "title": "Mười Năm Nữa",
+      "level": "B1",
+      "levelFocus": "Hiện tại hoàn thành, câu điều kiện, câu tường thuật, trình bày quan điểm",
+      "vietnamese": "Khi hình dung cuộc sống của mình mười năm nữa, tôi thấy một cuộc sống bình yên và ý nghĩa. Đến lúc đó, tôi hy vọng mình sẽ có một cơ sở kinh doanh nhỏ của riêng mình, có thể là một quán cà phê với một kệ sách để mọi người đọc và thư giãn. Tôi muốn nói tiếng Anh trôi chảy để có thể đi du lịch và kết bạn với người từ nhiều nước khác nhau. Tôi cũng mong khi ấy mình sẽ khỏe mạnh hơn bây giờ, vì tôi dự định tập thể dục đều đặn và ngủ đủ giấc hơn. Quan trọng nhất, tôi muốn có nhiều thời gian hơn cho bố mẹ. Tất nhiên, cuộc sống hiếm khi diễn ra đúng như kế hoạch. Nhưng có một bức tranh rõ ràng về tương lai giúp tôi có động lực cố gắng thêm một chút mỗi ngày.",
+      "hintsText": "ten years from now (mười năm nữa)  ·  by then (đến lúc đó)  ·  regularly (đều đặn)  ·  motivate (tạo động lực)",
+      "hints": [
+        {
+          "en": "ten years from now",
+          "vi": "mười năm nữa"
+        },
+        {
+          "en": "by then",
+          "vi": "đến lúc đó"
+        },
+        {
+          "en": "regularly",
+          "vi": "đều đặn"
+        },
+        {
+          "en": "motivate",
+          "vi": "tạo động lực"
+        }
+      ],
+      "answer": "When I imagine my life ten years from now, I see a calm and meaningful life. By then, I hope I will have my own small business, maybe a café with a bookshelf where people can read and relax. I want to speak English fluently so that I can travel and make friends from different countries. I also hope that I will be healthier than I am now, because I plan to exercise regularly and sleep better. Most importantly, I want to have more time for my parents. Of course, life rarely goes exactly as planned. But having a clear picture of the future motivates me to work a little harder every day."
+    }
+  ]
+}
