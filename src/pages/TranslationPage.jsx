@@ -679,18 +679,22 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
           {filteredLessons.map((l) => {
             const badgeClass = l.level.toLowerCase();
             const prevResult = history[l.id]?.diff;
+            const isCompleted = Boolean(prevResult);
 
             return (
               <a
                 key={l.id}
                 href={`#/translation/lesson/${l.id}`}
-                className="translation-card"
+                className={`translation-card ${isCompleted ? 'completed' : ''}`}
               >
                 <div className="translation-card-top">
                   <span className={`translation-badge ${badgeClass}`}>
                     Cấp {l.level}
                   </span>
-                  <span className="translation-card-num">Bài {l.number}</span>
+                  <span className="translation-card-num">
+                    Bài {l.number}
+                    {isCompleted && <span className="completed-check-icon"> ✓</span>}
+                  </span>
                 </div>
 
                 <h3>{l.title}</h3>
@@ -698,7 +702,7 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
                 <p className="translation-card-preview">{l.vietnamese}</p>
 
                 <div className="translation-card-focus">
-                  <Icon name="sparkles" />
+                  <Icon name={isCompleted ? 'check-circle' : 'sparkles'} />
                   <span>
                     {prevResult
                       ? `Đã làm · Độ khớp: ${prevResult.score}%`

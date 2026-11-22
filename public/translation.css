@@ -176,6 +176,30 @@
   box-shadow: 0 10px 25px rgba(22, 118, 94, 0.09);
 }
 
+/* Bài đã làm: Border xanh nổi bật */
+.translation-card.completed {
+  border: 1.5px solid #16765e;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(22, 118, 94, 0.08);
+}
+
+.translation-card.completed:hover {
+  border-color: #0d5644;
+  box-shadow: 0 10px 25px rgba(22, 118, 94, 0.16);
+}
+
+.translation-card.completed .translation-card-focus {
+  background: #ecfdf5;
+  color: #047857;
+  font-weight: 600;
+}
+
+.completed-check-icon {
+  color: #16765e;
+  font-weight: 800;
+  margin-left: 2px;
+}
+
 .translation-card-top {
   display: flex;
   justify-content: space-between;
