@@ -26,15 +26,18 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
   const lesson = allLessons.find((item) => item.id === lessonId);
 
   useEffect(() => {
+    autoScrollRef.current = autoScroll;
+  }, [autoScroll]);
+
+  useEffect(() => {
     if (lesson) {
       document.title = `${lesson.title} · ${lesson.level || ''} Listeningroom`;
       setActiveTab('script');
       setActiveIndex(-1);
       setIsPlaying(false);
       setHasStarted(false);
-      autoScrollRef.current = autoScroll;
     }
-  }, [lessonId, lesson, autoScroll]);
+  }, [lessonId, lesson]);
 
   if (!lesson) {
     return (
@@ -130,23 +133,33 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
     return url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.ogg') || url.startsWith('/videos/');
   }, [lesson?.videoUrl]);
 
-  const toggleSubtitles = () => {
-    const nextState = !subtitlesEnabled;
-    if (videoRef.current && videoRef.current.textTracks) {
+  const applySubtitleMode = (showing) => {
+    if (!videoRef.current) return;
+    const mode = showing ? 'showing' : 'hidden';
+    if (videoRef.current.textTracks) {
       for (let i = 0; i < videoRef.current.textTracks.length; i++) {
-        videoRef.current.textTracks[i].mode = nextState ? 'showing' : 'hidden';
+        videoRef.current.textTracks[i].mode = mode;
       }
     }
+    const trackElem = videoRef.current.querySelector('track');
+    if (trackElem && trackElem.track) {
+      trackElem.track.mode = mode;
+    }
+  };
+
+  const toggleSubtitles = () => {
+    const nextState = !subtitlesEnabled;
     setSubtitlesEnabled(nextState);
+    applySubtitleMode(nextState);
   };
 
   const handleVideoLoadedMetadata = () => {
-    if (videoRef.current && videoRef.current.textTracks) {
-      for (let i = 0; i < videoRef.current.textTracks.length; i++) {
-        videoRef.current.textTracks[i].mode = subtitlesEnabled ? 'showing' : 'hidden';
-      }
-    }
+    applySubtitleMode(subtitlesEnabled);
   };
+
+  useEffect(() => {
+    applySubtitleMode(subtitlesEnabled);
+  }, [subtitlesEnabled, resolvedSubtitleSrc]);
 
   const handleVideoPlay = () => {
     if (audioRef.current && !audioRef.current.paused) {
@@ -268,7 +281,6 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
 
         targetMedia.currentTime = Math.min(targetMedia.duration - 0.05, targetTime);
         localActiveIndex = -1;
-        autoScrollRef.current = true;
         sync(targetMedia);
         targetMedia.play().catch(() => {});
       };
@@ -284,7 +296,6 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
       if (video && !video.paused) {
         video.pause();
       }
-      autoScrollRef.current = autoScroll;
       setIsPlaying(true);
       setHasStarted(true);
       sync(audio);
@@ -294,7 +305,6 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
       if (audio && !audio.paused) {
         audio.pause();
       }
-      autoScrollRef.current = autoScroll;
       sync(video);
     };
 
@@ -526,17 +536,20 @@ export default function LessonDetail({ lessonId, preferredCollection = 'levels',
                 controls
                 playsInline
                 preload="metadata"
+                crossOrigin="anonymous"
                 src={resolvedVideoSrc}
                 onPlay={handleVideoPlay}
                 onLoadedMetadata={handleVideoLoadedMetadata}
               >
                 {resolvedSubtitleSrc && (
                   <track
+                    key={resolvedSubtitleSrc}
                     kind="subtitles"
                     src={resolvedSubtitleSrc}
                     srcLang="en"
                     label="English"
                     default
+                    onLoad={() => applySubtitleMode(subtitlesEnabled)}
                   />
                 )}
                 Trình duyệt của bạn không hỗ trợ phát video HTML5.
