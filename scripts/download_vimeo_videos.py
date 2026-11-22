@@ -93,8 +93,10 @@ def assemble_vimeo_video(manifest_url, output_mp4):
         a_temp = os.path.join(temp_dir, 'audio.mp4')
 
         # Download video segments concurrently
-        v_urls = [urllib.parse.urljoin(base_url, seg['url']) for seg in best_video['segments']]
-        a_urls = [urllib.parse.urljoin(base_url, seg['url']) for seg in best_audio['segments']]
+        v_base = urllib.parse.urljoin(base_url, best_video.get('base_url', ''))
+        a_base = urllib.parse.urljoin(base_url, best_audio.get('base_url', ''))
+        v_urls = [urllib.parse.urljoin(v_base, seg['url']) for seg in best_video['segments']]
+        a_urls = [urllib.parse.urljoin(a_base, seg['url']) for seg in best_audio['segments']]
 
         with ThreadPoolExecutor(max_workers=8) as ex:
             v_chunks = list(ex.map(fetch_seg, v_urls))
