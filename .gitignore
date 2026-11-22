@@ -10,4 +10,5 @@ public/audio/
 public/videos/
 .venv/
 .vercel
+scripts/sync_r2_when_ready.py
 
