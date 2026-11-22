@@ -58,9 +58,10 @@ def fetch_seg(url):
     for attempt in range(3):
         try:
             req = urllib.request.Request(url, headers={
-                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36'
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+                'Referer': 'https://elllo.org/'
             })
-            return urllib.request.urlopen(req, timeout=20).read()
+            return urllib.request.urlopen(req, timeout=15).read()
         except Exception as e:
             if attempt == 2:
                 print(f"    Failed to fetch {url}: {e}")
@@ -77,8 +78,12 @@ def assemble_vimeo_video(manifest_url, output_mp4):
         manifest_data = json.loads(urllib.request.urlopen(req, timeout=15).read().decode('utf-8'))
         base_url = urllib.parse.urljoin(manifest_url, manifest_data['base_url'])
 
-        # Best video (720p or highest available)
-        best_video = max(manifest_data['video'], key=lambda x: (x.get('height', 0), x.get('bitrate', 0)))
+        # Best video (capped at 720p max)
+        videos_720 = [v for v in manifest_data['video'] if v.get('height', 0) <= 720]
+        if videos_720:
+            best_video = max(videos_720, key=lambda x: (x.get('height', 0), x.get('bitrate', 0)))
+        else:
+            best_video = min(manifest_data['video'], key=lambda x: x.get('height', 0))
         # Best audio
         best_audio = max(manifest_data['audio'], key=lambda x: x.get('bitrate', 0))
 
