@@ -25,7 +25,7 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
 
   // Load data
   useEffect(() => {
-    fetch('/data/translation-practice.json?v=20261123_02')
+    fetch('/data/translation-practice.json?v=20261123_300')
       .then((res) => {
         if (!res.ok) throw new Error('Không thể tải dữ liệu luyện dịch');
         return res.json();
@@ -51,8 +51,12 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
   const currentLesson = useMemo(() => {
     if (!data || !lessonId) return null;
     return (
-      data.lessons.find((l) => l.id === lessonId || String(l.number) === lessonId) ||
-      null
+      data.lessons.find(
+        (l) =>
+          l.id === lessonId ||
+          String(l.number) === lessonId ||
+          (l.legacyIds && l.legacyIds.includes(lessonId))
+      ) || null
     );
   }, [data, lessonId]);
 
@@ -60,7 +64,15 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
   useEffect(() => {
     if (currentLesson) {
       document.title = `Bài ${currentLesson.number}: ${currentLesson.title} · Luyện dịch Listeningroom`;
-      const saved = history[currentLesson.id];
+      let saved = history[currentLesson.id];
+      if (!saved && currentLesson.legacyIds) {
+        for (const oldId of currentLesson.legacyIds) {
+          if (history[oldId]) {
+            saved = history[oldId];
+            break;
+          }
+        }
+      }
       if (saved) {
         setUserInput(saved.input || '');
         setDiffResult(saved.diff || null);
@@ -70,7 +82,7 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
       }
       setShowAnswer(false);
     } else {
-      document.title = 'Luyện dịch 90 bài khóa tiếng Anh theo chủ đề · Listeningroom';
+      document.title = 'Luyện dịch 300 bài khóa tiếng Anh theo chủ đề · Listeningroom';
     }
   }, [currentLesson]);
 
@@ -190,13 +202,24 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
   // Overall statistics
   const stats = useMemo(() => {
     if (!data) return { total: 0, completed: 0, avgScore: 0 };
-    const total = data.lessons.length;
-    const completedKeys = Object.keys(history).filter((k) => history[k]?.diff);
-    const completed = completedKeys.length;
-    const totalScore = completedKeys.reduce(
-      (sum, k) => sum + (history[k]?.diff?.score || 0),
-      0
-    );
+    const total = data.totalLessons || data.lessons.length;
+    let completed = 0;
+    let totalScore = 0;
+    data.lessons.forEach((l) => {
+      let saved = history[l.id]?.diff;
+      if (!saved && l.legacyIds) {
+        for (const oldId of l.legacyIds) {
+          if (history[oldId]?.diff) {
+            saved = history[oldId].diff;
+            break;
+          }
+        }
+      }
+      if (saved) {
+        completed++;
+        totalScore += (saved.score || 0);
+      }
+    });
     const avgScore = completed > 0 ? Math.round(totalScore / completed) : 0;
     return { total, completed, avgScore };
   }, [data, history]);
@@ -205,7 +228,7 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
     return (
       <div id="app">
         <Header collection="translation" level="A1" />
-        <div className="loading">Đang tải dữ liệu 90 bài luyện dịch…</div>
+        <div className="loading">Đang tải dữ liệu 300 bài luyện dịch…</div>
         <Footer />
       </div>
     );
@@ -240,7 +263,7 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
         <main className="translation-container">
           <nav className="worksheet-top-nav">
             <a className="worksheet-back-btn" href="#/translation">
-              <Icon name="arrow-left" /> Danh sách 90 bài luyện dịch
+              <Icon name="arrow-left" /> Danh sách 300 bài luyện dịch
             </a>
             <div className="worksheet-nav-arrows">
               {prevLesson ? (
@@ -610,10 +633,10 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
       <main className="translation-container">
         {/* Hero Section */}
         <section className="translation-hero">
-          <span className="translation-hero-badge">TÍNH NĂNG MỚI · 90 CHỦ ĐỀ</span>
-          <h1>Luyện Dịch Việt → Anh</h1>
+          <span className="translation-hero-badge">300 CHỦ ĐỀ · TỪ DỄ ĐẾN KHÓ</span>
+          <h1>Luyện Dịch 300 Bài Khóa Tiếng Anh</h1>
           <p>
-            Luyện tập chuyển ngữ từ tiếng Việt sang tiếng Anh theo 90 chủ đề từ trình độ A1 đến B1. Tự viết bản dịch vào dòng kẻ, kiểm tra đối chiếu từng từ đúng/sai và rèn luyện phản xạ ngữ pháp tự nhiên.
+            Luyện tập chuyển ngữ từ tiếng Việt sang tiếng Anh theo 300 bài khóa qua 3 phần từ A1 đến B1. Tự viết bản dịch vào dòng kẻ, kiểm tra đối chiếu từng từ đúng/sai và rèn luyện phản xạ ngữ pháp tự nhiên.
           </p>
           <div className="translation-stats-row">
             <div className="translation-stat-pill">
@@ -647,28 +670,28 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
               className={`translation-level-tab ${selectedLevel === 'ALL' ? 'active' : ''}`}
               onClick={() => setSelectedLevel('ALL')}
             >
-              Tất cả (90)
+              Tất cả (300)
             </button>
             <button
               type="button"
               className={`translation-level-tab ${selectedLevel === 'A1' ? 'active' : ''}`}
               onClick={() => setSelectedLevel('A1')}
             >
-              Cấp A1 (Bài 1–30)
+              Phần 1 · Cấp A1 (Bài 1–100)
             </button>
             <button
               type="button"
               className={`translation-level-tab ${selectedLevel === 'A2' ? 'active' : ''}`}
               onClick={() => setSelectedLevel('A2')}
             >
-              Cấp A2 (Bài 31–60)
+              Phần 2 · Cấp A2 (Bài 101–200)
             </button>
             <button
               type="button"
               className={`translation-level-tab ${selectedLevel === 'B1' ? 'active' : ''}`}
               onClick={() => setSelectedLevel('B1')}
             >
-              Cấp B1 (Bài 61–90)
+              Phần 3 · Cấp B1 (Bài 201–300)
             </button>
           </div>
 
@@ -676,7 +699,7 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
             <Icon name="search" />
             <input
               type="text"
-              placeholder="Tìm theo chủ đề, từ gợi ý..."
+              placeholder="Tìm theo chủ đề, từ gợi ý, số bài..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -687,7 +710,15 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
         <div className="translation-grid">
           {filteredLessons.map((l) => {
             const badgeClass = l.level.toLowerCase();
-            const prevResult = history[l.id]?.diff;
+            let prevResult = history[l.id]?.diff;
+            if (!prevResult && l.legacyIds) {
+              for (const oldId of l.legacyIds) {
+                if (history[oldId]?.diff) {
+                  prevResult = history[oldId].diff;
+                  break;
+                }
+              }
+            }
             const isCompleted = Boolean(prevResult);
 
             return (
