@@ -122,6 +122,13 @@
   flex-wrap: wrap;
 }
 
+.translation-header-options {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 .translation-checkbox-label {
   display: inline-flex;
   align-items: center;
@@ -429,7 +436,6 @@
 .worksheet-vn-box {
   background: #f8faf9;
   border: 1px solid #e2ebe7;
-  border-left: 4px solid #16765e;
   border-radius: 12px;
   padding: 16px 20px;
   font-size: 16px;
@@ -533,6 +539,8 @@
   background-attachment: local;
   resize: vertical;
   box-sizing: border-box;
+  overflow-y: hidden;
+  transition: height 0.12s ease-out;
 }
 
 .ruled-textarea::placeholder {

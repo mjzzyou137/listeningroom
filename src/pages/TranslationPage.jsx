@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useMemo, useRef, useLayoutEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Icon from '../components/Icon';
@@ -13,6 +13,13 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
   const [alwaysShowAnswer, setAlwaysShowAnswer] = useState(() => {
     try {
       return localStorage.getItem('openear-translation-always-show-answer') === 'true';
+    } catch {
+      return false;
+    }
+  });
+  const [hideHints, setHideHints] = useState(() => {
+    try {
+      return localStorage.getItem('openear-translation-hide-hints') === 'true';
     } catch {
       return false;
     }
@@ -55,6 +62,14 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
         setDiffResult(saved ? (saved.diff || null) : null);
       }
     }
+  };
+
+  // Toggle "Ẩn gợi ý" setting
+  const toggleHideHints = (checked) => {
+    setHideHints(checked);
+    try {
+      localStorage.setItem('openear-translation-hide-hints', String(checked));
+    } catch (e) {}
   };
 
   // Load data
@@ -122,6 +137,24 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
       document.title = 'Luyện dịch 400 bài khóa tiếng Anh theo chủ đề · Listeningroom';
     }
   }, [currentLesson, alwaysShowAnswer]);
+
+  // Auto-resize textarea to fit full text (especially when showing model answer)
+  const adjustTextareaHeight = () => {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto';
+      const scrollH = textareaRef.current.scrollHeight;
+      textareaRef.current.style.height = `${Math.max(190, scrollH + 4)}px`;
+    }
+  };
+
+  useLayoutEffect(() => {
+    adjustTextareaHeight();
+  }, [userInput, currentLesson, alwaysShowAnswer]);
+
+  useEffect(() => {
+    window.addEventListener('resize', adjustTextareaHeight);
+    return () => window.removeEventListener('resize', adjustTextareaHeight);
+  }, []);
 
   // Save history to localStorage
   const saveProgress = (id, input, diff) => {
@@ -358,7 +391,7 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
               </div>
 
               {/* Hints */}
-              {currentLesson.hints && currentLesson.hints.length > 0 && (
+              {currentLesson.hints && currentLesson.hints.length > 0 && !hideHints && (
                 <div className="worksheet-hints-box">
                   <div className="hints-title">Từ gợi ý (bấm để chèn vào bài làm):</div>
                   <div className="worksheet-hint-chips">
@@ -385,17 +418,6 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
                 <div className="worksheet-section-label">
                   <Icon name="edit" /> Viết bản tiếng Anh của bạn:
                 </div>
-                <label
-                  className="translation-checkbox-label"
-                  title="Khi bật, khi vào chi tiết các bài học sẽ luôn hiển thị sẵn đáp án trong ô nhập này"
-                >
-                  <input
-                    type="checkbox"
-                    checked={alwaysShowAnswer}
-                    onChange={(e) => toggleAlwaysShowAnswer(e.target.checked)}
-                  />
-                  <span>Hiện đáp án</span>
-                </label>
               </div>
 
               <div className="ruled-textarea-container">
@@ -403,7 +425,10 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
                   ref={textareaRef}
                   className="ruled-textarea"
                   value={userInput}
-                  onChange={(e) => setUserInput(e.target.value)}
+                  onChange={(e) => {
+                    setUserInput(e.target.value);
+                    adjustTextareaHeight();
+                  }}
                   onKeyDown={handleTextareaKeyDown}
                   placeholder="Nhập bản dịch tiếng Anh của bạn tại đây... (Ví dụ: Hello! My name is Minh...)"
                   rows={6}
@@ -720,50 +745,63 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
               className={`translation-level-tab ${selectedLevel === 'ALL' ? 'active' : ''}`}
               onClick={() => setSelectedLevel('ALL')}
             >
-              Tất cả (400)
+              Tất cả
             </button>
             <button
               type="button"
               className={`translation-level-tab ${selectedLevel === 'A1' ? 'active' : ''}`}
               onClick={() => setSelectedLevel('A1')}
             >
-              Phần 1 · Cấp A1 (Bài 1–100)
+              A1
             </button>
             <button
               type="button"
               className={`translation-level-tab ${selectedLevel === 'A2' ? 'active' : ''}`}
               onClick={() => setSelectedLevel('A2')}
             >
-              Phần 2 · Cấp A2 (Bài 101–200)
+              A2
             </button>
             <button
               type="button"
               className={`translation-level-tab ${selectedLevel === 'B1' ? 'active' : ''}`}
               onClick={() => setSelectedLevel('B1')}
             >
-              Phần 3 · Cấp B1 (Bài 201–300)
+              B1
             </button>
             <button
               type="button"
               className={`translation-level-tab ${selectedLevel === 'B2' ? 'active' : ''}`}
               onClick={() => setSelectedLevel('B2')}
             >
-              Phần 4 · Cấp B2 (Bài 301–400)
+              B2
             </button>
           </div>
 
           <div className="translation-nav-right">
-            <label
-              className="translation-checkbox-label"
-              title="Khi bật, khi vào chi tiết các bài học sẽ luôn hiển thị sẵn đáp án mẫu"
-            >
-              <input
-                type="checkbox"
-                checked={alwaysShowAnswer}
-                onChange={(e) => toggleAlwaysShowAnswer(e.target.checked)}
-              />
-              <span>Hiện đáp án</span>
-            </label>
+            <div className="translation-header-options">
+              <label
+                className="translation-checkbox-label"
+                title="Khi bật, khi vào chi tiết các bài học sẽ luôn hiển thị sẵn đáp án mẫu"
+              >
+                <input
+                  type="checkbox"
+                  checked={alwaysShowAnswer}
+                  onChange={(e) => toggleAlwaysShowAnswer(e.target.checked)}
+                />
+                <span>Hiện đáp án</span>
+              </label>
+              <label
+                className="translation-checkbox-label"
+                title="Khi bật, sẽ ẩn danh sách các từ gợi ý khi vào làm bài"
+              >
+                <input
+                  type="checkbox"
+                  checked={hideHints}
+                  onChange={(e) => toggleHideHints(e.target.checked)}
+                />
+                <span>Ẩn gợi ý</span>
+              </label>
+            </div>
 
             <div className="translation-search-box">
               <Icon name="search" />
