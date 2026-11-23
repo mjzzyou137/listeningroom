@@ -17,13 +17,7 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
       return false;
     }
   });
-  const [showAnswer, setShowAnswer] = useState(() => {
-    try {
-      return localStorage.getItem('openear-translation-always-show-answer') === 'true';
-    } catch {
-      return false;
-    }
-  });
+  const [showAnswer, setShowAnswer] = useState(false);
   const [diffResult, setDiffResult] = useState(null);
   const [history, setHistory] = useState(() => {
     try {
@@ -39,10 +33,28 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
   // Toggle "Luôn hiện đáp án" setting
   const toggleAlwaysShowAnswer = (checked) => {
     setAlwaysShowAnswer(checked);
-    setShowAnswer(checked);
     try {
       localStorage.setItem('openear-translation-always-show-answer', String(checked));
     } catch (e) {}
+
+    if (currentLesson) {
+      if (checked) {
+        setUserInput(currentLesson.answer);
+        setDiffResult(null);
+      } else {
+        let saved = history[currentLesson.id];
+        if (!saved && currentLesson.legacyIds) {
+          for (const oldId of currentLesson.legacyIds) {
+            if (history[oldId]) {
+              saved = history[oldId];
+              break;
+            }
+          }
+        }
+        setUserInput(saved ? (saved.input || '') : '');
+        setDiffResult(saved ? (saved.diff || null) : null);
+      }
+    }
   };
 
   // Load data
@@ -95,14 +107,17 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
           }
         }
       }
-      if (saved) {
+      if (alwaysShowAnswer) {
+        setUserInput(currentLesson.answer);
+        setDiffResult(null);
+      } else if (saved) {
         setUserInput(saved.input || '');
         setDiffResult(saved.diff || null);
       } else {
         setUserInput('');
         setDiffResult(null);
       }
-      setShowAnswer(alwaysShowAnswer);
+      setShowAnswer(false);
     } else {
       document.title = 'Luyện dịch 300 bài khóa tiếng Anh theo chủ đề · Listeningroom';
     }
@@ -146,7 +161,7 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
 
   // Reset lesson
   const handleReset = () => {
-    setUserInput('');
+    setUserInput(alwaysShowAnswer && currentLesson ? currentLesson.answer : '');
     setDiffResult(null);
     setShowAnswer(false);
     if (currentLesson) {
@@ -366,8 +381,21 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
 
             {/* Writing Section (Ruled textarea matching Image 1) */}
             <div className="worksheet-write-section">
-              <div className="worksheet-section-label">
-                <Icon name="edit" /> Viết bản tiếng Anh của bạn:
+              <div className="worksheet-section-header-flex">
+                <div className="worksheet-section-label">
+                  <Icon name="edit" /> Viết bản tiếng Anh của bạn:
+                </div>
+                <label
+                  className="translation-checkbox-label"
+                  title="Khi bật, khi vào chi tiết các bài học sẽ luôn hiển thị sẵn đáp án trong ô nhập này"
+                >
+                  <input
+                    type="checkbox"
+                    checked={alwaysShowAnswer}
+                    onChange={(e) => toggleAlwaysShowAnswer(e.target.checked)}
+                  />
+                  <span>Hiện đáp án</span>
+                </label>
               </div>
 
               <div className="ruled-textarea-container">
@@ -405,18 +433,6 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
                   <Icon name={showAnswer ? 'eye-off' : 'eye'} />
                   {showAnswer ? 'Ẩn đáp án mẫu' : 'Xem đáp án mẫu'}
                 </button>
-
-                <label
-                  className="translation-checkbox-label"
-                  title="Khi bật, khi vào chi tiết các bài học sẽ luôn hiển thị sẵn đáp án mẫu"
-                >
-                  <input
-                    type="checkbox"
-                    checked={alwaysShowAnswer}
-                    onChange={(e) => toggleAlwaysShowAnswer(e.target.checked)}
-                  />
-                  <span>Hiện đáp án</span>
-                </label>
 
                 {userInput && (
                   <button
