@@ -70,7 +70,7 @@ export default function Header({ collection, level, compact = false }) {
         </a>
       </nav>
       <a className="level-pill" href={pillHref}>
-        {badgeType} {collection === 'translation' ? '90 BÀI' : collection === 'sentence-building' ? '2500 CÂU' : currentLevel}
+        {badgeType} {collection === 'translation' ? '400 BÀI' : collection === 'sentence-building' ? '2500 CÂU' : currentLevel}
       </a>
     </header>
   );

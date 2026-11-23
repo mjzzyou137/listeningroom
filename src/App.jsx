@@ -24,7 +24,7 @@ function parseHash(hash) {
     };
   }
 
-  const transLevelMatch = hashPath.match(/^#\/translation\/(A1|A2|B1)$/i);
+  const transLevelMatch = hashPath.match(/^#\/translation\/(A1|A2|B1|B2)$/i);
   if (transLevelMatch) {
     return {
       type: 'translation',

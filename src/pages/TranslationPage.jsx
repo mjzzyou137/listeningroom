@@ -59,7 +59,7 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
 
   // Load data
   useEffect(() => {
-    fetch('/data/translation-practice.json?v=20261123_300')
+    fetch('/data/translation-practice.json?v=20261123_400')
       .then((res) => {
         if (!res.ok) throw new Error('Không thể tải dữ liệu luyện dịch');
         return res.json();
@@ -119,7 +119,7 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
       }
       setShowAnswer(false);
     } else {
-      document.title = 'Luyện dịch 300 bài khóa tiếng Anh theo chủ đề · Listeningroom';
+      document.title = 'Luyện dịch 400 bài khóa tiếng Anh theo chủ đề · Listeningroom';
     }
   }, [currentLesson, alwaysShowAnswer]);
 
@@ -265,7 +265,7 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
     return (
       <div id="app">
         <Header collection="translation" level="A1" />
-        <div className="loading">Đang tải dữ liệu 300 bài luyện dịch…</div>
+        <div className="loading">Đang tải dữ liệu 400 bài luyện dịch…</div>
         <Footer />
       </div>
     );
@@ -300,7 +300,7 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
         <main className="translation-container">
           <nav className="worksheet-top-nav">
             <a className="worksheet-back-btn" href="#/translation">
-              <Icon name="arrow-left" /> Danh sách 300 bài luyện dịch
+              <Icon name="arrow-left" /> Danh sách 400 bài luyện dịch
             </a>
             <div className="worksheet-nav-arrows">
               {prevLesson ? (
@@ -683,10 +683,10 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
       <main className="translation-container">
         {/* Hero Section */}
         <section className="translation-hero">
-          <span className="translation-hero-badge">300 CHỦ ĐỀ · TỪ DỄ ĐẾN KHÓ</span>
-          <h1>Luyện Dịch 300 Bài Khóa Tiếng Anh</h1>
+          <span className="translation-hero-badge">400 CHỦ ĐỀ · TỪ DỄ ĐẾN KHÓ</span>
+          <h1>Luyện Dịch 400 Bài Khóa Tiếng Anh</h1>
           <p>
-            Luyện tập chuyển ngữ từ tiếng Việt sang tiếng Anh theo 300 bài khóa qua 3 phần từ A1 đến B1. Tự viết bản dịch vào dòng kẻ, kiểm tra đối chiếu từng từ đúng/sai và rèn luyện phản xạ ngữ pháp tự nhiên.
+            Luyện tập chuyển ngữ từ tiếng Việt sang tiếng Anh theo 400 bài khóa qua 4 phần từ A1 đến B2. Tự viết bản dịch vào dòng kẻ, kiểm tra đối chiếu từng từ đúng/sai và rèn luyện phản xạ ngữ pháp tự nhiên.
           </p>
           <div className="translation-stats-row">
             <div className="translation-stat-pill">
@@ -720,7 +720,7 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
               className={`translation-level-tab ${selectedLevel === 'ALL' ? 'active' : ''}`}
               onClick={() => setSelectedLevel('ALL')}
             >
-              Tất cả (300)
+              Tất cả (400)
             </button>
             <button
               type="button"
@@ -742,6 +742,13 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
               onClick={() => setSelectedLevel('B1')}
             >
               Phần 3 · Cấp B1 (Bài 201–300)
+            </button>
+            <button
+              type="button"
+              className={`translation-level-tab ${selectedLevel === 'B2' ? 'active' : ''}`}
+              onClick={() => setSelectedLevel('B2')}
+            >
+              Phần 4 · Cấp B2 (Bài 301–400)
             </button>
           </div>
 
