@@ -115,6 +115,44 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 }
 
+.translation-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.translation-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1f473e;
+  background: #ffffff;
+  border: 1.5px solid #cad9d3;
+  padding: 8px 14px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.translation-checkbox-label:hover {
+  border-color: #16765e;
+  background: #f4faf7;
+  color: #16765e;
+}
+
+.translation-checkbox-label input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  accent-color: #16765e;
+  cursor: pointer;
+  margin: 0;
+}
+
 .translation-search-box {
   position: relative;
   min-width: 260px;

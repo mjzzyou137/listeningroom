@@ -10,7 +10,20 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
   const [selectedLevel, setSelectedLevel] = useState(levelFilter || 'ALL');
   const [searchQuery, setSearchQuery] = useState('');
   const [userInput, setUserInput] = useState('');
-  const [showAnswer, setShowAnswer] = useState(false);
+  const [alwaysShowAnswer, setAlwaysShowAnswer] = useState(() => {
+    try {
+      return localStorage.getItem('openear-translation-always-show-answer') === 'true';
+    } catch {
+      return false;
+    }
+  });
+  const [showAnswer, setShowAnswer] = useState(() => {
+    try {
+      return localStorage.getItem('openear-translation-always-show-answer') === 'true';
+    } catch {
+      return false;
+    }
+  });
   const [diffResult, setDiffResult] = useState(null);
   const [history, setHistory] = useState(() => {
     try {
@@ -22,6 +35,15 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
   });
 
   const textareaRef = useRef(null);
+
+  // Toggle "Luôn hiện đáp án" setting
+  const toggleAlwaysShowAnswer = (checked) => {
+    setAlwaysShowAnswer(checked);
+    setShowAnswer(checked);
+    try {
+      localStorage.setItem('openear-translation-always-show-answer', String(checked));
+    } catch (e) {}
+  };
 
   // Load data
   useEffect(() => {
@@ -80,11 +102,11 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
         setUserInput('');
         setDiffResult(null);
       }
-      setShowAnswer(false);
+      setShowAnswer(alwaysShowAnswer);
     } else {
       document.title = 'Luyện dịch 300 bài khóa tiếng Anh theo chủ đề · Listeningroom';
     }
-  }, [currentLesson]);
+  }, [currentLesson, alwaysShowAnswer]);
 
   // Save history to localStorage
   const saveProgress = (id, input, diff) => {
@@ -383,6 +405,18 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
                   <Icon name={showAnswer ? 'eye-off' : 'eye'} />
                   {showAnswer ? 'Ẩn đáp án mẫu' : 'Xem đáp án mẫu'}
                 </button>
+
+                <label
+                  className="translation-checkbox-label"
+                  title="Khi bật, khi vào chi tiết các bài học sẽ luôn hiển thị sẵn đáp án mẫu"
+                >
+                  <input
+                    type="checkbox"
+                    checked={alwaysShowAnswer}
+                    onChange={(e) => toggleAlwaysShowAnswer(e.target.checked)}
+                  />
+                  <span>Hiện đáp án</span>
+                </label>
 
                 {userInput && (
                   <button
@@ -695,14 +729,28 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
             </button>
           </div>
 
-          <div className="translation-search-box">
-            <Icon name="search" />
-            <input
-              type="text"
-              placeholder="Tìm theo chủ đề, từ gợi ý, số bài..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
+          <div className="translation-nav-right">
+            <label
+              className="translation-checkbox-label"
+              title="Khi bật, khi vào chi tiết các bài học sẽ luôn hiển thị sẵn đáp án mẫu"
+            >
+              <input
+                type="checkbox"
+                checked={alwaysShowAnswer}
+                onChange={(e) => toggleAlwaysShowAnswer(e.target.checked)}
+              />
+              <span>Hiện đáp án</span>
+            </label>
+
+            <div className="translation-search-box">
+              <Icon name="search" />
+              <input
+                type="text"
+                placeholder="Tìm theo chủ đề, từ gợi ý, số bài..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
           </div>
         </div>
 
