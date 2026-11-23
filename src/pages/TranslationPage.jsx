@@ -25,7 +25,7 @@ export default function TranslationPage({ lessonId, levelFilter = 'ALL' }) {
 
   // Load data
   useEffect(() => {
-    fetch('/data/translation-practice.json?v=20261123_01')
+    fetch('/data/translation-practice.json?v=20261123_02')
       .then((res) => {
         if (!res.ok) throw new Error('Không thể tải dữ liệu luyện dịch');
         return res.json();
